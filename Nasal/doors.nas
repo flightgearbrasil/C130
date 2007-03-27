@@ -28,4 +28,3 @@ Doors.passengerexport = func {
 # objects must be here, otherwise local to init()
 doorsystem = Doors.new();
 
-init();
