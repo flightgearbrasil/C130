@@ -1,0 +1,14 @@
+<?xml version="1.0" ?> 
+
+<piston_engine name="Wright Cyclone 975C18CB1">
+
+   <minmp unit="INHG">  6.0 </minmp>
+   <maxmp unit="INHG"> 54.5 </maxmp>                                         <!-- aeromatic 30.0 -->
+   <displacement unit="IN3"> 16000.00 </displacement>                        <!-- aeromatic 4480.00 -->
+   <maxhp>    4591.00 </maxhp>
+   <cycles>      2.0 </cycles>
+   <idlerpm>   700.0 </idlerpm>
+   <maxthrottle> 1.0 </maxthrottle>
+   <minthrottle> 0.2 </minthrottle>
+
+</piston_engine> 

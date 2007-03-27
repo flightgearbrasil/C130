@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+   <key n="68">
+    <name>D</name>
+    <desc>Passenger door</desc>
+    <binding>
+     <command>nasal</command>
+     <script>globals.c130.doorsystem.passengerexport();</script>
+    </binding>
+   </key>
+
+   <key n="83">
+     <name>S</name>
+     <desc>Start smoke</desc>
+     <binding>
+       <command>property-assign</command>
+       <property>controls/smoke</property>
+       <value>true</value>
+     </binding>
+   </key>
+
+   <key n="100">
+    <name>d</name>
+    <desc>Crew door</desc>
+    <binding>
+     <command>nasal</command>
+     <script>globals.c130.doorsystem.crewexport();</script>
+    </binding>
+   </key>
+
+   <key n="106">
+     <name>j</name>
+     <desc>Jump signal</desc>
+     <binding>
+       <command>property-assign</command>
+       <property>controls/signal</property>
+       <value>true</value>
+     </binding>
+   </key>
+
+   <key n="115">
+     <name>s</name>
+     <desc>Stop smoke</desc>
+     <binding>
+       <command>property-assign</command>
+       <property>controls/smoke</property>
+       <value>false</value>
+     </binding>
+   </key>
+
+</PropertyList>
+
