@@ -3,17 +3,18 @@
 <PropertyList>
 
  <path>propellerL.ac</path>
-
+ 
  <animation>
    <name>heliceG</name>
-   <object-name>pal1</object-name>
+   <object-name>pal1</object-name>   
    <object-name>pal2</object-name>   
-   <object-name>pal3</object-name>
-   <object-name>pal4</object-name>
+   <object-name>pal3</object-name>   
+   <object-name>pal4</object-name>   
    <object-name>bol</object-name>   
-   <object-name>disque</object-name>
- </animation>
-        
+   <object-name>propdisc</object-name>
+   <object-name>propblur</object-name>
+ </animation>   
+
 <!-- Mise en place des pales par défaut -->
  <animation>
    <type>rotate</type>
@@ -24,8 +25,8 @@
      <x-m> 0.0 </x-m>
      <y-m> 0.0 </y-m>
      <z-m> 0.0 </z-m>
-   </center>  
-    <axis>
+   </center>
+   <axis>
      <x> 0.0 </x>
      <y> 0.0 </y>
      <z> 1.0 </z>
@@ -86,26 +87,43 @@
 <!-- Sélection Pales/disque en fonction de "RPM" -->
  <animation>
    <type>select</type>
+   <object-name>propdisc</object-name>
+   <condition>
+     <greater-than>
+       <property>engines/engine[1]/rpm</property>
+       <value>1500</value>
+     </greater-than>
+   </condition>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>propblur</object-name>
+   <condition>
+   <and>
+     <greater-than>
+       <property>engines/engine[1]/rpm</property>
+       <value>600.000</value>
+     </greater-than>
+     <less-than>
+       <property>engines/engine[1]/rpm</property>
+       <value>1500.001</value>
+     </less-than>
+   </and>
+   </condition>
+ </animation>
+
+ <animation>
+   <type>select</type>
    <object-name>pal1</object-name>
    <object-name>pal2</object-name>   
    <object-name>pal3</object-name>
    <object-name>pal4</object-name>
    <condition>
      <less-than>
-       <property>/engines/engine[1]/rpm</property>
-       <value>2000</value>
+       <property>engines/engine[1]/rpm</property>
+       <value>1500</value>
      </less-than>
-   </condition>
- </animation>
- 
- <animation>
-   <type>select</type>
-   <object-name>disque</object-name>
-   <condition>
-     <greater-than>
-       <property>/engines/engine[1]/rpm</property>
-       <value>1900</value>
-     </greater-than>
    </condition>
  </animation>
 

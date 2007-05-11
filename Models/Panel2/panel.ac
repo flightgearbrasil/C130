@@ -7,7 +7,7 @@ OBJECT poly
 name "Cube_0"
 data 4
 Cube
-texture "backgrouns.rgb"
+texture "background.rgb"
 texrep 1 1
 crease 30.000000
 numvert 28
