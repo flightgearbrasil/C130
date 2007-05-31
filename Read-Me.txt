@@ -24,6 +24,15 @@ Range                         :
 Crew                          : 
 Charge                        : 
 
+Some useful keys:
+=================
+
+d      : Open/Close door
+D      : Open/Close bay
+S      : Start smoke
+u      : Stop smoke
+Ctrl-j : jump of parachutists
+
 Thanks
 ======
 Didier FABERT for his superb textures
@@ -31,7 +40,7 @@ Pierre GEOFFROY for its research on the engines
 
 ===============
 BARANGER Emmanuel
-March, 27, 2007. 
+February 18, 2007. 
 
 
 [Français]
@@ -56,6 +65,14 @@ Plafond                       :
 Autonomie estimée             : 
 Equipage                      : 
 
+Quelques touches utiles :
+=========================
+
+d      : Ouverture/Fermeture de la porte
+D      : Ouverture/Fermeture de la baie
+S      : Active la fumé
+u      : Stop la fumé
+Ctrl-j : Saut de parachutistes.
 
 Remerciements
 =============
@@ -64,4 +81,4 @@ Pierre GEOFFROY pour ses recherches sur les moteurs
 
 ===============
 BARANGER Emmanuel
-27 Mars 2007.
+08 Mars 2007.

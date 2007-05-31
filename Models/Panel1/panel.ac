@@ -9651,7 +9651,7 @@ OBJECT poly
 name "Circle.029"
 data 10
 Circle.003
-texture "couleur-bord.rgb"
+texture "background.rgb"
 texrep 1 1
 crease 30.000000
 numvert 32

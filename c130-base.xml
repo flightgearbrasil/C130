@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <sim>
+
+    <status>BARANGER</status>
+    <aircraft-version>0.1</aircraft-version>
+
+    <startup>
+      <splash-texture>Aircraft/C130/c130-splash.rgb</splash-texture>
+    </startup>
+
+    <systems>
+      <electrical>
+        <path>Aircraft/Generic/generic-electrical.xml</path>
+      </electrical>
+    </systems> 
+
+    <sound>
+      <audible>true</audible>
+      <path>Aircraft/C130/Sounds/c130-sound.xml</path>
+    </sound>
+
+    <model>
+      <path>Aircraft/C130/Models/c130.xml</path>
+    </model> 
+
+    <submodels>
+      <serviceable type="bool">true</serviceable>
+      <path>Aircraft/C130/Submodels/submodels.xml</path>
+    </submodels>
+  
+    <virtual-cockpit archive="y">true</virtual-cockpit>
+    <allow-toggle-cockpit archive="y">true</allow-toggle-cockpit>
+  
+    <view>
+      <internal archive="y">true</internal>
+      <config>
+        <!-- X/Y/Z == right/up/back -->
+        <x-offset-m archive="y">  -0.598 </x-offset-m>
+        <y-offset-m archive="y">   0.205 </y-offset-m> <!-- 3.005 - 2.8 -->
+        <z-offset-m archive="y"> -10.333 </z-offset-m>
+        <pitch-offset-deg> 0.0 </pitch-offset-deg>
+        <default-field-of-view-deg type="double"> 60.0 </default-field-of-view-deg>
+      </config>
+    </view>
+  
+    <chase-distance-m type="double" archive="y">-45.00</chase-distance-m>
+  
+    <help>
+      <key>
+        <name>D</name>
+        <desc>Open/Close backdoor</desc>
+      </key>
+      <key>
+        <name>d</name>
+        <desc>Open/Close crew door</desc>
+      </key>
+      <key>
+        <name>S</name>
+        <desc>Start engine smoke</desc>
+      </key>
+      <key>
+        <name>u</name>
+        <desc>Stop engine smoke</desc>
+      </key>
+      <key>
+        <name>Ctrl-j</name>
+        <desc>Parachutist</desc>
+      </key>
+    </help>
+
+  </sim>
+ 
+  <!-- engines on, low pitch (parking) -->
+  <controls>
+    <engines>
+      <engine n="0">
+        <magnetos archive="y">3</magnetos>
+        <propeller-pitch>0.0</propeller-pitch>
+      </engine>
+      <engine n="1">
+        <magnetos archive="y">3</magnetos>
+        <propeller-pitch>0.0</propeller-pitch>
+      </engine>
+      <engine n="2">
+        <magnetos archive="y">3</magnetos>
+        <propeller-pitch>0.0</propeller-pitch>
+      </engine>
+      <engine n="3">
+        <magnetos archive="y">3</magnetos>
+        <propeller-pitch>0.0</propeller-pitch>
+      </engine>
+    </engines>
+    <smoke type="bool">true</smoke>
+    <signal type="bool">true</signal>
+    <paratroopers type="bool">true</paratroopers>
+    <jump-signal type="bool">false</jump-signal>
+    <negGtime type="int">0</negGtime>
+    <gmeter>
+      <reset type="int">1</reset>
+    </gmeter>
+    <flight>
+      <elevator-trim type="double">0.1</elevator-trim>
+    </flight>
+  </controls>
+
+  <!-- above 700 RPM avoids the stop --> 
+  <engines>
+    <engine n="0">
+      <rpm archive="y">100</rpm>
+    </engine>
+    <engine n="1">
+      <rpm archive="y">100</rpm>
+    </engine>
+    <engine n="2">
+      <rpm archive="y">100</rpm>
+    </engine>
+    <engine n="3">
+      <rpm archive="y">100</rpm>
+    </engine>
+  </engines>
+ 
+  <ai>
+    <submodels>
+      <trigger type="bool">false</trigger>
+    </submodels>
+  </ai>
+
+  <!-- autopilot -->
+  <autopilot>
+    <settings>
+      <target-speed-kt>330</target-speed-kt>
+    </settings>
+  </autopilot>
+
+  <consumables>
+    <fuel>
+      <tank n="9">
+        <level-gal_us archive="y">200</level-gal_us>
+      </tank>
+    </fuel>
+  </consumables>
+
+  <input>
+    <keyboard include="Nasal/c130-keyboard.xml">
+    </keyboard>
+  </input>
+
+  <nasal>
+    <c130>
+      <file>Aircraft/C130/Nasal/doors.nas</file>
+    </c130>
+    <G-Meter>
+      <file>Aircraft/C130/Nasal/gmeter.nas</file>
+    </G-Meter>
+    <Jumpers>
+      <file>Aircraft/C130/Nasal/paratroopers.nas</file>
+    </Jumpers>
+  </nasal>
+  
+</PropertyList>

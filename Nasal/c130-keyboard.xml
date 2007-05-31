@@ -30,8 +30,8 @@
     </binding>
    </key>
 
-   <key n="106">
-     <name>j</name>
+   <key n="10">
+     <name>Ctrl-j</name>
      <desc>Jump signal</desc>
      <binding>
        <command>property-assign</command>
@@ -40,8 +40,8 @@
      </binding>
    </key>
 
-   <key n="115">
-     <name>s</name>
+   <key n="117">
+     <name>u</name>
      <desc>Stop smoke</desc>
      <binding>
        <command>property-assign</command>
