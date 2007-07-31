@@ -7,7 +7,7 @@
     <desc>Passenger door</desc>
     <binding>
      <command>nasal</command>
-     <script>globals.c130.doorsystem.passengerexport();</script>
+     <script>c130.doorsystem.passengerexport();</script>
     </binding>
    </key>
 
@@ -26,7 +26,7 @@
     <desc>Crew door</desc>
     <binding>
      <command>nasal</command>
-     <script>globals.c130.doorsystem.crewexport();</script>
+     <script>c130.doorsystem.crewexport();</script>
     </binding>
    </key>
 
