@@ -580,11 +580,11 @@
    <property>/controls/engines/engine[0]/propeller-pitch</property>
    <interpolation>
      <entry>
-       <ind>   0.0 </ind>
+       <ind>   1.0 </ind>
        <dep> -91.0 </dep>
      </entry>
      <entry>
-       <ind> 1.0 </ind>
+       <ind> 0.0 </ind>
        <dep> 0.0 </dep>
      </entry>
    </interpolation>
@@ -607,11 +607,11 @@
    <property>/controls/engines/engine[1]/propeller-pitch</property>
    <interpolation>
      <entry>
-       <ind>   0.0 </ind>
+       <ind>   1.0 </ind>
        <dep> -91.0 </dep>
      </entry>
      <entry>
-       <ind> 1.0 </ind>
+       <ind> 0.0 </ind>
        <dep> 0.0 </dep>
      </entry>
    </interpolation>
@@ -634,11 +634,11 @@
    <property>/controls/engines/engine[2]/propeller-pitch</property>
    <interpolation>
      <entry>
-       <ind>   0.0 </ind>
+       <ind>   1.0 </ind>
        <dep> -91.0 </dep>
      </entry>
      <entry>
-       <ind> 1.0 </ind>
+       <ind> 0.0 </ind>
        <dep> 0.0 </dep>
      </entry>
    </interpolation>
@@ -661,11 +661,11 @@
    <property>/controls/engines/engine[3]/propeller-pitch</property>
    <interpolation>
      <entry>
-       <ind>   0.0 </ind>
+       <ind>   1.0 </ind>
        <dep> -91.0 </dep>
      </entry>
      <entry>
-       <ind> 1.0 </ind>
+       <ind> 0.0 </ind>
        <dep> 0.0 </dep>
      </entry>
    </interpolation>

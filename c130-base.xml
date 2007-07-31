@@ -78,22 +78,22 @@
     <engines>
       <engine n="0">
         <magnetos archive="y">3</magnetos>
-        <propeller-pitch>0.0</propeller-pitch>
+        <propeller-pitch>1.0</propeller-pitch>
       </engine>
       <engine n="1">
         <magnetos archive="y">3</magnetos>
-        <propeller-pitch>0.0</propeller-pitch>
+        <propeller-pitch>1.0</propeller-pitch>
       </engine>
       <engine n="2">
         <magnetos archive="y">3</magnetos>
-        <propeller-pitch>0.0</propeller-pitch>
+        <propeller-pitch>1.0</propeller-pitch>
       </engine>
       <engine n="3">
         <magnetos archive="y">3</magnetos>
-        <propeller-pitch>0.0</propeller-pitch>
+        <propeller-pitch>1.0</propeller-pitch>
       </engine>
     </engines>
-    <smoke type="bool">true</smoke>
+    <smoke type="bool">false</smoke>
     <signal type="bool">true</signal>
     <paratroopers type="bool">true</paratroopers>
     <jump-signal type="bool">false</jump-signal>
