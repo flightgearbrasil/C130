@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<!-- Lockheed C130 Hercules. -->
+
+<PropertyList include="c130-base.xml">
+
+  <sim>
+
+    <description>C130 Hercules (YASim)</description>
+    <flight-model>yasim</flight-model>
+    <aero>flying-c130-yasim</aero>
+
+  </sim>
+
+</PropertyList>
+

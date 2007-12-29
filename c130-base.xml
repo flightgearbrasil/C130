@@ -2,7 +2,7 @@
 
 <PropertyList>
 
-  <sim>
+  <sim include="Nasal/views.xml">
 
     <status>BARANGER</status>
     <aircraft-version>0.1</aircraft-version>
@@ -13,7 +13,7 @@
 
     <systems>
       <electrical>
-        <path>Aircraft/Generic/generic-electrical.xml</path>
+        <path></path>
       </electrical>
     </systems> 
 
@@ -24,6 +24,7 @@
 
     <model>
       <path>Aircraft/C130/Models/c130.xml</path>
+      <start-idling type="bool">0</start-idling>
     </model> 
 
     <submodels>
@@ -31,22 +32,15 @@
       <path>Aircraft/C130/Submodels/submodels.xml</path>
     </submodels>
   
+    <instrumentation>
+      <radar>
+        <name>radar</name>
+        <number>0</number>
+      </radar>
+    </instrumentation>
+
     <virtual-cockpit archive="y">true</virtual-cockpit>
     <allow-toggle-cockpit archive="y">true</allow-toggle-cockpit>
-  
-    <view>
-      <internal archive="y">true</internal>
-      <config>
-        <!-- X/Y/Z == right/up/back -->
-        <x-offset-m archive="y">  -0.598 </x-offset-m>
-        <y-offset-m archive="y">   0.205 </y-offset-m> <!-- 3.005 - 2.8 -->
-        <z-offset-m archive="y"> -10.333 </z-offset-m>
-        <pitch-offset-deg> 0.0 </pitch-offset-deg>
-        <default-field-of-view-deg type="double"> 60.0 </default-field-of-view-deg>
-      </config>
-    </view>
-  
-    <chase-distance-m type="double" archive="y">-45.00</chase-distance-m>
   
     <help>
       <key>
@@ -93,6 +87,41 @@
         <propeller-pitch>1.0</propeller-pitch>
       </engine>
     </engines>
+
+    <electric>
+      <external-power>0</external-power>
+      <battery-switch>0</battery-switch>
+      <engine n="0">
+        <generator>0</generator>
+      </engine>
+      <engine n="1">
+        <generator>0</generator>
+      </engine>
+    </electric>
+    <gear>
+      <brake-parking>1.0</brake-parking>
+      <gear-down>true</gear-down>
+    </gear>
+    <lighting>
+      <instruments-norm>0.8</instruments-norm>
+      <landing-lights type="bool">0</landing-lights>
+      <beacon type="bool">0</beacon>
+      <strobe type="bool">0</strobe>
+      <nav-lights type="bool">0</nav-lights>
+      <cabin-lights type="bool">0</cabin-lights>
+      <wing-lights type="bool">0</wing-lights>
+      <taxi-light type="bool">0</taxi-light>
+    <instrument-lights type="bool">0</instrument-lights>
+    </lighting>
+    <anti-ice>
+      <prop-heat>0</prop-heat>
+      <pitot-heat>0</pitot-heat>
+    </anti-ice>
+    <cabin>
+      <fan type="bool">0</fan>
+      <heat type="bool">0</heat>
+    </cabin>
+
     <smoke type="bool">false</smoke>
     <signal type="bool">true</signal>
     <paratroopers type="bool">true</paratroopers>
@@ -148,16 +177,37 @@
     </keyboard>
   </input>
 
+  <instrumentation>
+    <radar>
+      <serviceable type="bool" archive="y">true</serviceable>
+      <switch type="string" archive="y">off</switch>
+      <mode-control type="int" archive="y">3</mode-control>
+      <range type="int" archive="y">20</range>
+      <mode type="string"	archive="y">WX</mode>
+      <heading-marker type="bool"	archive="y">false</heading-marker>
+      <lightning type="bool" archive="y">false</lightning>
+      <display-mode type="string">arc</display-mode>
+      <radar-texture-path type="string" archive="y">Aircraft/Instruments-3d/RDR-160/od_wxradar.rgb</radar-texture-path>
+      <echo-texture-path type="string" archive="y">Aircraft/Instruments/Textures/wxecho.rgb</echo-texture-path>
+      <display-controls>
+        <WX type="bool" archive="y">false</WX>
+        <data type="bool" archive="y">false</data>
+        <pos type="bool" archive="y">true</pos>
+      </display-controls>
+    </radar>
+    <inst-vertical-speed-indicator>
+      <serviceable>true</serviceable>
+    </inst-vertical-speed-indicator>
+  </instrumentation>
+
   <nasal>
     <c130>
+      <file>Aircraft/C130/Nasal/Electrical.nas</file>
       <file>Aircraft/C130/Nasal/doors.nas</file>
-    </c130>
-    <G-Meter>
+      <file>Aircraft/Instruments-3d/RDR-160/RDR160.nas</file>
       <file>Aircraft/C130/Nasal/gmeter.nas</file>
-    </G-Meter>
-    <Jumpers>
       <file>Aircraft/C130/Nasal/paratroopers.nas</file>
-    </Jumpers>
+    </c130>
   </nasal>
   
 </PropertyList>
