@@ -8,7 +8,8 @@
 
     <description>C130 Hercules (YASim)</description>
     <flight-model>yasim</flight-model>
-    <aero>flying-c130-yasim</aero>
+<!--    <aero>flying-c130-yasim</aero> -->
+    <aero>c130-yasim</aero>
 
   </sim>
 

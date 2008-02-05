@@ -1,38 +1,43 @@
-<!--  C130 YASim config. - 2007 BARANGER Emmanuel
+<!--  C130 YASim config. - 2008 Emmanuel BARANGER
+                                Pierre GEOFFROY    
+                                Corrections by Jettoo
+                                
       Envergure : 40.4 m (132 ft 7 in)
       Longueur  : 29.8 m (97 ft 9 in)
       Hauteur   : 11.6 m (38 ft 3 in)
-      Poids vide: 38000 kg (83000 lb)
+      Poids vide: 33700 kg (74295 lb)
       Moteurs   : 4 Allison T56-A-15 turboprops de 4,500 ch chacun pour 871 kg (1920 lb)
       Vitesse   : 540 km/h (292 kts)
 -->
-
-<airplane mass="83000">
+<airplane mass="74295">
 
   <!-- Configuration d'approche -->
-  <approach speed="70" aoa="12">
-    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.1"/>
-    <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="1.0"/>
-    <control-setting axis="/controls/engines/engine[1]/throttle" value="0.1"/>
-    <control-setting axis="/controls/engines/engine[1]/propeller-pitch" value="1.0"/>
-    <control-setting axis="/controls/engines/engine[2]/throttle" value="0.1"/>
-    <control-setting axis="/controls/engines/engine[2]/propeller-pitch" value="1.0"/>
-    <control-setting axis="/controls/engines/engine[3]/throttle" value="0.1"/>
-    <control-setting axis="/controls/engines/engine[3]/propeller-pitch" value="1.0"/>
+  <!-- some docu: here speed and aoa are very crucial for the solver, easy to make mistakes here (don't use too high aoa's) -->
+  <approach speed="90" aoa="4" fuel="0.4">
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.3"/>
+    <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="0.6"/>
+    <control-setting axis="/controls/engines/engine[1]/throttle" value="0.3"/>
+    <control-setting axis="/controls/engines/engine[1]/propeller-pitch" value="0.6"/>
+    <control-setting axis="/controls/engines/engine[2]/throttle" value="0.3"/>
+    <control-setting axis="/controls/engines/engine[2]/propeller-pitch" value="0.6"/>
+    <control-setting axis="/controls/engines/engine[3]/throttle" value="0.3"/>
+    <control-setting axis="/controls/engines/engine[3]/propeller-pitch" value="0.6"/>
+
     <control-setting axis="/controls/flight/flaps" value="1.0"/>
     <control-setting axis="/controls/gear/gear-down" value="1"/>
   </approach>
 
-<!-- Configuration de croisiÃ¨re -->
-  <cruise speed="292" alt="28000">
+<!-- Configuration de croisière -->
+<cruise speed="310" alt="28000" fuel="0.7">
     <control-setting axis="/controls/engines/engine[0]/throttle" value="1.0"/>
-    <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="0.36"/>
+    <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="1.0"/>
     <control-setting axis="/controls/engines/engine[1]/throttle" value="1.0"/>
-    <control-setting axis="/controls/engines/engine[1]/propeller-pitch" value="0.36"/>
+    <control-setting axis="/controls/engines/engine[1]/propeller-pitch" value="1.0"/>
     <control-setting axis="/controls/engines/engine[2]/throttle" value="1.0"/>
-    <control-setting axis="/controls/engines/engine[2]/propeller-pitch" value="0.36"/>
+    <control-setting axis="/controls/engines/engine[2]/propeller-pitch" value="1.0"/>
     <control-setting axis="/controls/engines/engine[3]/throttle" value="1.0"/>
-    <control-setting axis="/controls/engines/engine[3]/propeller-pitch" value="0.36"/>
+    <control-setting axis="/controls/engines/engine[3]/propeller-pitch" value="1.0"/>
+
     <control-setting axis="/controls/flight/flaps" value="0.0"/>
     <control-setting axis="/controls/gear/gear-down" value="0"/>
   </cruise>
@@ -40,20 +45,20 @@
   <cockpit x="10.333" y="0.598" z="3.005"/>
 
   <!-- Fuselage -->
-  <fuselage ax="13.224" ay="0" az="1.173" bx="-16.415" by="0" bz="4.169" width="4.304" taper="0.5" midpoint="0.5"/>
+  <!-- In my opinion it is easier to describe this fuselage with 3 parts
+       the first main part is basically a straight tube (and not elevating)
+       the rest is the radar cone from the front and the tail (both maybe not necessary, but add to realism)-->
+  <fuselage ax="12.05" ay="0" az="2.08" bx="-8.81" by="0" bz="2.08" width="4.304" taper="0.40" midpoint="0.5"/>
+  <!-- nose 
+  <fuselage ax="13.17" ay="0" az="1.20" bx="11.20" by="0" bz="1.20" width="1.40" taper="0.40" midpoint="0.4"/>-->
+  <!-- back 
+  <fuselage ax="-8.60" ay="0" az="3.08" bx="-16.43" by="0" bz="4.18" width="2.60" taper="0.35" midpoint="0.4"/>-->
 
   <!-- Ailes -->
-  <wing x="-1.486" y="1.240" z="3.660" 
-        taper="0.52"
-        length="18.680" 
-        chord="5.201" 
-        sweep="0"
-        dihedral="1.0" 
-        camber="0.08" 
-        incidence="0">
+  <wing x="-1.486" y="1.240" z="3.660" taper="0.52" length="18.680" chord="5.201" sweep="0" dihedral="1.0" camber="0.08" incidence="0">
         <stall aoa="16.0" width="5" peak="1.3"/>
-        <flap0 start="0.0" end="0.6" lift="1.5" drag="1.6"/>
-        <flap1 start="0.6" end="0.9" lift="1.2" drag="1.3"/>
+        <flap0 start="0.048" end="0.679" lift="1.5" drag="1.6"/>
+        <flap1 start="0.679" end="0.990" lift="1.2" drag="1.3"/>
 
         <control-input axis="/controls/flight/flaps" control="FLAP0"/>
         <control-input axis="/controls/flight/aileron" control="FLAP1" split="true"/>
@@ -69,12 +74,7 @@
   </wing>
 
   <!-- Gouverne de profondeur -->
-  <hstab x="-12.648" y="0.370" z="4.090" 
-         taper="0.43" 
-         length="7.247" 
-         chord="4.494" 
-         sweep="0" 
-         dihedral="0.0">
+  <hstab x="-12.648" y="0.370" z="4.090" taper="0.43" length="7.247" chord="4.494" sweep="0" dihedral="0.0">
          <stall aoa="20.0" width="4" peak="1.5"/>
          <flap0 start="0" end="1" lift="1.5" drag="1.4"/>
 
@@ -87,11 +87,7 @@
   </hstab>
 
   <!-- Gouverne de direction -->
-  <vstab x="-12.181" y="0" z="4.296" 
-         taper="0.32"
-         length="6.704" 
-         chord="5.776" 
-         sweep="30">
+  <vstab x="-12.181" y="0" z="4.296" taper="0.32" length="6.704" chord="5.776" sweep="30">
          <stall aoa="16.0" width="4" peak="1.5"/>
          <flap0 start="0.25" end="0.8" lift="1.8" drag="1.5"/>
 
@@ -103,26 +99,29 @@
         <control-speed control="FLAP0" transition-time="2.0"/>
   </vstab>
 
-  <!-- Moteurs et hÃ©lices -->
-  <!-- ExtÃ©rieur gauche -->
-  <propeller x="1.209" y="9.821" z="3.307"
-               mass="1920" 
-               moment="110" 
-	       radius="2.0" 
-	       cruise-speed="292"
-	       cruise-rpm="1200"
-	       cruise-power="4000"
-	       cruise-alt="25000"
-	       min-rpm="2100" 
-	       max-rpm="1400"
-	       gear-ratio="3.35"> 
+  <!-- Moteurs et hélices -->
+  <!-- Extèrieur gauche -->
+  <!-- modified some settings here, but not all have to be correct now 
+       on turbine engines there is no gear ratio, the eng-rpm is that the propeller sees
+       I don't know the flat rating of the engine-->
+  <propeller x="1.92" y="9.821" z="3.307" 
+             mass="2294" 
+             moment="110" 
+             radius="2.8" 
+             cruise-speed="292" 
+             cruise-rpm="920" 
+             cruise-power="1800" 
+             cruise-alt="25000" 
+             min-rpm="220" 
+             max-rpm="1020" 
+             gear-ratio="1.00"> 
       <actionpt x="3.764" y="9.821" z="3.622"/>
       <turbine-engine eng-power="4500" 
-	 	      eng-rpm="13820"
-	 	      alt="28000"
-	 	      flat-rating="1250"
-		      min-n2="70" 
-		      max-n2="100"/> 
+                      eng-rpm="1020" 
+                      alt="28000" 
+                      flat-rating="4150" 
+                      min-n2="70" 
+                      max-n2="100"/> 
       <control-input axis="/controls/engines/engine[0]/propeller-pitch" control="ADVANCE"/>
       <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
       <control-input axis="/controls/engines/engine[0]/starter" control="STARTER"/>
@@ -131,25 +130,10 @@
       <control-input axis="/controls/engines/engine[0]/boost" control="BOOST"/>
     </propeller>
 
-  <!-- IntÃ©rieur gauche -->
-  <propeller x="1.209" y="4.929" z="3.307"
-               mass="1920" 
-               moment="-110" 
-	       radius="2.0" 
-	       cruise-speed="292"
-	       cruise-rpm="1200"
-	       cruise-power="4000"
-	       cruise-alt="25000"
-	       min-rpm="2100" 
-	       max-rpm="1400"
-	       gear-ratio="3.35"> 
+  <!-- Intérieur gauche -->
+  <propeller x="1.92" y="4.929" z="3.307" mass="2294" moment="110" radius="2.8" cruise-speed="292" cruise-rpm="920" cruise-power="1800" cruise-alt="25000" min-rpm="220" max-rpm="1020" gear-ratio="1.00">  
       <actionpt x="3.764" y="4.926" z="3.622"/>
-      <turbine-engine eng-power="4500" 
-	 	      eng-rpm="13820"
-	 	      alt="28000"
-	 	      flat-rating="1250"
-		      min-n2="70" 
-		      max-n2="100"/> 
+      <turbine-engine eng-power="4500" eng-rpm="1020" alt="28000" flat-rating="4150" min-n2="70" max-n2="100"/> 
       <control-input axis="/controls/engines/engine[1]/propeller-pitch" control="ADVANCE"/>
       <control-input axis="/controls/engines/engine[1]/throttle" control="THROTTLE"/>
       <control-input axis="/controls/engines/engine[1]/starter" control="STARTER"/>
@@ -158,25 +142,10 @@
       <control-input axis="/controls/engines/engine[1]/boost" control="BOOST"/>
     </propeller>
 
-  <!-- Interieur droit -->
-  <propeller x="1.209" y="-4.929" z="3.307"
-               mass="1920" 
-               moment="110" 
-	       radius="2.0" 
-	       cruise-speed="292"
-	       cruise-rpm="1200"
-	       cruise-power="4000"
-	       cruise-alt="25000"
-	       min-rpm="2100" 
-	       max-rpm="1400"
-	       gear-ratio="3.35"> 
+    <!-- Intï¿½rieur droit 0.0738-->
+  <propeller x="1.92" y="-4.929" z="3.307" mass="2294" moment="110" radius="2.8" cruise-speed="292" cruise-rpm="920" cruise-power="1800" cruise-alt="25000" min-rpm="220" max-rpm="1020" gear-ratio="1.00"> 
       <actionpt x="3.764" y="-4.926" z="3.622"/>
-      <turbine-engine eng-power="4500" 
-	 	      eng-rpm="13820"
-	 	      alt="28000"
-	 	      flat-rating="1250"
-		      min-n2="70" 
-		      max-n2="100"/> 
+      <turbine-engine eng-power="4500" eng-rpm="1020" alt="28000" flat-rating="4150" min-n2="70" max-n2="100"/> 
       <control-input axis="/controls/engines/engine[2]/propeller-pitch" control="ADVANCE"/>
       <control-input axis="/controls/engines/engine[2]/throttle" control="THROTTLE"/>
       <control-input axis="/controls/engines/engine[2]/starter" control="STARTER"/>
@@ -185,25 +154,10 @@
       <control-input axis="/controls/engines/engine[2]/boost" control="BOOST"/>
     </propeller>
 
-  <!-- ExtÃ©rieur droit -->
-  <propeller x="1.209" y="-9.821" z="3.307"
-               mass="1920" 
-               moment="-110" 
-	       radius="2.0" 
-	       cruise-speed="292"
-	       cruise-rpm="1200"
-	       cruise-power="4000"
-	       cruise-alt="25000"
-	       min-rpm="210" 
-	       max-rpm="1400"
-	       gear-ratio="3.35"> 
+  <!-- Extï¿½rieur droit -->
+  <propeller x="1.92" y="-9.821" z="3.307" mass="2294" moment="110" radius="2.8" cruise-speed="292" cruise-rpm="920" cruise-power="1800" cruise-alt="25000" min-rpm="220" max-rpm="1020" gear-ratio="1.00"> 
       <actionpt x="3.764" y="-9.821" z="3.622"/>
-      <turbine-engine eng-power="4500" 
-	 	      eng-rpm="13820"
-	 	      alt="28000"
-	 	      flat-rating="1250"
-		      min-n2="70" 
-		      max-n2="100"/> 
+      <turbine-engine eng-power="4500" eng-rpm="1020" alt="28000" flat-rating="4150" min-n2="70" max-n2="100"/> 
       <control-input axis="/controls/engines/engine[3]/propeller-pitch" control="ADVANCE"/>
       <control-input axis="/controls/engines/engine[3]/throttle" control="THROTTLE"/>
       <control-input axis="/controls/engines/engine[3]/starter" control="STARTER"/>
@@ -214,10 +168,7 @@
 
   <!-- Poition des roues au sol -->
   <!-- Nez -->
-  <gear x="9.511" y="0" z="-0.898" 
-        retract-time="7" 
-        compression="0.2" 
-        spring="0.2">
+  <gear x="9.511" y="0" z="-0.898" retract-time="7" compression="0.2" spring="0.4">
         <control-input axis="/controls/flight/rudder" control="STEER" square="true"/>
         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
         <control-output control="STEER" prop="/gear/gear[0]/steering-norm"/>
@@ -226,10 +177,7 @@
   </gear>
 
   <!-- Gauche avant -->
-  <gear x="0.831" y="2.125" z="-0.896" 
-        retract-time="7" 
-        compression="0.2" 
-        spring="0.6">
+  <gear x="0.831" y="2.125" z="-0.896" retract-time="7" compression="0.2" spring="0.6">
         <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
         <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
@@ -238,10 +186,7 @@
   </gear>
 
   <!-- Droite avant -->
-  <gear x="0.831" y="-2.125" z="-0.896" 
-        retract-time="7" 
-        compression="0.2" 
-        spring="0.6">
+  <gear x="0.831" y="-2.125" z="-0.896" retract-time="7" compression="0.2" spring="0.6">
         <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
         <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
@@ -249,11 +194,8 @@
         <control-speed control="EXTEND" transition-time="10"/>
   </gear>
 
-  <!-- Gauche arriÃ¨re -->
-  <gear x="-0.702" y="2.125" z="-0.896" 
-        retract-time="7" 
-        compression="0.2" 
-        spring="0.6">
+  <!-- Gauche arriï¿½re -->
+  <gear x="-0.702" y="2.125" z="-0.896" retract-time="7" compression="0.2" spring="0.6">
         <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
         <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
@@ -261,11 +203,8 @@
         <control-speed control="EXTEND" transition-time="10"/>
   </gear>
 
-  <!-- Droite arriÃ¨re -->
-  <gear x="-0.702" y="-2.125" z="-0.896" 
-        retract-time="7" 
-        compression="0.2" 
-        spring="0.6">
+  <!-- Droite arriï¿½re -->
+  <gear x="-0.702" y="-2.125" z="-0.896" retract-time="7" compression="0.2" spring="0.6">
         <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
         <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
@@ -273,23 +212,34 @@
         <control-speed control="EXTEND" transition-time="10"/>
   </gear>
 
-  <!-- RÃ©servoirs de carburant d'aprÃ¨s "http://www.aviation-fr.info/guide/hercules.php"-->
-  <!-- 1 et 4 - RÃ©servoirs principaux d'extrÃ©mitÃ©s                  4940 litres / 1300 gallons / 10881 livres -->
-  <tank x="-1.187" y="14.732" z="3.927" capacity="10881"/>
-  <tank x="-1.187" y="-14.732" z="3.927" capacity="10881"/>
-  <!-- 2 et 3 - RÃ©servoirs principaux intÃ©rieurs                    4560 litres / 1200 gallons / 10044 livres -->
-  <tank x="-1.479" y="7.041" z="3.796" capacity="10044"/>
-  <tank x="-1.479" y="-7.041" z="3.796" capacity="10044"/>
-  <!-- 5 et 6 - RÃ©servoirs auxiliaires                              3458 litres / 910  gallons / 7616  livres --> 
-  <tank x="-1.479" y="2.451" z="3.770" capacity="7616"/>
-  <tank x="-1.479" y="-2.451" z="3.770" capacity="7616"/>
+  <!-- Ré½servoirs de carburant d'après "http://www.aviation-fr.info/guide/hercules.php"-->
+  <!-- 1 et 4 - Réservoirs principaux d'extrémités                  4940 litres / 1300 gallons / 10881 livres -->
+  <!-- adjusted tanks to get a balanced aircraft/approx position)-->
+  <tank x="-0.1" y="14.732" z="3.927" capacity="10881"/>
+  <tank x="-0.1" y="-14.732" z="3.927" capacity="10881"/>
+  <!-- 2 et 3 - Réservoirs principaux intérieurs                    4560 litres / 1200 gallons / 10044 livres -->
+  <tank x="-0.7" y="7.041" z="3.796" capacity="10044"/>
+  <tank x="-0.7" y="-7.041" z="3.796" capacity="10044"/>
+  <!-- 5 et 6 - Réservoirs auxiliaires                              3458 litres / 910  gallons / 7616  livres -->
+  <tank x="-1.0" y="2.451" z="3.770" capacity="7616"/>
+  <tank x="-1.0" y="-2.451" z="3.770" capacity="7616"/>
 
-  <!-- 7 et 8 - RÃ©servoirs supplÃ©mentaires sur pylones              5320 litres / 1400 gallons / 11728 livres -->
-  <!-- non utilisÃ© pour le moment
+  <!-- 7 et 8 - Réservoirs supplémentaires sur pylones              5320 litres / 1400 gallons / 11728 livres -->
+  <!-- non utilisé pour le moment
   <tank x="-1.178" y="7.108" z="2.305" capacity="11728"/>
   <tank x="-1.178" y="-7.108" z="2.305" capacity="11728"/> -->
 
-  <!-- Ballast CG au centre de la corde des ailes x=1.469 y=0 z=3.772-->
-  <ballast x="179.50" y="0.0" z="7.60" mass="2450"/>
+  <!-- Ballast CG au centre de la corde des ailes x=1.469 y=0 z=3.772 -->
+  <!-- ballast is your friend, you can tune your aircraft, on most yasim aircrafts the tail is too heavy, so weight can be removed, this weight is redistributed across the fuselage (negative ballast)
+       it's always good to know where heavy parts are in the fuselage and define them ( the weight is subtracted from the fuselage and given to that point (positive ballast)
+       so you can trim your aircraft by moving the masses where they belong-->
+  <!--radar -->
+  <ballast x="13.00" y="0.0" z="1.20" mass="2000"/>
+  <!--cockpit -->
+  <ballast x="10.50" y="0.0" z="2.00" mass="4000"/>
+  <!--more ballast added (for balance)-->
+  <ballast x="6.50" y="0.0" z="1.00" mass="6000"/>
+  <!--removed from tail -->
+  <ballast x="-16.00" y="0.0" z="0.00" mass="-9000"/>
   
 </airplane>
