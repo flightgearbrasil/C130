@@ -1,6 +1,7 @@
 <!--  C130 YASim config. - 2008 Emmanuel BARANGER
-                                Pierre GEOFFROY    
-                                Corrections by Jettoo
+                                
+                                update by Jettoo
+                                      and Pierre GEOFFROY    
                                 
       Envergure : 40.4 m (132 ft 7 in)
       Longueur  : 29.8 m (97 ft 9 in)
@@ -12,7 +13,6 @@
 <airplane mass="74295">
 
   <!-- Configuration d'approche -->
-  <!-- some docu: here speed and aoa are very crucial for the solver, easy to make mistakes here (don't use too high aoa's) -->
   <approach speed="90" aoa="4" fuel="0.4">
     <control-setting axis="/controls/engines/engine[0]/throttle" value="0.3"/>
     <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="0.6"/>
@@ -45,14 +45,7 @@
   <cockpit x="10.333" y="0.598" z="3.005"/>
 
   <!-- Fuselage -->
-  <!-- In my opinion it is easier to describe this fuselage with 3 parts
-       the first main part is basically a straight tube (and not elevating)
-       the rest is the radar cone from the front and the tail (both maybe not necessary, but add to realism)-->
   <fuselage ax="12.05" ay="0" az="2.08" bx="-8.81" by="0" bz="2.08" width="4.304" taper="0.40" midpoint="0.5"/>
-  <!-- nose 
-  <fuselage ax="13.17" ay="0" az="1.20" bx="11.20" by="0" bz="1.20" width="1.40" taper="0.40" midpoint="0.4"/>-->
-  <!-- back 
-  <fuselage ax="-8.60" ay="0" az="3.08" bx="-16.43" by="0" bz="4.18" width="2.60" taper="0.35" midpoint="0.4"/>-->
 
   <!-- Ailes -->
   <wing x="-1.486" y="1.240" z="3.660" taper="0.52" length="18.680" chord="5.201" sweep="0" dihedral="1.0" camber="0.08" incidence="0">
@@ -100,10 +93,7 @@
   </vstab>
 
   <!-- Moteurs et hélices -->
-  <!-- Extèrieur gauche -->
-  <!-- modified some settings here, but not all have to be correct now 
-       on turbine engines there is no gear ratio, the eng-rpm is that the propeller sees
-       I don't know the flat rating of the engine-->
+  <!-- Extérieur gauche -->
   <propeller x="1.92" y="9.821" z="3.307" 
              mass="2294" 
              moment="110" 
@@ -142,7 +132,7 @@
       <control-input axis="/controls/engines/engine[1]/boost" control="BOOST"/>
     </propeller>
 
-    <!-- Intï¿½rieur droit 0.0738-->
+    <!-- Inérieur droit 0.0738-->
   <propeller x="1.92" y="-4.929" z="3.307" mass="2294" moment="110" radius="2.8" cruise-speed="292" cruise-rpm="920" cruise-power="1800" cruise-alt="25000" min-rpm="220" max-rpm="1020" gear-ratio="1.00"> 
       <actionpt x="3.764" y="-4.926" z="3.622"/>
       <turbine-engine eng-power="4500" eng-rpm="1020" alt="28000" flat-rating="4150" min-n2="70" max-n2="100"/> 
@@ -154,7 +144,7 @@
       <control-input axis="/controls/engines/engine[2]/boost" control="BOOST"/>
     </propeller>
 
-  <!-- Extï¿½rieur droit -->
+  <!-- Extérieur droit -->
   <propeller x="1.92" y="-9.821" z="3.307" mass="2294" moment="110" radius="2.8" cruise-speed="292" cruise-rpm="920" cruise-power="1800" cruise-alt="25000" min-rpm="220" max-rpm="1020" gear-ratio="1.00"> 
       <actionpt x="3.764" y="-9.821" z="3.622"/>
       <turbine-engine eng-power="4500" eng-rpm="1020" alt="28000" flat-rating="4150" min-n2="70" max-n2="100"/> 
@@ -230,9 +220,6 @@
   <tank x="-1.178" y="-7.108" z="2.305" capacity="11728"/> -->
 
   <!-- Ballast CG au centre de la corde des ailes x=1.469 y=0 z=3.772 -->
-  <!-- ballast is your friend, you can tune your aircraft, on most yasim aircrafts the tail is too heavy, so weight can be removed, this weight is redistributed across the fuselage (negative ballast)
-       it's always good to know where heavy parts are in the fuselage and define them ( the weight is subtracted from the fuselage and given to that point (positive ballast)
-       so you can trim your aircraft by moving the masses where they belong-->
   <!--radar -->
   <ballast x="13.00" y="0.0" z="1.20" mass="2000"/>
   <!--cockpit -->
