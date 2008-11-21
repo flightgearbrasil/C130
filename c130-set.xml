@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 
-<!-- <PropertyList include="c130-jsbsim-set.xml"> -->
-<PropertyList include="c130-yasim-set.xml">
+<!-- <PropertyList include="c130-jsbsim-cnf.xml"> -->
+<PropertyList include="c130-yasim-cnf.xml">
 
   <sim>
     <description>C130 Hercules</description>

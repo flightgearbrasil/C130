@@ -8,7 +8,7 @@
     <aircraft-version>0.1</aircraft-version>
 
     <startup>
-      <splash-texture>Aircraft/C130/c130-splash.rgb</splash-texture>
+      <splash-texture>Aircraft/C130/c130-splash.png</splash-texture>
     </startup>
 
     <systems>
@@ -25,13 +25,28 @@
     <model>
       <path>Aircraft/C130/Models/c130.xml</path>
       <start-idling type="bool">0</start-idling>
+      <livery>
+        <file type="string">default</file>
+      </livery>
     </model> 
 
     <submodels>
       <serviceable type="bool">true</serviceable>
       <path>Aircraft/C130/Submodels/submodels.xml</path>
     </submodels>
-  
+
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic>
+        <int type="int" n="0">0</int>
+        <int type="int" n="1">0</int>
+        <int type="int" n="2">0</int>
+        <int type="int" n="3">0</int>
+        <int type="int" n="4">0</int>
+        <int type="int" n="5">0</int>
+      </generic>
+    </multiplay>
+
     <instrumentation>
       <radar>
         <name>radar</name>
@@ -39,10 +54,8 @@
       </radar>
     </instrumentation>
 
-    <virtual-cockpit archive="y">true</virtual-cockpit>
-    <allow-toggle-cockpit archive="y">true</allow-toggle-cockpit>
-  
     <help>
+      <title>C130 Hercules</title>
       <key>
         <name>D</name>
         <desc>Open/Close backdoor</desc>
@@ -65,8 +78,10 @@
       </key>
     </help>
 
+    <menubar include="Dialogs/c130-menu.xml"/>
+
   </sim>
- 
+
   <!-- engines on, low pitch (parking) -->
   <controls>
     <engines>
@@ -150,7 +165,7 @@
       <rpm archive="y">100</rpm>
     </engine>
   </engines>
- 
+
   <ai>
     <submodels>
       <trigger type="bool">false</trigger>
@@ -183,8 +198,8 @@
       <switch type="string" archive="y">off</switch>
       <mode-control type="int" archive="y">3</mode-control>
       <range type="int" archive="y">20</range>
-      <mode type="string"	archive="y">WX</mode>
-      <heading-marker type="bool"	archive="y">false</heading-marker>
+      <mode type="string" archive="y">WX</mode>
+      <heading-marker type="bool" archive="y">false</heading-marker>
       <lightning type="bool" archive="y">false</lightning>
       <display-mode type="string">arc</display-mode>
       <radar-texture-path type="string" archive="y">Aircraft/Instruments-3d/RDR-160/od_wxradar.rgb</radar-texture-path>
@@ -202,12 +217,13 @@
 
   <nasal>
     <c130>
-      <file>Aircraft/C130/Nasal/Electrical.nas</file>
       <file>Aircraft/C130/Nasal/doors.nas</file>
+      <file>Aircraft/C130/Nasal/liveries.nas</file>
+      <file>Aircraft/C130/Nasal/Electrical.nas</file>
       <file>Aircraft/Instruments-3d/RDR-160/RDR160.nas</file>
       <file>Aircraft/C130/Nasal/gmeter.nas</file>
       <file>Aircraft/C130/Nasal/paratroopers.nas</file>
     </c130>
   </nasal>
-  
+
 </PropertyList>

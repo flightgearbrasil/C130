@@ -3,6 +3,16 @@
 <PropertyList>
 
   <path>c130.ac</path>
+
+  <nasal>
+    <load>
+      var livery_update = aircraft.livery_update.new("Aircraft/C130/Models/Liveries", 10);
+    </load>
+    <unload>
+      livery_update.stop();
+    </unload>
+  </nasal>
+
   <animation>
     <!-- Objets opaques -->
     <object-name>fuselage</object-name>
@@ -49,17 +59,18 @@
     <object-name>profondeur</object-name>
     <object-name>direction</object-name>
     <object-name>moteurs</object-name>
-    <object-name>hublots</object-name>
     <object-name>cables</object-name>
-    <object-name>interieur</object-name>
-    <object-name>cabine</object-name>
-    <object-name>pilote</object-name>
-    <object-name>copilote</object-name>
-    <object-name>navigateur</object-name>
-    <object-name>ingenieur</object-name>
-
 
     <!-- Objets transparents -->
+    <object-name>vitres</object-name>
+    <object-name>hublotBG</object-name>
+    <object-name>hublotBD</object-name>
+  </animation>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>glass_shader.png</texture>
     <object-name>vitres</object-name>
     <object-name>hublotBG</object-name>
     <object-name>hublotBD</object-name>
@@ -72,43 +83,95 @@
     <object-name>hublotBD</object-name>
   </animation>
 
-  <panel>
-    <name>Panel3D</name>
-    <path>Aircraft/C130/Models/Panel1/hotspots.xml</path>
-    <bottom-left>
-      <x-m>-11.074</x-m>
-      <y-m> -0.366</y-m>
-      <z-m>  2.262</z-m>
-    </bottom-left>
-    <bottom-right>
-      <x-m>-11.074</x-m>
-      <y-m> -0.205</y-m>
-      <z-m>  2.262</z-m>
-    </bottom-right>
-    <top-left>
-      <x-m>-11.074</x-m>
-      <y-m> -0.366</y-m>
-      <z-m>  2.382</z-m>
-    </top-left>
-  </panel>
+  <animation>
+    <type>material</type>
+    <object-name>fuselage</object-name>
+    <object-name>caches</object-name>
+    <object-name>ailes</object-name>
+    <object-name>fuselage</object-name>
+    <object-name>derive</object-name>
+    <object-name>roueAG</object-name>
+    <object-name>roueAD</object-name>
+    <object-name>tempAB</object-name>
+    <object-name>tempAH</object-name>
+    <object-name>rotationH</object-name>
+    <object-name>articule01</object-name>
+    <object-name>articule02</object-name>
+    <object-name>porteA1</object-name>
+    <object-name>porteA2</object-name>
+    <object-name>roue1G</object-name>
+    <object-name>roue2G</object-name>
+    <object-name>porteroueG1</object-name>
+    <object-name>porteroueG2</object-name>
+    <object-name>tempG</object-name>
+    <object-name>tempHG</object-name>
+    <object-name>roue1D</object-name>
+    <object-name>roue2D</object-name>
+    <object-name>porteroueD1</object-name>
+    <object-name>porteroueD2</object-name>
+    <object-name>tempD</object-name>
+    <object-name>tempHD</object-name>
+    <object-name>aileronG</object-name>
+    <object-name>voletG1</object-name>
+    <object-name>voletG2</object-name>
+    <object-name>aileronD</object-name>
+    <object-name>voletD1</object-name>
+    <object-name>voletD2</object-name>
+    <object-name>aileronG</object-name>
+    <object-name>voletG1</object-name>
+    <object-name>reservoirs</object-name>
+    <object-name>porteA</object-name>
+    <object-name>antennes</object-name>
+    <object-name>porteBG</object-name>
+    <object-name>porteBD</object-name>
+    <object-name>baieB</object-name>
+    <object-name>baieH</object-name>
+    <object-name>profondeur</object-name>
+    <object-name>direction</object-name>
+    <object-name>moteurs</object-name>
+    <object-name>cables</object-name>
 
-  <!-- Tableau de bord --> 
-  <model>
-    <path>Aircraft/C130/Models/Panel1/panel.xml</path>
-    <offsets>
-      <x-m> -10.746 </x-m>
-      <y-m>   0.000 </y-m>
-      <z-m>   2.410 </z-m>
-    </offsets>
-  </model>
+    <property-base>sim/model/livery</property-base>
+    <texture-prop>texture</texture-prop>
+    <texture>texture.png</texture>
+<!--
+    <diffuse>
+      <red-prop>diffuse/red</red-prop>
+      <green-prop>diffuse/green</green-prop>
+      <blue-prop>diffuse/blue</blue-prop>
+    </diffuse>
 
-  <!-- Plafonnier --> 
+    <ambient>
+      <red-prop>ambient/red</red-prop>
+      <green-prop>ambient/green</green-prop>
+      <blue-prop>ambient/blue</blue-prop>
+    </ambient>
+-->
+    <specular>
+      <red-prop>specular/red</red-prop>
+      <green-prop>specular/green</green-prop>
+      <blue-prop>specular/blue</blue-prop>
+    </specular>
+
+    <emission>
+      <red-prop>emission/red</red-prop>
+      <green-prop>emission/green</green-prop>
+      <blue-prop>emission/blue</blue-prop>
+    </emission>
+<!--
+    <shininess>
+      <shininess-prop>shininess</shininess-prop>
+    </shininess>
+-->
+  </animation>
+
+  <!-- Intérieur -->
   <model>
-    <path>Aircraft/C130/Models/Panel2/panel.xml</path>
+    <path>Aircraft/C130/Models/Interior/interior.xml</path>
     <offsets>
-      <x-m> -10.433 </x-m>
-      <y-m>   0.000 </y-m>
-      <z-m>   3.603 </z-m>
+      <x-m> 0.0 </x-m>
+      <y-m> 0.0 </y-m>
+      <z-m> 0.0 </z-m>
     </offsets>
   </model>
 
