@@ -221,7 +221,6 @@
       <file>Aircraft/C130/Nasal/liveries.nas</file>
       <file>Aircraft/C130/Nasal/Electrical.nas</file>
       <file>Aircraft/Instruments-3d/RDR-160/RDR160.nas</file>
-      <file>Aircraft/C130/Nasal/gmeter.nas</file>
       <file>Aircraft/C130/Nasal/paratroopers.nas</file>
     </c130>
   </nasal>

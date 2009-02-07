@@ -23997,8 +23997,6 @@ OBJECT poly
 name "hublotBD"
 data 8
 hublotBD
-texture "glass.rgb"
-texrep 1 1
 crease 30.000000
 numvert 72
 3.605461 0.917033 -1.876177
