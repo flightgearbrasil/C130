@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
 
@@ -172,6 +172,59 @@
       <x-m> 0.0 </x-m>
       <y-m> 0.0 </y-m>
       <z-m> 0.0 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Particules OSG -->
+  <!-- Gauche extérieur -->
+  <model>
+    <path>Aircraft/C130/Models/effects/trail1.xml</path>
+    <offsets>
+      <x-m>  0.170 </x-m>
+      <y-m> -9.821 </y-m>
+      <z-m>  2.916 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Gauche intérieur -->
+  <model>
+    <path>Aircraft/C130/Models/effects/trail2.xml</path>
+    <offsets>
+      <x-m>  0.170 </x-m>
+      <y-m> -4.926 </y-m>
+      <z-m>  2.916 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Droit intérieur -->
+  <model>
+    <path>Aircraft/C130/Models/effects/trail3.xml</path>
+    <offsets>
+      <x-m> 0.170 </x-m>
+      <y-m> 4.926 </y-m>
+      <z-m> 2.916 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Droit extérieur -->
+  <model>
+    <path>Aircraft/C130/Models/effects/trail4.xml</path>
+    <offsets>
+      <x-m> 0.170 </x-m>
+      <y-m> 9.821 </y-m>
+      <z-m> 2.916 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
     </offsets>
   </model>
 
@@ -456,14 +509,8 @@
     <object-name>rotationH</object-name>
     <property>gear/gear[0]/position-norm</property>
     <interpolation>
-      <entry>
-        <ind> 0.0</ind>
-        <dep> 80.00</dep>
-      </entry>
-      <entry>
-        <ind> 1.0</ind>
-        <dep> 0.0</dep>
-      </entry>
+      <entry><ind> 0 </ind><dep> 80 </dep></entry>
+      <entry><ind> 1 </ind><dep>  0 </dep></entry>
     </interpolation>
     <center>
       <x-m> -9.509 </x-m>
@@ -484,14 +531,8 @@
     <object-name>tempG</object-name>
     <property>gear/gear[1]/position-norm</property>
     <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep> 1.00</dep>
-      </entry>
-      <entry>
-        <ind>1.0</ind>
-        <dep> 0.00</dep>
-      </entry>
+      <entry><ind> 0 </ind><dep> 1 </dep></entry>
+      <entry><ind> 1 </ind><dep> 0 </dep></entry>
     </interpolation>
     <axis>
       <x>  0.00 </x>
@@ -507,14 +548,8 @@
     <object-name>tempD</object-name>
     <property>gear/gear[2]/position-norm</property>
     <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep> 1.00</dep>
-      </entry>
-      <entry>
-        <ind>1.0</ind>
-        <dep> 0.00</dep>
-      </entry>
+      <entry><ind> 0 </ind><dep> 1 </dep></entry>
+      <entry><ind> 1 </ind><dep> 0 </dep></entry>
     </interpolation>
     <axis>
       <x>  0.00 </x>
@@ -529,22 +564,10 @@
     <object-name>porteA1</object-name>
     <property>gear/gear[0]/position-norm</property>
     <interpolation>
-      <entry>
-        <ind>  0.00 </ind>
-        <dep>  0.00 </dep>
-      </entry>
-      <entry>
-        <ind>   0.15 </ind>
-        <dep>  53.00 </dep>
-      </entry>
-      <entry>
-        <ind>   0.95 </ind>
-        <dep>  53.00 </dep>
-      </entry>
-      <entry>
-        <ind>  1.00 </ind>
-        <dep>  0.00 </dep>
-      </entry>
+      <entry><ind> 0.00 </ind><dep>  0 </dep></entry>
+      <entry><ind> 0.15 </ind><dep> 53 </dep></entry>
+      <entry><ind> 0.95 </ind><dep> 53 </dep></entry>
+      <entry><ind> 1.00 </ind><dep>  0 </dep></entry>
     </interpolation>
     <center>
       <x-m> -11.290 </x-m>
@@ -563,14 +586,8 @@
     <object-name>porteA2</object-name>
     <property>gear/gear[0]/position-norm</property>
     <interpolation>
-      <entry>
-        <ind>  0.000 </ind>
-        <dep> -1.195 </dep>
-      </entry>
-      <entry>
-        <ind> 1.000 </ind>
-        <dep> 0.000 </dep>
-      </entry>
+      <entry><ind> 0 </ind><dep> -1.195 </dep></entry>
+      <entry><ind> 1 </ind><dep>  0.000 </dep></entry>
     </interpolation>
     <axis>
       <x>  1.00 </x>
@@ -584,14 +601,8 @@
     <object-name>porteA2</object-name>
     <property>gear/gear[0]/position-norm</property>
     <interpolation>
-      <entry>
-        <ind>  0.000 </ind>
-        <dep>  0.158 </dep>
-      </entry>
-      <entry>
-        <ind> 1.000 </ind>
-        <dep> 0.000 </dep>
-      </entry>
+      <entry><ind> 0 </ind><dep> 0.158 </dep></entry>
+      <entry><ind> 1 </ind><dep> 0.000 </dep></entry>
     </interpolation>
     <axis>
       <x>  0.00 </x>
@@ -605,18 +616,9 @@
     <object-name>porteroueG1</object-name>
     <property>gear/gear[1]/position-norm</property>
     <interpolation>
-      <entry>
-        <ind>  0.00 </ind>
-        <dep> 51.20 </dep>
-      </entry>
-      <entry>
-        <ind> 0.1 </ind>
-        <dep> 0.0 </dep>
-      </entry>
-      <entry>
-        <ind> 1.0 </ind>
-        <dep> 0.0 </dep>
-      </entry>
+      <entry><ind> 0.0 </ind><dep> 51.20 </dep></entry>
+      <entry><ind> 0.1 </ind><dep>  0.00 </dep></entry>
+      <entry><ind> 1.0 </ind><dep>  0.00 </dep></entry>
     </interpolation>
     <center>
       <x-m>  0.000 </x-m>
@@ -635,18 +637,9 @@
     <object-name>porteroueG2</object-name>
     <property>gear/gear[1]/position-norm</property>
     <interpolation>
-      <entry>
-        <ind>   0.00 </ind>
-        <dep>  90.00 </dep>
-      </entry>
-      <entry>
-        <ind> 0.1 </ind>
-        <dep> 0.0 </dep>
-      </entry>
-      <entry>
-        <ind> 1.0 </ind>
-        <dep> 0.0 </dep>
-      </entry>
+      <entry><ind> 0.0 </ind><dep> 90 </dep></entry>
+      <entry><ind> 0.1 </ind><dep>  0 </dep></entry>
+      <entry><ind> 1.0 </ind><dep>  0 </dep></entry>
     </interpolation>
     <center>
       <x-m>  0.000 </x-m>
@@ -665,18 +658,9 @@
     <object-name>porteroueD1</object-name>
     <property>gear/gear[2]/position-norm</property>
     <interpolation>
-      <entry>
-        <ind>  0.00 </ind>
-        <dep> 51.20 </dep>
-      </entry>
-      <entry>
-        <ind> 0.1 </ind>
-        <dep> 0.0 </dep>
-      </entry>
-      <entry>
-        <ind> 1.0 </ind>
-        <dep> 0.0 </dep>
-      </entry>
+      <entry><ind> 0.0 </ind><dep> 51.20 </dep></entry>
+      <entry><ind> 0.1 </ind><dep>  0.00 </dep></entry>
+      <entry><ind> 1.0 </ind><dep>  0.00 </dep></entry>
     </interpolation>
     <center>
       <x-m>  0.000 </x-m>
@@ -695,18 +679,9 @@
     <object-name>porteroueD2</object-name>
     <property>gear/gear[2]/position-norm</property>
     <interpolation>
-      <entry>
-        <ind>  0.00 </ind>
-        <dep> 90.00 </dep>
-      </entry>
-      <entry>
-        <ind> 0.1 </ind>
-        <dep> 0.0 </dep>
-      </entry>
-      <entry>
-        <ind> 1.0 </ind>
-        <dep> 0.0 </dep>
-      </entry>
+      <entry><ind> 0.0 </ind><dep> 90 </dep></entry>
+      <entry><ind> 0.1 </ind><dep>  0 </dep></entry>
+      <entry><ind> 1.0 </ind><dep>  0 </dep></entry>
     </interpolation>
     <center>
       <x-m>  0.000 </x-m>
@@ -729,14 +704,8 @@
     <object-name>articule01</object-name>
     <property>gear/gear[0]/compression-norm</property>
     <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>1.00</ind>
-        <dep>0.49</dep>
-      </entry>
+      <entry><ind> 0 </ind><dep> 0.00 </dep></entry>
+      <entry><ind> 1 </ind><dep> 0.49 </dep></entry>
     </interpolation>
     <axis>
       <x>0</x>
@@ -750,14 +719,8 @@
     <object-name>articule01</object-name>
     <property>gear/gear[0]/compression-norm</property>
     <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>  1.000</ind>
-        <dep>-41.801</dep>
-      </entry>
+      <entry><ind> 0 </ind><dep>   0.000 </dep></entry>
+      <entry><ind> 1 </ind><dep> -41.801 </dep></entry>
     </interpolation>
     <center>
       <x-m> -9.641 </x-m>
@@ -776,14 +739,8 @@
     <object-name>articule02</object-name>
     <property>gear/gear[0]/compression-norm</property>
     <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind> 1.00</ind>
-        <dep>42.40</dep>
-      </entry>
+      <entry><ind> 0 </ind><dep>  0.00 </dep></entry>
+      <entry><ind> 1 </ind><dep> 42.40 </dep></entry>
     </interpolation>
     <center>
       <x-m> -9.659 </x-m>
@@ -804,14 +761,8 @@
     <object-name>tempG</object-name>
     <property>gear/gear[1]/compression-norm</property>
     <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>1.00</ind>
-        <dep>0.49</dep>
-      </entry>
+      <entry><ind> 0 </ind><dep> 0.00 </dep></entry>
+      <entry><ind> 1 </ind><dep> 0.49 </dep></entry>
     </interpolation>
     <axis>
       <x>0</x>
@@ -827,14 +778,8 @@
     <object-name>tempD</object-name>
     <property>gear/gear[2]/compression-norm</property>
     <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>1.00</ind>
-        <dep>0.49</dep>
-      </entry>
+      <entry><ind> 0 </ind><dep> 0.00 </dep></entry>
+      <entry><ind> 1 </ind><dep> 0.49 </dep></entry>
     </interpolation>
     <axis>
       <x>0</x>
@@ -1031,18 +976,9 @@
     <object-name>hublotBG</object-name>
     <property>instrumentation/doors/passenger/position-norm</property>
     <interpolation>
-      <entry>
-        <ind> 0.0 </ind>
-        <dep> 0.0 </dep>
-      </entry>
-      <entry>
-        <ind> 0.2 </ind>
-        <dep> 0.05 </dep>
-      </entry>
-      <entry>
-        <ind> 1.0 </ind>
-        <dep> 0.05 </dep>
-      </entry>
+      <entry><ind> 0.0 </ind><dep> 0.00 </dep></entry>
+      <entry><ind> 0.2 </ind><dep> 0.05 </dep></entry>
+      <entry><ind> 1.0 </ind><dep> 0.05 </dep></entry>
     </interpolation>
     <axis>
       <x> 0.000 </x>
@@ -1057,18 +993,9 @@
     <object-name>hublotBG</object-name>
     <property>instrumentation/doors/passenger/position-norm</property>
     <interpolation>
-      <entry>
-        <ind> 0.0 </ind>
-        <dep> 0.0 </dep>
-      </entry>
-      <entry>
-        <ind> 0.2 </ind>
-        <dep> 0.0 </dep>
-      </entry>
-      <entry>
-        <ind>  1.0 </ind>
-        <dep> 40.0 </dep>
-      </entry>
+      <entry><ind> 0.0 </ind><dep>  0 </dep></entry>
+      <entry><ind> 0.2 </ind><dep>  0 </dep></entry>
+      <entry><ind> 1.0 </ind><dep> 40 </dep></entry>
     </interpolation>
     <center>
       <x-m> 3.615 </x-m>
@@ -1089,18 +1016,9 @@
     <object-name>hublotBD</object-name>
     <property>instrumentation/doors/passenger/position-norm</property>
     <interpolation>
-      <entry>
-        <ind> 0.0 </ind>
-        <dep> 0.0 </dep>
-      </entry>
-      <entry>
-        <ind> 0.2 </ind>
-        <dep> 0.05 </dep>
-      </entry>
-      <entry>
-        <ind> 1.0 </ind>
-        <dep> 0.05 </dep>
-      </entry>
+      <entry><ind> 0.0 </ind><dep> 0.00 </dep></entry>
+      <entry><ind> 0.2 </ind><dep> 0.05 </dep></entry>
+      <entry><ind> 1.0 </ind><dep> 0.05 </dep></entry>
     </interpolation>
     <axis>
       <x>  0.000 </x>
@@ -1115,18 +1033,9 @@
     <object-name>hublotBD</object-name>
     <property>instrumentation/doors/passenger/position-norm</property>
     <interpolation>
-      <entry>
-        <ind> 0.0 </ind>
-        <dep> 0.0 </dep>
-      </entry>
-      <entry>
-        <ind> 0.2 </ind>
-        <dep> 0.0 </dep>
-      </entry>
-      <entry>
-        <ind>  1.0 </ind>
-        <dep> 40.0 </dep>
-      </entry>
+      <entry><ind> 0.0 </ind><dep>  0 </dep></entry>
+      <entry><ind> 0.2 </ind><dep>  0 </dep></entry>
+      <entry><ind> 1.0 </ind><dep> 40 </dep></entry>
     </interpolation>
     <center>
       <x-m> 3.615 </x-m>

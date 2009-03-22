@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
 
@@ -113,10 +113,12 @@
         <generator>0</generator>
       </engine>
     </electric>
+
     <gear>
       <brake-parking>1.0</brake-parking>
       <gear-down>true</gear-down>
     </gear>
+
     <lighting>
       <instruments-norm>0.8</instruments-norm>
       <landing-lights type="bool">0</landing-lights>
@@ -126,25 +128,29 @@
       <cabin-lights type="bool">0</cabin-lights>
       <wing-lights type="bool">0</wing-lights>
       <taxi-light type="bool">0</taxi-light>
-    <instrument-lights type="bool">0</instrument-lights>
+      <instrument-lights type="bool">0</instrument-lights>
     </lighting>
+
     <anti-ice>
       <prop-heat>0</prop-heat>
       <pitot-heat>0</pitot-heat>
     </anti-ice>
+
     <cabin>
       <fan type="bool">0</fan>
       <heat type="bool">0</heat>
     </cabin>
 
-    <smoke type="bool">false</smoke>
+    <smoke type="bool">true</smoke>
     <signal type="bool">true</signal>
     <paratroopers type="bool">true</paratroopers>
     <jump-signal type="bool">false</jump-signal>
     <negGtime type="int">0</negGtime>
+
     <gmeter>
       <reset type="int">1</reset>
     </gmeter>
+
     <flight>
       <elevator-trim type="double">0.1</elevator-trim>
     </flight>

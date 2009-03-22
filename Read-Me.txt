@@ -9,7 +9,7 @@ A little history
 
 
 C130 Hercules
-==================
+=============
 
 Manufacturer                  : Lockheed
 Type                          : Transport

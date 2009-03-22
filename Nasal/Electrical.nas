@@ -11,8 +11,10 @@ var OutPuts = "systems/electrical/outputs/";
 var Volts = props.globals.getNode("/systems/electrical/volts",1);
 var Amps = props.globals.getNode("/systems/electrical/amps",1);
 var BATT = props.globals.getNode("/controls/electric/battery-switch",1);
-var L_ALT = props.globals.getNode("/controls/electric/engine[0]/generator",1);
-var R_ALT = props.globals.getNode("/controls/electric/engine[1]/generator",1);
+var L1_ALT = props.globals.getNode("/controls/electric/engine[0]/generator",1);
+var L2_ALT = props.globals.getNode("/controls/electric/engine[1]/generator",1);
+var R1_ALT = props.globals.getNode("/controls/electric/engine[2]/generator",1);
+var R2_ALT = props.globals.getNode("/controls/electric/engine[3]/generator",1);
 var EXT  = props.globals.getNode("/controls/electric/external-power",1); 
 
 #var battery = Battery.new(volts,amps,amp_hours,charge_percent,charge_amps);
@@ -94,6 +96,8 @@ var battery = Battery.new(24,30,12,1.0,7.0);
 
 alternator1 = Alternator.new("/engines/engine[0]/rpm",500.0,28.0,60.0);
 alternator2 = Alternator.new("/engines/engine[1]/rpm",500.0,28.0,60.0);
+alternator3 = Alternator.new("/engines/engine[2]/rpm",500.0,28.0,60.0);
+alternator4 = Alternator.new("/engines/engine[3]/rpm",500.0,28.0,60.0);
 
 var strobe_switch = props.globals.getNode("controls/lighting/strobe", 1);
 aircraft.light.new("/controls/lighting/strobe-state", [0.05, 1.30], strobe_switch);
@@ -111,8 +115,12 @@ var update_virtual_bus = func( dt ) {
     var PWR = props.globals.getNode("systems/electrical/serviceable",1).getBoolValue();
     var engine0_state = props.globals.getNode("/engines/engine[0]/running").getBoolValue();
     var engine1_state = props.globals.getNode("/engines/engine[1]/running").getBoolValue();
+    var engine2_state = props.globals.getNode("/engines/engine[2]/running").getBoolValue();
+    var engine3_state = props.globals.getNode("/engines/engine[3]/running").getBoolValue();
     var alternator1_volts = 0.0;
     var alternator2_volts = 0.0;
+    var alternator3_volts = 0.0;
+    var alternator4_volts = 0.0;
     battery_volts = battery.get_output_volts();
     
     if (engine0_state)alternator1_volts = alternator1.get_output_volts();
@@ -120,6 +128,12 @@ var update_virtual_bus = func( dt ) {
 
     if (engine1_state)alternator2_volts = alternator2.get_output_volts();
     props.globals.getNode("/engines/engine[1]/amp-v",1).setValue(alternator2_volts);
+
+    if (engine2_state)alternator3_volts = alternator3.get_output_volts();
+    props.globals.getNode("/engines/engine[1]/amp-v",1).setValue(alternator3_volts);
+
+    if (engine3_state)alternator4_volts = alternator4.get_output_volts();
+    props.globals.getNode("/engines/engine[1]/amp-v",1).setValue(alternator4_volts);
 
     external_volts = 0.0;
     load = 0.0;
@@ -130,13 +144,21 @@ var update_virtual_bus = func( dt ) {
         bus_volts = battery_volts * PWR;
         power_source = "battery";
         }
-   if ( L_ALT.getBoolValue() and (alternator1_volts > bus_volts) ) {
+   if ( L1_ALT.getBoolValue() and (alternator1_volts > bus_volts) ) {
         bus_volts = alternator1_volts * PWR;
         power_source = "alternator1";
         }
-    if ( R_ALT.getBoolValue() and (alternator2_volts > bus_volts) ) {
+   if ( L2_ALT.getBoolValue() and (alternator1_volts > bus_volts) ) {
         bus_volts = alternator2_volts * PWR;
         power_source = "alternator2";
+        }
+    if ( R1_ALT.getBoolValue() and (alternator3_volts > bus_volts) ) {
+        bus_volts = alternator3_volts * PWR;
+        power_source = "alternator3";
+        }
+    if ( R2_ALT.getBoolValue() and (alternator4_volts > bus_volts) ) {
+        bus_volts = alternator4_volts * PWR;
+        power_source = "alternator4";
         }
     if ( EXT.getBoolValue() and ( external_volts > bus_volts) ) {
         bus_volts = external_volts * PWR;
@@ -172,15 +194,21 @@ var electrical_bus = func(){
     bus_volts = arg[0]; 
     load = 0.0;
     var starter_switch = props.globals.getNode("/controls/engines/engine[0]/starter").getBoolValue();
-    var starter_switch1 = props.globals.getNode("/controls/engines/engine[1]/starter").getBoolValue(); 
+    var starter_switch1 = props.globals.getNode("/controls/engines/engine[1]/starter").getBoolValue();
+    var starter_switch2 = props.globals.getNode("/controls/engines/engine[2]/starter").getBoolValue(); 
+    var starter_switch3 = props.globals.getNode("/controls/engines/engine[3]/starter").getBoolValue(); 
     var starter_volts = bus_volts * starter_switch;
     starter_volts = bus_volts * starter_switch1;
     setprop(OutPuts~"starter",starter_volts); 
     load += getprop(OutPuts~"starter") * 0.1;
     var f_pump0 = getprop("/controls/engines/engine[0]/fuel-pump");
     var f_pump1 = getprop("/controls/engines/engine[1]/fuel-pump");
+    var f_pump2 = getprop("/controls/engines/engine[2]/fuel-pump");
+    var f_pump3 = getprop("/controls/engines/engine[3]/fuel-pump");
     setprop(OutPuts~"fuel-pump",bus_volts * f_pump0); 
     setprop(OutPuts~"fuel-pump",bus_volts * f_pump1); 
+    setprop(OutPuts~"fuel-pump",bus_volts * f_pump2); 
+    setprop(OutPuts~"fuel-pump",bus_volts * f_pump3); 
     load += getprop(OutPuts~"fuel-pump") * 0.02;
     setprop(OutPuts~"pitot-heat",bus_volts * getprop("/controls/anti-ice/pitot-heat")); 
     setprop(OutPuts~"landing-lights",bus_volts * getprop("/controls/lighting/landing-lights")); 
