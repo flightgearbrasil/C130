@@ -39,8 +39,12 @@
   <animation>
     <type>rotate</type>
     <object-name>needle</object-name>
-    <property>consumables/fuel/tank[0]/level-lbs</property>
-    <factor>0.09</factor>
+    <property>/engines/engine[0]/fuel-flow-gph</property>
+    <interpolation>
+      <entry><ind>    0 </ind><dep>  90 </dep></entry>
+      <entry><ind>  200 </ind><dep> 230 </dep></entry>
+      <entry><ind> 1200 </ind><dep> 420 </dep></entry>
+    </interpolation>
     <center>
       <x-m> 0.02 </x-m>
       <y-m> 0.00 </y-m>
