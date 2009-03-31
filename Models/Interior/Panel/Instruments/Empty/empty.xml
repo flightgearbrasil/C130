@@ -1,7 +1,39 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
+
 <PropertyList>
 
- <path>empty.ac</path>
+  <path>empty.ac</path>
+
+  <animation>
+    <object-name>fond</object-name>
+    <object-name>face</object-name>
+
+    <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>shader.png</texture>
+    <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>face</object-name>
+    <emission>
+      <red>   0.8 </red>
+      <green> 0.7 </green>
+      <blue>  0.5 </blue>
+      <factor-prop>/controls/lighting/instruments-norm</factor-prop>
+    </emission>
+  </animation>
+
 
 </PropertyList>
 

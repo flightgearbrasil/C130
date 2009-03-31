@@ -2,12 +2,12 @@
 
 <PropertyList>
 
- <path>speed.ac</path>
+  <path>speed.ac</path>
 
   <animation>
     <object-name>fond</object-name>
-    <object-name>ball</object-name>
-    <object-name>Needle1</object-name>
+    <object-name>face</object-name>
+    <object-name>needle</object-name>
 
     <object-name>vitre</object-name>
   </animation>
@@ -26,25 +26,25 @@
 
   <animation>
     <type>material</type>
-    <object-name>ball</object-name>
-    <object-name>Needle1</object-name>
+    <object-name>face</object-name>
+    <object-name>needle</object-name>
     <emission>
-      <red>   0.6 </red>
-      <green> 0.3 </green>
-      <blue>  0.3 </blue>
+      <red>   0.8 </red>
+      <green> 0.7 </green>
+      <blue>  0.5 </blue>
       <factor-prop>/controls/lighting/instruments-norm</factor-prop>
-    </emission> 
-  </animation>    
+    </emission>
+  </animation>
 
   <animation>
     <type>rotate</type>
-    <object-name>Needle1</object-name>
+    <object-name>needle</object-name>
     <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
     <interpolation>
       <entry><ind>   0.00 </ind><dep>   0 </dep></entry>
       <entry><ind>  86.95 </ind><dep>  26 </dep></entry>
       <entry><ind> 608.69 </ind><dep> 334 </dep></entry>
-    </interpolation>
+    </interpolation>   
     <axis>
       <x> -1 </x>
       <y>  0 </y>

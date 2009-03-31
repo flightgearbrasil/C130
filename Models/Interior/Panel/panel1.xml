@@ -37,7 +37,7 @@
   <model>
     <path>Aircraft/C130/Models/Interior/Panel/Instruments/clock/clock.xml</path>
     <offsets>
-      <x-m> -0.334 </x-m>
+      <x-m> -0.332 </x-m>
       <y-m> -0.600 </y-m>
       <z-m>  0.259 </z-m>
     </offsets>
@@ -46,7 +46,7 @@
   <model>
     <path>Aircraft/C130/Models/Interior/Panel/Instruments/clock/clock.xml</path>
     <offsets>
-      <x-m> -0.334 </x-m>
+      <x-m> -0.332 </x-m>
       <y-m>  0.628 </y-m>
       <z-m>  0.036 </z-m>
     </offsets>
