@@ -15,6 +15,9 @@
       <electrical>
         <path></path>
       </electrical>
+      <refuel>
+        <type>boom</type>
+      </refuel>
     </systems> 
 
     <sound>
@@ -229,6 +232,9 @@
       <file>Aircraft/Instruments-3d/RDR-160/RDR160.nas</file>
       <file>Aircraft/C130/Nasal/paratroopers.nas</file>
     </c130>
+    <aar>
+      <file>Aircraft/Generic/aar.nas</file>
+    </aar>
   </nasal>
 
 </PropertyList>
