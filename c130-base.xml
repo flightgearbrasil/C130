@@ -11,15 +11,6 @@
       <splash-texture>Aircraft/C130/c130-splash.png</splash-texture>
     </startup>
 
-    <systems>
-      <electrical>
-        <path></path>
-      </electrical>
-      <refuel>
-        <type>boom</type>
-      </refuel>
-    </systems> 
-
     <sound>
       <audible>true</audible>
       <path>Aircraft/C130/Sounds/c130-sound.xml</path>
@@ -84,6 +75,15 @@
     <menubar include="Dialogs/c130-menu.xml"/>
 
   </sim>
+
+  <systems>
+    <electrical>
+      <path></path>
+    </electrical>
+    <refuel>
+      <type>boom</type>
+    </refuel>
+  </systems> 
 
   <!-- engines on, low pitch (parking) -->
   <controls>
