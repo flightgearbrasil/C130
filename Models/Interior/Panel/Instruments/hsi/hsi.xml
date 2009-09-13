@@ -7,7 +7,8 @@
   <animation>
     <!-- Objets opaques -->
     <object-name>fond</object-name>
-    <object-name>buttons</object-name>
+    <object-name>buttonCRS</object-name>
+    <object-name>buttonHDG</object-name>
     <object-name>back</object-name>
     <object-name>cmpscard</object-name>
     <object-name>crs01</object-name>
@@ -22,6 +23,8 @@
     <object-name>bearing-bug</object-name>
     <object-name>heading-bug</object-name>
     <object-name>GSpointer</object-name>
+    <object-name>cache</object-name>
+    <object-name>off-flag</object-name>
 
     <!-- Objets transparents -->
     <object-name>vitre</object-name>
@@ -54,6 +57,8 @@
     <object-name>bearing-bug</object-name>
     <object-name>heading-bug</object-name>
     <object-name>GSpointer</object-name>
+    <object-name>cache</object-name>
+    <object-name>off-flag</object-name>
     <emission>
       <red>   0.8 </red>
       <green> 0.7 </green>
@@ -62,11 +67,12 @@
     </emission>
   </animation>
 
-  <!-- DME Readout -->
+  <!-- tacan distance digital display -->
   <animation>
     <type>textranslate</type>
     <object-name>dist01</object-name>
-    <property>/instrumentation/navcomputer/indicated-distance-nm</property>
+    <property>instrumentation/tacan/indicated-distance-nm</property>
+    <!-- <property>/instrumentation/navcomputer/indicated-distance-nm</property> -->
     <factor>0.001</factor>
     <step>100</step>
     <axis>
@@ -79,7 +85,8 @@
   <animation>
     <type>textranslate</type>
     <object-name>dist02</object-name>
-    <property>/instrumentation/navcomputer/indicated-distance-nm</property>
+    <property>instrumentation/tacan/indicated-distance-nm</property>
+    <!-- <property>/instrumentation/navcomputer/indicated-distance-nm</property> -->
     <factor>0.01</factor>
     <step>10</step>
     <axis>
@@ -92,7 +99,8 @@
   <animation>
     <type>textranslate</type>
     <object-name>dist03</object-name>
-    <property>/instrumentation/navcomputer/indicated-distance-nm</property>
+    <property>instrumentation/tacan/indicated-distance-nm</property>
+    <!-- <property>/instrumentation/navcomputer/indicated-distance-nm</property> -->
     <factor>0.1</factor>
     <step>1</step>
     <axis>
@@ -105,13 +113,14 @@
   <animation>
     <type>textranslate</type>
     <object-name>dist04</object-name>
-    <property>/instrumentation/navcomputer/indicated-distance-nm</property>
+    <property>instrumentation/tacan/indicated-distance-nm</property>
+    <!-- <property>/instrumentation/navcomputer/indicated-distance-nm</property> -->
     <factor>1</factor>
     <step>0.1</step>
     <axis>
-      <x>0</x>
-      <y>1</y>
-      <z>0</z>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
     </axis>
   </animation>
  
@@ -119,7 +128,8 @@
   <animation>
     <type>textranslate</type>
     <object-name>crs01</object-name>
-    <property>/instrumentation/nav/radials/selected-deg</property>
+    <property>instrumentation/nav[1]/radials/selected-deg</property>
+    <!-- <property>/instrumentation/nav/radials/selected-deg</property> -->
     <factor>0.001</factor>
     <step>100</step>
     <axis>
@@ -132,7 +142,8 @@
   <animation>
     <type>textranslate</type>
     <object-name>crs02</object-name>
-    <property>/instrumentation/nav/radials/selected-deg</property>
+    <property>instrumentation/nav[1]/radials/selected-deg</property>
+    <!-- <property>/instrumentation/nav/radials/selected-deg</property> -->
     <factor>0.01</factor>
     <step>10</step>
     <axis>
@@ -145,7 +156,8 @@
   <animation>
     <type>textranslate</type>
     <object-name>crs03</object-name>
-    <property>/instrumentation/nav/radials/selected-deg</property>
+    <property>instrumentation/nav[1]/radials/selected-deg</property>
+    <!-- <property>/instrumentation/nav/radials/selected-deg</property> -->
     <factor>0.1</factor>
     <step>1</step>
     <axis>
@@ -158,7 +170,14 @@
   <animation>
     <type>rotate</type>
     <object-name>cmpscard</object-name>
-    <property>/orientation/heading-magnetic-deg[0]</property>
+    <condition>
+      <greater-than>
+        <property>systems/electrical/outputs/hsi</property>
+        <value>24</value>
+      </greater-than>
+    </condition>
+    <property>instrumentation/heading-indicator-fg/indicated-heading-deg</property>
+    <!-- <property>/orientation/heading-magnetic-deg[0]</property> -->
     <axis>
       <x> 1 </x>
       <y> 0 </y>
@@ -188,7 +207,14 @@
   <animation>
     <type>rotate</type>
     <object-name>heading-bug</object-name>
-    <property>/autopilot/settings/heading-bug-deg</property>
+    <condition>
+      <greater-than>
+        <property>systems/electrical/outputs/hsi</property>
+        <value>24</value>
+      </greater-than>
+    </condition>
+    <property>instrumentation/heading-indicator-fg/indicated-heading-deg</property>
+    <!-- <property>/autopilot/settings/heading-bug-deg</property> -->
     <axis>
       <x> -1 </x>
       <y>  0 </y>
@@ -199,12 +225,47 @@
   <animation>
     <type>rotate</type>
     <object-name>bearing-bug</object-name>
-    <property>/instrumentation/navcomputer/indicated-bearing</property>
+    <condition>
+      <greater-than>
+        <property>systems/electrical/outputs/hsi</property>
+        <value>24</value>
+      </greater-than>
+    </condition>
+    <!-- <property>/instrumentation/navcomputer/indicated-bearing</property> -->
+    <property>/autopilot/settings/heading-bug-deg</property>
     <axis>
       <x> -1 </x>
       <y>  0 </y>
       <z>  0 </z>
     </axis>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>cache</object-name>
+    <condition>
+      <or>
+        <equals>
+          <property>instrumentation/tacan/in-range</property>
+          <value>false</value>
+        </equals>
+        <equals>
+          <property>instrumentation/tacan/switch-position</property>
+          <value>0</value>
+        </equals>
+      </or>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>off-flag</object-name>
+    <condition>
+      <less-than>
+        <property>systems/electrical/outputs/hsi</property>
+        <value>24</value>
+      </less-than>
+    </condition>
   </animation>
 
   <animation>
@@ -225,9 +286,9 @@
     <property>/instrumentation/nav/heading-needle-deflection</property>
     <factor>0.002</factor>
     <axis>
-      <x>0</x>
-      <y>1.0</y>
-      <z>0.0</z>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
     </axis>
   </animation>
 
@@ -240,6 +301,8 @@
       <entry><ind>9</ind><dep>0.03</dep></entry>
     </interpolation>
     <axis>
+      <x> 0 </x>
+      <y> 0 </y>
       <z> 1 </z>
     </axis>
   </animation>
@@ -250,6 +313,38 @@
     <condition>
       <property>/instrumentation/nav/has-gs</property>
     </condition>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>buttonCRS</object-name>
+    <property>instrumentation/nav[1]/radials/selected-deg</property>
+    <center>
+      <x-m>  0.007 </x-m>
+      <y-m> -0.048 </y-m>
+      <z-m> -0.050 </z-m>
+    </center>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+   <type>rotate</type>
+   <object-name>buttonHDG</object-name>
+   <property>instrumentation/heading-indicator-fg/offset-deg</property>
+   <center>
+      <x-m>  0.007 </x-m>
+      <y-m> -0.048 </y-m>
+      <z-m> -0.050 </z-m>
+   </center>
+   <axis>
+     <x> -1 </x>
+     <y>  0 </y>
+     <z>  0 </z>
+   </axis>
   </animation>
 
 </PropertyList>

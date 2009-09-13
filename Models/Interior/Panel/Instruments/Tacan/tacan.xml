@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>tacan.ac</path>
+
+  <animation>
+    <object-name>fond</object-name>
+    <object-name>test-lamp</object-name>
+    <object-name>visses</object-name>
+    <object-name>vol-knob</object-name>
+    <object-name>test-button</object-name>
+    <object-name>tenth-knob</object-name>
+    <object-name>xy-knob</object-name>
+    <object-name>unit-knob</object-name>
+    <object-name>select-knob</object-name>
+    <object-name>drum-1</object-name>
+    <object-name>drum-2</object-name>
+    <object-name>drum-3</object-name>
+    <object-name>x-sign</object-name>
+    <object-name>y-sign</object-name>
+
+    <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>shader.png</texture>
+    <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>drum-1</object-name>
+    <object-name>drum-2</object-name>
+    <object-name>drum-3</object-name>
+    <object-name>x-sign</object-name>
+    <object-name>y-sign</object-name>
+    <object-name>vol-knob</object-name>
+    <object-name>test-button</object-name>
+    <object-name>tenth-knob</object-name>
+    <object-name>xy-knob</object-name>
+    <object-name>unit-knob</object-name>
+    <object-name>select-knob</object-name>
+    <emission>
+      <red>   0.8 </red>
+      <green> 0.7 </green>
+      <blue>  0.5 </blue>
+      <factor-prop>/controls/lighting/instruments-norm</factor-prop>
+    </emission>
+  </animation>
+
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>drum-1</object-name>
+    <property>instrumentation/tacan/frequencies/selected-channel[1]</property>
+    <factor>0.1</factor>
+    <offset>-1</offset>
+    <center>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>drum-2</object-name>
+    <property>instrumentation/tacan/frequencies/selected-channel[2]</property>
+    <factor>0.1</factor>
+    <offset>-1</offset>
+    <center>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>drum-3</object-name>
+    <property>instrumentation/tacan/frequencies/selected-channel[3]</property>
+    <factor>0.1</factor>
+    <offset>-1</offset>
+    <center>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>y-sign</object-name>
+    <condition>
+      <equals>
+        <property>instrumentation/tacan/frequencies/selected-channel[4]</property>
+        <value>Y</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>x-sign</object-name>
+    <condition>
+      <equals>
+        <property>instrumentation/tacan/frequencies/selected-channel[4]</property>
+        <value>X</value>
+      </equals>
+    </condition>
+  </animation>
+
+</PropertyList>

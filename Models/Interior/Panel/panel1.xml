@@ -4,6 +4,16 @@
 
   <path>panel1.ac</path>
 
+  <!-- Tacan -->
+  <model>
+   <path>Aircraft/C130/Models/Interior/Panel/Instruments/Tacan/tacan.xml</path>
+    <offsets>
+      <x-m> -0.280 </x-m>
+      <y-m> -0.180 </y-m>
+      <z-m> -0.183 </z-m>
+    </offsets>
+  </model>
+
   <!-- Altimètre -->
   <model>
    <path>Aircraft/C130/Models/Interior/Panel/Instruments/altimeter/altimeter.xml</path>
