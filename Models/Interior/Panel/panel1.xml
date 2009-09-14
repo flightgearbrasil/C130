@@ -8,9 +8,12 @@
   <model>
    <path>Aircraft/C130/Models/Interior/Panel/Instruments/Tacan/tacan.xml</path>
     <offsets>
-      <x-m> -0.280 </x-m>
-      <y-m> -0.180 </y-m>
-      <z-m> -0.183 </z-m>
+      <x-m> -0.333 </x-m>
+      <y-m> -0.258 </y-m>
+      <z-m>  0.056 </z-m>
+      <roll-deg>     0.0 </roll-deg>
+      <pitch-deg>   90.0 </pitch-deg>
+      <heading-deg>  0.0 </heading-deg>
     </offsets>
   </model>
 
@@ -145,7 +148,7 @@
     <offsets>
       <x-m> -0.335 </x-m>
       <y-m> -0.286 </y-m>
-      <z-m> -0.088 </z-m>
+      <z-m> -0.098 </z-m>
     </offsets>
   </model>
 
