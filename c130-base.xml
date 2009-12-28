@@ -231,6 +231,7 @@
       <file>Aircraft/C130/Nasal/Electrical.nas</file>
       <file>Aircraft/Instruments-3d/RDR-160/RDR160.nas</file>
       <file>Aircraft/C130/Nasal/paratroopers.nas</file>
+      <file>Aircraft/C130/Nasal/light.nas</file>
     </c130>
     <aar>
       <file>Aircraft/Generic/aar.nas</file>

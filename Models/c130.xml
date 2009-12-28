@@ -165,6 +165,23 @@
 -->
   </animation>
 
+  <!-- Une ombre pour OSG -->
+  <model>
+    <name>shadowOSG</name>
+    <path>Aircraft/C130/Models/shadow.xml</path>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>shadowOSG</object-name>
+    <condition>
+      <equals>
+        <property>sim[0]/rendering/shadows-ai</property>
+        <value>true</value>
+      </equals>
+    </condition>
+  </animation>
+
   <!-- Intérieur -->
   <model>
     <path>Aircraft/C130/Models/Interior/interior.xml</path>
@@ -1066,5 +1083,51 @@
       <z> 0.000 </z>
     </axis>
   </animation>
+
+  <!-- Ajout des effets lumineux -->
+  <model>
+    <path>Aircraft/C130/Models/light/beacon.xml</path>
+    <offsets>
+      <x-m> 12.588 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> 11.168 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/C130/Models/light/RedLight.xml</path>
+    <offsets>
+      <x-m>  -0.235 </x-m>
+      <y-m> -20.146 </y-m>
+      <z-m>   4.208 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/C130/Models/light/GreenLight.xml</path>
+    <offsets>
+      <x-m> -0.235 </x-m>
+      <y-m> 20.146 </y-m>
+      <z-m>  4.208 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/C130/Models/light/StrobeWhite.xml</path>
+    <offsets>
+      <x-m>  -0.135 </x-m>
+      <y-m> -20.146 </y-m>
+      <z-m>   4.208 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/C130/Models/light/StrobeWhite.xml</path>
+    <offsets>
+      <x-m> -0.135 </x-m>
+      <y-m> 20.146 </y-m>
+      <z-m>  4.208 </z-m>
+    </offsets>
+  </model>
 
 </PropertyList>
