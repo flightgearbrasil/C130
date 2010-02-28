@@ -139,15 +139,15 @@
              mass="3014" 
              moment="110" 
              radius="2.8" 
-             cruise-speed="292" 
+             cruise-speed="300" 
              cruise-rpm="920" 
-             cruise-power="1800" 
+             cruise-power="4500" 
              cruise-alt="25000" 
              min-rpm="220" 
              max-rpm="1020"> 
              <actionpt x="3.764" y="9.821" z="3.622"/>
              <control-input axis="/controls/engines/engine[0]/propeller-pitch" control="ADVANCE"/>
-             <turbine-engine eng-power="4591" 
+             <turbine-engine eng-power="5565" 
                              eng-rpm="1020" 
                              alt="28000" 
                              flat-rating="4150" 
@@ -165,15 +165,15 @@
              mass="3014" 
              moment="110" 
              radius="2.8" 
-             cruise-speed="292" 
+             cruise-speed="300" 
              cruise-rpm="920" 
-             cruise-power="1800" 
+             cruise-power="4500" 
              cruise-alt="25000" 
              min-rpm="220" 
              max-rpm="1020"> 
              <actionpt x="3.764" y="4.926" z="3.622"/>
              <control-input axis="/controls/engines/engine[1]/propeller-pitch" control="ADVANCE"/>
-             <turbine-engine eng-power="4591" 
+             <turbine-engine eng-power="5565" 
                              eng-rpm="1020" 
                              alt="28000" 
                              flat-rating="4150" 
@@ -191,15 +191,15 @@
              mass="3014" 
              moment="110" 
              radius="2.8" 
-             cruise-speed="292" 
+             cruise-speed="300" 
              cruise-rpm="920" 
-             cruise-power="1800" 
+             cruise-power="4500" 
              cruise-alt="25000" 
              min-rpm="220" 
              max-rpm="1020"> 
              <actionpt x="3.764" y="-4.926" z="3.622"/>
              <control-input axis="/controls/engines/engine[2]/propeller-pitch" control="ADVANCE"/>
-             <turbine-engine eng-power="4591" 
+             <turbine-engine eng-power="5565" 
                              eng-rpm="1020" 
                              alt="28000" 
                              flat-rating="4150" 
@@ -217,9 +217,9 @@
              mass="3014" 
              moment="110" 
              radius="2.8" 
-             cruise-speed="292" 
+             cruise-speed="300" 
              cruise-rpm="920" 
-             cruise-power="1800" 
+             cruise-power="4500" 
              cruise-alt="25000" 
              min-rpm="220" 
              max-rpm="1020"> 

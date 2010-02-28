@@ -12,10 +12,6 @@
 
     <condition>
       <and>
-        <equals>
-          <property>/controls/smoke</property>
-          <value>true</value>
-        </equals>
         <greater-than>
           <property>/engines/engine[3]/n2</property>
           <value>50</value>

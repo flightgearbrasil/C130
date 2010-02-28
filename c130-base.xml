@@ -18,7 +18,9 @@
 
     <model>
       <path>Aircraft/C130/Models/c130.xml</path>
-      <start-idling type="bool">0</start-idling>
+      <start-idling type="bool">false</start-idling>
+      <hide-fuel type="bool">false</hide-fuel>
+      <hide-probe type="bool">false</hide-probe>
       <livery>
         <file type="string">default</file>
       </livery>
@@ -57,14 +59,6 @@
       <key>
         <name>d</name>
         <desc>Open/Close crew door</desc>
-      </key>
-      <key>
-        <name>S</name>
-        <desc>Start engine smoke</desc>
-      </key>
-      <key>
-        <name>u</name>
-        <desc>Stop engine smoke</desc>
       </key>
       <key>
         <name>Ctrl-j</name>
