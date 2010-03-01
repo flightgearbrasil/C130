@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- <PropertyList include="kc130-jsbsim-cnf.xml"> -->
+<PropertyList include="kc130-yasim-cnf.xml">
+
+  <sim>
+    <description>KC130 Hercules</description>
+    <author>BARANGER Emmanuel (3D), FABERT Didier (texture), Jettoo (FDM)</author>
+  </sim>
+
+</PropertyList>
+

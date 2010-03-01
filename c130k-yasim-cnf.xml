@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- Lockheed C130 Hercules. -->
+<!-- Lockheed C130 K Hercules. -->
 
 <PropertyList include="c130-base.xml">
 
   <sim>
 
-    <description>C130 Hercules (YASim)</description>
+    <description>C130 K Hercules (YASim)</description>
     <flight-model>yasim</flight-model>
-    <aero>c130-yasim</aero>
+    <aero>c130k-yasim</aero>
 
     <startup>
-      <splash-texture>Aircraft/C130/splash/c130-splash.png</splash-texture>
+      <splash-texture>Aircraft/C130/splash/c130k-splash.png</splash-texture>
     </startup>
 
     <model>
-      <path>Aircraft/C130/Models/c130.xml</path>
+      <path>Aircraft/C130/Models/c130k.xml</path>
       <start-idling type="bool">false</start-idling>
       <livery>
         <file type="string">default</file>

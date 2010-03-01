@@ -6,16 +6,16 @@
 
   <sim>
 
-    <description>C130 Hercules (YASim)</description>
+    <description>KC130 Hercules (YASim)</description>
     <flight-model>yasim</flight-model>
-    <aero>c130-yasim</aero>
+    <aero>kc130-yasim</aero>
 
     <startup>
-      <splash-texture>Aircraft/C130/splash/c130-splash.png</splash-texture>
+      <splash-texture>Aircraft/C130/splash/kc130-splash.png</splash-texture>
     </startup>
 
     <model>
-      <path>Aircraft/C130/Models/c130.xml</path>
+      <path>Aircraft/C130/Models/kc130.xml</path>
       <start-idling type="bool">false</start-idling>
       <livery>
         <file type="string">default</file>

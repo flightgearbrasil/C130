@@ -7,24 +7,10 @@
     <status>BARANGER</status>
     <aircraft-version>0.1</aircraft-version>
 
-    <startup>
-      <splash-texture>Aircraft/C130/c130-splash.png</splash-texture>
-    </startup>
-
     <sound>
       <audible>true</audible>
       <path>Aircraft/C130/Sounds/c130-sound.xml</path>
     </sound>
-
-    <model>
-      <path>Aircraft/C130/Models/c130.xml</path>
-      <start-idling type="bool">false</start-idling>
-      <hide-fuel type="bool">false</hide-fuel>
-      <hide-probe type="bool">false</hide-probe>
-      <livery>
-        <file type="string">default</file>
-      </livery>
-    </model> 
 
     <submodels>
       <serviceable type="bool">true</serviceable>

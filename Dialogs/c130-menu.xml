@@ -13,20 +13,6 @@
           <script>aircraft.livery.dialog.toggle()</script>
         </binding>
       </item>
-      <item>
-        <label>Show/hide refueling</label>
-        <binding>
-          <command>property-toggle</command>
-          <property>/sim/model/hide-fuel</property>
-        </binding>
-      </item>
-      <item>
-        <label>Show/hide noze probe</label>
-        <binding>
-          <command>property-toggle</command>
-          <property>/sim/model/hide-probe</property>
-        </binding>
-      </item>
     </menu>
   </default>
 
