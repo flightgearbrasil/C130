@@ -4,15 +4,6 @@
 
   <path>c130.ac</path>
 
-  <nasal>
-    <load>
-      var livery_update = aircraft.livery_update.new("Aircraft/C130/Models/Liveries", 10);
-    </load>
-    <unload>
-      livery_update.stop();
-    </unload>
-  </nasal>
-
   <animation>
     <!-- Objets opaques -->
     <object-name>fuselage</object-name>

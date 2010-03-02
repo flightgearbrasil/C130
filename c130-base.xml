@@ -26,6 +26,8 @@
         <int type="int" n="3">0</int>
         <int type="int" n="4">0</int>
         <int type="int" n="5">0</int>
+        <float n="0" alias="/instrumentation/doors/crew/position-norm"/>
+        <float n="1" alias="/instrumentation/doors/passenger/position-norm"/>
       </generic>
     </multiplay>
 
@@ -36,22 +38,6 @@
       </radar>
     </instrumentation>
 
-    <help>
-      <title>C130 Hercules</title>
-      <key>
-        <name>D</name>
-        <desc>Open/Close backdoor</desc>
-      </key>
-      <key>
-        <name>d</name>
-        <desc>Open/Close crew door</desc>
-      </key>
-      <key>
-        <name>Ctrl-j</name>
-        <desc>Parachutist</desc>
-      </key>
-    </help>
-
     <menubar include="Dialogs/c130-menu.xml"/>
 
   </sim>
@@ -60,9 +46,6 @@
     <electrical>
       <path></path>
     </electrical>
-    <refuel>
-      <type>boom</type>
-    </refuel>
   </systems> 
 
   <!-- engines on, low pitch (parking) -->
@@ -202,6 +185,14 @@
     <inst-vertical-speed-indicator>
       <serviceable>true</serviceable>
     </inst-vertical-speed-indicator>
+    <doors>
+      <crew>
+        <position-norm type="float">0</position-norm>
+      </crew>
+      <passenger>
+        <position-norm type="float">0</position-norm>
+      </passenger>
+    </doors>
   </instrumentation>
 
   <nasal>

@@ -3,10 +3,68 @@
 <!-- <PropertyList include="kc130-jsbsim-cnf.xml"> -->
 <PropertyList include="kc130-yasim-cnf.xml">
 
+  <controls>
+    <refuelling>
+      <refuelling-drogues-pos-norm type="float">0</refuelling-drogues-pos-norm>
+    </refuelling>
+  </controls>
+
   <sim>
     <description>KC130 Hercules</description>
-    <author>BARANGER Emmanuel (3D), FABERT Didier (texture), Jettoo (FDM)</author>
+    <author>BARANGER Emmanuel (3D/FDM), FABERT Didier (texture), Jettoo (FDM)</author>
+
+    <help>
+      <title>KC130 Hercules</title>
+      <key>
+        <name>D</name>
+        <desc>Open/Close backdoor</desc>
+      </key>
+      <key>
+        <name>d</name>
+        <desc>Open/Close crew door</desc>
+      </key>
+      <key>
+        <name>Ctrl-j</name>
+        <desc>Parachutist</desc>
+      </key>
+      <key>
+        <name>O</name>
+        <desc>operate drogue</desc>
+      </key>
+    </help>
+
+    <multiplay>
+      <generic>
+        <float n="2" alias="/controls/refuelling/refuelling-drogues-pos-norm"/>
+      </generic>
+    </multiplay>
+
   </sim>
+
+  <systems>
+    <refuel>
+      <type type="string">boom</type>
+    </refuel>
+  </systems>
+
+  <input>
+    <keyboard>
+      <key n="79">
+        <name>O</name>
+        <desc>Extend Refuelling Drogues</desc>
+        <binding n="0">
+          <command>nasal</command>
+          <script>drogue.toggle_refuelling_drogues()</script>
+        </binding>
+      </key>
+    </keyboard>
+  </input>
+
+  <nasal>
+    <drogue>
+      <file>Aircraft/C130/Nasal/drogues.nas</file>
+    </drogue>
+  </nasal>
 
 </PropertyList>
 
