@@ -27,7 +27,7 @@
 
   <systems>
     <refuel>
-      <type type="string">boom</type>
+      <type type="string">probe</type>
     </refuel>
   </systems>
 
