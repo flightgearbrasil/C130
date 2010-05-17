@@ -118,7 +118,7 @@
     </gmeter>
 
     <flight>
-      <elevator-trim type="double">0.1</elevator-trim>
+      <elevator-trim type="double">0</elevator-trim>
     </flight>
   </controls>
 
