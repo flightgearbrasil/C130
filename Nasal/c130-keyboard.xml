@@ -7,7 +7,7 @@
     <desc>Passenger door</desc>
     <binding>
      <command>nasal</command>
-     <script>c130.doorsystem.passengerexport();</script>
+     <script>doors.doorsystem.passengerexport();</script>
     </binding>
    </key>
 
@@ -26,7 +26,7 @@
     <desc>Crew door</desc>
     <binding>
      <command>nasal</command>
-     <script>c130.doorsystem.crewexport();</script>
+     <script>doors.doorsystem.crewexport();</script>
     </binding>
    </key>
 
@@ -49,6 +49,24 @@
        <value>false</value>
      </binding>
    </key>
+
+  <key n="127">
+    <name>Delete</name>
+    <desc>Toggle Reversers</desc>
+    <binding>
+      <command>property-toggle</command>
+      <property>controls/engines/engine[0]/reverser</property>
+    </binding>
+    <binding>
+      <command>nasal</command>
+      <script>
+         setprop("controls/engines/engine[0]/propeller-pitch",0);
+         setprop("controls/engines/engine[1]/propeller-pitch",0);
+         setprop("controls/engines/engine[2]/propeller-pitch",0);
+         setprop("controls/engines/engine[3]/propeller-pitch",0);
+      </script>
+    </binding>
+  </key>
 
 </PropertyList>
 
