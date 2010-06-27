@@ -38,7 +38,8 @@
   <animation>
     <type>shader</type>
     <shader>chrome</shader>
-    <texture>shader.png</texture>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <object-name>vitre</object-name>
   </animation>
 
   <animation>
@@ -63,7 +64,7 @@
       <red>   0.8 </red>
       <green> 0.7 </green>
       <blue>  0.5 </blue>
-      <factor-prop>/controls/lighting/instruments-norm</factor-prop>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
     </emission>
   </animation>
 
@@ -73,7 +74,7 @@
     <object-name>dist01</object-name>
     <property>instrumentation/tacan/indicated-distance-nm</property>
     <!-- <property>/instrumentation/navcomputer/indicated-distance-nm</property> -->
-    <factor>0.001</factor>
+    <factor>0.0005</factor>
     <step>100</step>
     <axis>
       <x> 0 </x>
@@ -87,7 +88,7 @@
     <object-name>dist02</object-name>
     <property>instrumentation/tacan/indicated-distance-nm</property>
     <!-- <property>/instrumentation/navcomputer/indicated-distance-nm</property> -->
-    <factor>0.01</factor>
+    <factor>0.005</factor>
     <step>10</step>
     <axis>
       <x> 0 </x>
@@ -101,7 +102,7 @@
     <object-name>dist03</object-name>
     <property>instrumentation/tacan/indicated-distance-nm</property>
     <!-- <property>/instrumentation/navcomputer/indicated-distance-nm</property> -->
-    <factor>0.1</factor>
+    <factor>0.05</factor>
     <step>1</step>
     <axis>
       <x> 0 </x>
@@ -123,14 +124,13 @@
       <z> 0 </z>
     </axis>
   </animation>
- 
+
   <!-- Course Readout -->
   <animation>
     <type>textranslate</type>
     <object-name>crs01</object-name>
-    <property>instrumentation/nav[1]/radials/selected-deg</property>
-    <!-- <property>/instrumentation/nav/radials/selected-deg</property> -->
-    <factor>0.001</factor>
+    <property>instrumentation/nav[0]/radials/selected-deg</property>
+    <factor>0.0005</factor>
     <step>100</step>
     <axis>
       <x> 0 </x>
@@ -142,9 +142,8 @@
   <animation>
     <type>textranslate</type>
     <object-name>crs02</object-name>
-    <property>instrumentation/nav[1]/radials/selected-deg</property>
-    <!-- <property>/instrumentation/nav/radials/selected-deg</property> -->
-    <factor>0.01</factor>
+    <property>instrumentation/nav[0]/radials/selected-deg</property>
+    <factor>0.005</factor>
     <step>10</step>
     <axis>
       <x> 0 </x>
@@ -156,9 +155,8 @@
   <animation>
     <type>textranslate</type>
     <object-name>crs03</object-name>
-    <property>instrumentation/nav[1]/radials/selected-deg</property>
-    <!-- <property>/instrumentation/nav/radials/selected-deg</property> -->
-    <factor>0.1</factor>
+    <property>instrumentation/nav[0]/radials/selected-deg</property>
+    <factor>0.05</factor>
     <step>1</step>
     <axis>
       <x> 0 </x>
@@ -173,10 +171,10 @@
     <condition>
       <greater-than>
         <property>systems/electrical/outputs/hsi</property>
-        <value>24</value>
+        <value type="float">24</value>
       </greater-than>
     </condition>
-    <property>instrumentation/heading-indicator-fg/indicated-heading-deg</property>
+    <property>instrumentation/heading-indicator/indicated-heading-deg</property>
     <!-- <property>/orientation/heading-magnetic-deg[0]</property> -->
     <axis>
       <x> 1 </x>
@@ -188,15 +186,14 @@
       <y> 0.000 </y>
       <y> 0.003 </y>
     </center>
-  </animation> 
+  </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>HDGneedle</object-name>
     <object-name>HDGneedle2</object-name>
     <object-name>heading-bug</object-name>
-    <object-name>bearing-bug</object-name>
-    <property>/orientation/heading-magnetic-deg[0]</property>
+    <property>orientation/heading-deg</property>
     <axis>
       <x> 1 </x>
       <y> 0 </y>
@@ -213,16 +210,15 @@
         <value>24</value>
       </greater-than>
     </condition>
-    <property>instrumentation/heading-indicator-fg/indicated-heading-deg</property>
-    <!-- <property>/autopilot/settings/heading-bug-deg</property> -->
-    <axis>
-      <x> -1 </x>
-      <y>  0 </y>
-      <z>  0 </z>
-    </axis>
+      <property>autopilot/settings/heading-bug-deg</property>
+      <axis>
+        <x> -1 </x>
+        <y>  0 </y>
+        <z>  0 </z>
+      </axis>
   </animation>
- 
-  <animation>
+
+  <!--<animation>
     <type>rotate</type>
     <object-name>bearing-bug</object-name>
     <condition>
@@ -231,14 +227,13 @@
         <value>24</value>
       </greater-than>
     </condition>
-    <!-- <property>/instrumentation/navcomputer/indicated-bearing</property> -->
-    <property>/autopilot/settings/heading-bug-deg</property>
+    <property>autopilot/settings/heading-bug-deg</property>
     <axis>
       <x> -1 </x>
       <y>  0 </y>
       <z>  0 </z>
     </axis>
-  </animation>
+  </animation>-->
 
   <animation>
     <type>select</type>
@@ -263,16 +258,41 @@
     <condition>
       <less-than>
         <property>systems/electrical/outputs/hsi</property>
-        <value>24</value>
+        <value type="float">24</value>
       </less-than>
     </condition>
   </animation>
+
+<!-- tacan display -->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>bearing-bug</object-name>
+    <property>orientation/heading-deg</property>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+<animation>
+   <type>rotate</type>
+   <object-name>bearing-bug</object-name>
+   <property>instrumentation/tacan/indicated-bearing-true-deg</property>
+   <axis>
+      <x>-1</x>
+      <y>0</y>
+      <z>0</z>
+   </axis>
+
+</animation>
 
   <animation>
     <type>rotate</type>
     <object-name>HDGneedle</object-name>
     <object-name>HDGneedle2</object-name>
-    <property>/instrumentation/nav/radials/selected-deg</property>
+    <property>instrumentation/nav/radials/selected-deg</property>
     <axis>
       <x> -1 </x>
       <y>  0 </y>
@@ -283,8 +303,13 @@
   <animation>
     <type>translate</type>
     <object-name>HDGneedle2</object-name>
-    <property>/instrumentation/nav/heading-needle-deflection</property>
-    <factor>0.002</factor>
+    <property>instrumentation/nav/heading-needle-deflection</property>
+    <interpolation>
+      <entry><ind> -10 </ind><dep> -0.0253 </dep></entry>
+      <entry><ind>   0 </ind><dep>  0.0000 </dep></entry>
+      <entry><ind>  10 </ind><dep>  0.0253 </dep></entry>
+    </interpolation>
+    <!--<factor>0.002</factor>-->
     <axis>
       <x> 0 </x>
       <y> 1 </y>
@@ -295,10 +320,11 @@
   <animation>
     <type>translate</type>
     <object-name>GSpointer</object-name>
-    <property>/instrumentation/nav/gs-needle-deflection</property>
+    <property>instrumentation/nav/gs-needle-deflection</property>
     <interpolation>
-      <entry><ind>-9</ind><dep>-0.03</dep></entry>
-      <entry><ind>9</ind><dep>0.03</dep></entry>
+      <entry><ind> -9 </ind><dep> -0.03 </dep></entry>
+      <entry><ind>  0 </ind><dep>  0.00 </dep></entry>
+      <entry><ind>  9 </ind><dep>  0.03 </dep></entry>
     </interpolation>
     <axis>
       <x> 0 </x>
@@ -311,14 +337,17 @@
     <type>select</type>
     <object-name>GSpointer</object-name>
     <condition>
-      <property>/instrumentation/nav/has-gs</property>
+      <and>
+         <property>instrumentation/nav/has-gs</property>
+         <property>instrumentation/nav/in-range</property>
+     </and>
     </condition>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>buttonCRS</object-name>
-    <property>instrumentation/nav[1]/radials/selected-deg</property>
+    <property>instrumentation/nav[0]/radials/selected-deg</property>
     <center>
       <x-m>  0.007 </x-m>
       <y-m> -0.048 </y-m>
@@ -334,7 +363,7 @@
   <animation>
    <type>rotate</type>
    <object-name>buttonHDG</object-name>
-   <property>instrumentation/heading-indicator-fg/offset-deg</property>
+   <property>instrumentation/heading-indicator/offset-deg</property>
    <center>
       <x-m>  0.007 </x-m>
       <y-m> -0.048 </y-m>
@@ -348,3 +377,4 @@
   </animation>
 
 </PropertyList>
+

@@ -71,7 +71,7 @@
 
     <electric>
       <external-power>0</external-power>
-      <battery-switch>0</battery-switch>
+      <battery-switch>1</battery-switch>
       <engine n="0">
         <generator>0</generator>
       </engine>
@@ -201,7 +201,7 @@
     </doors>
     <c130>
       <file>Aircraft/C130/Nasal/liveries.nas</file>
-      <file>Aircraft/C130/Nasal/Electrical.nas</file>
+<!--  <file>Aircraft/C130/Nasal/Electrical.nas</file> -->
       <file>Aircraft/Instruments-3d/RDR-160/RDR160.nas</file>
       <file>Aircraft/C130/Nasal/paratroopers.nas</file>
       <file>Aircraft/C130/Nasal/light.nas</file>

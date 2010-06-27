@@ -4,6 +4,16 @@
 
   <path>panel1.ac</path>
 
+  <!-- adf -->
+  <model>
+    <path>Aircraft/Instruments-3d/adf/adf.xml</path>
+    <offsets>
+      <x-m> -0.322 </x-m>
+      <y-m> -0.530 </y-m>
+      <z-m>  0.160 </z-m>
+    </offsets>
+  </model>
+
   <!-- Tacan -->
   <model>
    <path>Aircraft/C130/Models/Interior/Panel/Instruments/Tacan/tacan.xml</path>
