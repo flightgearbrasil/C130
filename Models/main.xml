@@ -143,6 +143,39 @@
 -->
   </animation>
 
+  <effect>
+    <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
+    <object-name>fuselage</object-name>
+    <object-name>caches</object-name>
+    <object-name>ailes</object-name>
+    <object-name>fuselage</object-name>
+    <object-name>derive</object-name>
+    <object-name>porteA1</object-name>
+    <object-name>porteA2</object-name>
+    <object-name>porteroueG1</object-name>
+    <object-name>porteroueG2</object-name>
+    <object-name>porteroueD1</object-name>
+    <object-name>porteroueD2</object-name>
+    <object-name>aileronG</object-name>
+    <object-name>voletG1</object-name>
+    <object-name>voletG2</object-name>
+    <object-name>aileronD</object-name>
+    <object-name>voletD1</object-name>
+    <object-name>voletD2</object-name>
+    <object-name>aileronG</object-name>
+    <object-name>voletG1</object-name>
+    <object-name>reservoirs</object-name>
+    <object-name>porteA</object-name>
+    <object-name>antennes</object-name>
+    <object-name>porteBG</object-name>
+    <object-name>porteBD</object-name>
+    <object-name>baieB</object-name>
+    <object-name>baieH</object-name>
+    <object-name>profondeur</object-name>
+    <object-name>direction</object-name>
+    <object-name>moteurs</object-name>
+  </effect>
+
   <animation>
     <type>shader</type>
     <shader>chrome</shader>
