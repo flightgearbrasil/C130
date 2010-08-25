@@ -22,6 +22,12 @@ RAF-187
 
 RAF-188
 
+BH7112
+
+VC-3
+
+VXE-6
+
 These liverie were made by : Brett HARRISON 2010
 
 Thanks to him.
