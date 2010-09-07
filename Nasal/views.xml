@@ -21,6 +21,39 @@
   </view>
 
   <view n="101">
+    <name>Weapons View</name>
+    <type>lookfrom</type>
+    <internal archive="y">true</internal>
+    <config>
+      <from-model type="bool">true</from-model>
+      <from-model-idx type="int">0</from-model-idx>
+      <ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
+      <default-field-of-view-deg type="double">39</default-field-of-view-deg>
+      <pitch-offset-deg>-5</pitch-offset-deg>
+      <x-offset-m archive="y"> -2.71 </x-offset-m> <!--Right-->
+      <y-offset-m archive="y">  1.41 </y-offset-m> <!--Up-->
+      <z-offset-m archive="y">  0.00 </z-offset-m> <!--Back-->
+    </config>
+  </view> 
+
+  <view n="102">
+    <name>Battle Management Station</name>
+    <type>lookfrom</type>
+    <internal archive="y">true</internal>
+    <config>
+      <from-model type="bool">true</from-model>
+      <from-model-idx type="int">-90</from-model-idx>
+      <ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
+      <default-field-of-view-deg type="double">120</default-field-of-view-deg>
+      <pitch-offset-deg>-5</pitch-offset-deg>
+      <heading-offset-deg>90</heading-offset-deg>
+      <x-offset-m archive="y">  0.60 </x-offset-m> <!--Right-->
+      <y-offset-m archive="y">  1.60 </y-offset-m> <!--Up-->
+      <z-offset-m archive="y"> -3.40 </z-offset-m> <!--Back-->
+    </config>
+  </view>
+
+  <view n="103">
     <name>Commander Seat View</name>
     <internal archive="y">true</internal>
     <type>lookfrom</type>
@@ -36,7 +69,7 @@
     </config>
   </view>
 
-  <view n="102">
+  <view n="104">
     <name>Engineer Seat View</name>
     <internal archive="y">true</internal>
     <type>lookfrom</type>
@@ -53,7 +86,7 @@
     </config>
   </view>
 
-  <view n="103">
+  <view n="105">
     <name>Tail Camera View</name>
     <type>lookfrom</type>
     <internal archive="y">true</internal>

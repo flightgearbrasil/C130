@@ -10,10 +10,6 @@
     <flight-model>yasim</flight-model>
     <aero>kc130-yasim</aero>
 
-    <startup>
-      <splash-texture>Aircraft/C130/splash/kc130-splash.png</splash-texture>
-    </startup>
-
     <model>
       <path>Aircraft/C130/Models/kc130.xml</path>
       <start-idling type="bool">false</start-idling>
@@ -22,7 +18,70 @@
       </livery>
     </model> 
 
+    <startup>
+      <splash-texture>Aircraft/C130/splash/kc130-splash.png</splash-texture>
+    </startup>
+
+    <sound>
+      <audible>true</audible>
+      <path>Aircraft/C130/Sounds/c130-sound.xml</path>
+    </sound>
+
+    <help>
+      <title>KC130 Hercules</title>
+      <key>
+        <name>D</name>
+        <desc>Open/Close backdoor</desc>
+      </key>
+      <key>
+        <name>d</name>
+        <desc>Open/Close crew door</desc>
+      </key>
+      <key>
+        <name>Ctrl-j</name>
+        <desc>Parachutist</desc>
+      </key>
+      <key>
+        <name>O</name>
+        <desc>operate drogue</desc>
+      </key>
+    </help>
+
+    <multiplay>
+      <generic>
+        <float n="2" alias="/controls/refuelling/refuelling-drogues-pos-norm"/>
+      </generic>
+    </multiplay>
+
   </sim>
+
+  <controls>
+    <refuelling>
+      <refuelling-drogues-pos-norm type="float">0</refuelling-drogues-pos-norm>
+    </refuelling>
+  </controls>
+
+  <systems>
+    <refuel>
+      <type type="string">boom</type>
+    </refuel>
+  </systems>
+
+  <tanker type="bool">false</tanker>
+
+  <input>
+    <keyboard/>
+  </input>
+
+  <input>
+    <keyboard include="Nasal/kc130-keyboard.xml"/>
+  </input>
+
+  <nasal>
+    <drogue>
+      <file>Aircraft/C130/Nasal/drogues.nas</file>
+    </drogue>
+  </nasal>
 
 </PropertyList>
 

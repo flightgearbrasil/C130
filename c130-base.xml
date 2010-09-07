@@ -7,11 +7,6 @@
     <status>BARANGER</status>
     <aircraft-version>0.1</aircraft-version>
 
-    <sound>
-      <audible>true</audible>
-      <path>Aircraft/C130/Sounds/c130-sound.xml</path>
-    </sound>
-
     <submodels>
       <serviceable type="bool">true</serviceable>
       <path>Aircraft/C130/Submodels/submodels.xml</path>
@@ -159,11 +154,6 @@
     </fuel>
   </consumables>
 
-  <input>
-    <keyboard include="Nasal/c130-keyboard.xml">
-    </keyboard>
-  </input>
-
   <instrumentation>
     <radar>
       <serviceable type="bool" archive="y">true</serviceable>
@@ -203,7 +193,6 @@
       <file>Aircraft/C130/Nasal/liveries.nas</file>
 <!--  <file>Aircraft/C130/Nasal/Electrical.nas</file> -->
       <file>Aircraft/Instruments-3d/RDR-160/RDR160.nas</file>
-      <file>Aircraft/C130/Nasal/paratroopers.nas</file>
       <file>Aircraft/C130/Nasal/light.nas</file>
     </c130>
     <aar>
