@@ -70,10 +70,6 @@
   <tanker type="bool">false</tanker>
 
   <input>
-    <keyboard/>
-  </input>
-
-  <input>
     <keyboard include="Nasal/kc130-keyboard.xml"/>
   </input>
 

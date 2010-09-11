@@ -189,8 +189,10 @@
     <doors>
       <file>Aircraft/C130/Nasal/doors.nas</file>
     </doors>
-    <c130>
+    <liverie>
       <file>Aircraft/C130/Nasal/liveries.nas</file>
+    </liverie>
+    <c130>
 <!--  <file>Aircraft/C130/Nasal/Electrical.nas</file> -->
       <file>Aircraft/Instruments-3d/RDR-160/RDR160.nas</file>
       <file>Aircraft/C130/Nasal/light.nas</file>
