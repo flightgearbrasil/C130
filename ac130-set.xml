@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- <PropertyList include="ac130-jsbsim-cnf.xml"> -->
+<PropertyList include="ac130-yasim-cnf.xml">
+
+  <sim>
+
+    <description>AC-130</description>
+    <author>Jack Mermod (3D/AC-130 Transition)</author>
+
+  </sim>
+
+</PropertyList>
+

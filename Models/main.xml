@@ -199,17 +199,6 @@
     <path>Aircraft/C130/Models/shadow.xml</path>
   </model>
 
-  <animation>
-    <type>select</type>
-    <object-name>shadowOSG</object-name>
-    <condition>
-      <equals>
-        <property>sim[0]/rendering/shadows-ai</property>
-        <value>true</value>
-      </equals>
-    </condition>
-  </animation>
-
   <!-- Intérieur -->
   <model>
     <path>Aircraft/C130/Models/Interior/interior.xml</path>
@@ -220,10 +209,41 @@
     </offsets>
   </model>
 
+  <!-- Effets sur le sol -->
+  <!-- Roue avant -->
+  <model>
+    <path>Aircraft/C130/Models/effects/ground/ground0.xml</path>
+    <offsets>
+      <x-m> -0.831 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.896 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Roue gauche -->
+  <model>
+    <path>Aircraft/C130/Models/effects/ground/ground1.xml</path>
+    <offsets>
+      <x-m>  0.702 </x-m>
+      <y-m> -2.125 </y-m>
+      <z-m> -0.896 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Roue droite -->
+  <model>
+    <path>Aircraft/C130/Models/effects/ground/ground2.xml</path>
+    <offsets>
+      <x-m>  0.702 </x-m>
+      <y-m>  2.125 </y-m>
+      <z-m> -0.896 </z-m>
+    </offsets>
+  </model>
+
   <!-- Particules OSG -->
   <!-- Gauche extérieur -->
   <model>
-    <path>Aircraft/C130/Models/effects/trail1.xml</path>
+    <path>Aircraft/C130/Models/effects/trail/trail1.xml</path>
     <offsets>
       <x-m>  0.170 </x-m>
       <y-m> -9.821 </y-m>
@@ -236,7 +256,7 @@
 
   <!-- Gauche intérieur -->
   <model>
-    <path>Aircraft/C130/Models/effects/trail2.xml</path>
+    <path>Aircraft/C130/Models/effects/trail/trail2.xml</path>
     <offsets>
       <x-m>  0.170 </x-m>
       <y-m> -4.926 </y-m>
@@ -249,7 +269,7 @@
 
   <!-- Droit intérieur -->
   <model>
-    <path>Aircraft/C130/Models/effects/trail3.xml</path>
+    <path>Aircraft/C130/Models/effects/trail/trail3.xml</path>
     <offsets>
       <x-m> 0.170 </x-m>
       <y-m> 4.926 </y-m>
@@ -262,7 +282,7 @@
 
   <!-- Droit extérieur -->
   <model>
-    <path>Aircraft/C130/Models/effects/trail4.xml</path>
+    <path>Aircraft/C130/Models/effects/trail/trail4.xml</path>
     <offsets>
       <x-m> 0.170 </x-m>
       <y-m> 9.821 </y-m>

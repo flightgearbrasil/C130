@@ -38,8 +38,7 @@
   <animation>
     <type>shader</type>
     <shader>chrome</shader>
-    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
-    <object-name>vitre</object-name>
+    <texture>shader.png</texture>
   </animation>
 
   <animation>
@@ -263,8 +262,7 @@
     </condition>
   </animation>
 
-<!-- tacan display -->
-
+  <!-- tacan display -->
   <animation>
     <type>rotate</type>
     <object-name>bearing-bug</object-name>
@@ -276,17 +274,16 @@
     </axis>
   </animation>
 
-<animation>
-   <type>rotate</type>
-   <object-name>bearing-bug</object-name>
-   <property>instrumentation/tacan/indicated-bearing-true-deg</property>
-   <axis>
-      <x>-1</x>
-      <y>0</y>
-      <z>0</z>
-   </axis>
-
-</animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>bearing-bug</object-name>
+    <property>instrumentation/tacan/indicated-bearing-true-deg</property>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
 
   <animation>
     <type>rotate</type>
@@ -377,4 +374,3 @@
   </animation>
 
 </PropertyList>
-

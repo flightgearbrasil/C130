@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<PropertyList> 
+<path>infrared_camera.ac</path>
+
+<animation>
+ <object-name>camera</object-name>
+ <type>spin</type>
+ <property>power/on</property>
+ <factor>25</factor>
+ <center>
+  <x-m>0</x-m>
+  <y-m>0</y-m>
+  <z-m>0</z-m>
+ </center>
+ <axis>
+  <x>0</x>
+  <y>0</y>
+  <z>1</z>
+ </axis>
+</animation>
+
+
+</PropertyList>
