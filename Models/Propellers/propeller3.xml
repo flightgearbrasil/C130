@@ -33,7 +33,7 @@
  <animation>
    <type>rotate</type>
    <object-name>pal1</object-name>
-   <property>/controls/engines/engine[2]/propeller-pitch</property>
+   <property>controls/engines/engine[2]/propeller-pitch</property>
    <factor> 62.0 </factor>
    <center>
      <x-m> 0.0 </x-m>
@@ -50,7 +50,7 @@
  <animation>
    <type>rotate</type>
    <object-name>pal2</object-name>
-   <property>/controls/engines/engine[2]/propeller-pitch</property>
+   <property>controls/engines/engine[2]/propeller-pitch</property>
    <factor> 62.0 </factor>
    <center>
      <x-m> 0.0 </x-m>
@@ -67,7 +67,7 @@
  <animation>
    <type>rotate</type>
    <object-name>pal3</object-name>
-   <property>/controls/engines/engine[2]/propeller-pitch</property>
+   <property>controls/engines/engine[2]/propeller-pitch</property>
    <factor> 62.0 </factor>
    <center>
      <x-m> 0.0 </x-m>
@@ -84,7 +84,7 @@
   <animation>
    <type>rotate</type>
    <object-name>pal4</object-name>
-   <property>/controls/engines/engine[2]/propeller-pitch</property>
+   <property>controls/engines/engine[2]/propeller-pitch</property>
    <factor> 62.0 </factor>
    <center>
      <x-m> 0.0 </x-m>
