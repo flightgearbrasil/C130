@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
@@ -11,27 +11,12 @@
     <object-name>ailes</object-name>
     <object-name>fuselage</object-name>
     <object-name>derive</object-name>
-    <object-name>roueAG</object-name>
-    <object-name>roueAD</object-name>
-    <object-name>tempAB</object-name>
-    <object-name>tempAH</object-name>
-    <object-name>rotationH</object-name>
-    <object-name>articule01</object-name>
-    <object-name>articule02</object-name>
     <object-name>porteA1</object-name>
     <object-name>porteA2</object-name>
-    <object-name>roue1G</object-name>
-    <object-name>roue2G</object-name>
     <object-name>porteroueG1</object-name>
     <object-name>porteroueG2</object-name>
-    <object-name>tempG</object-name>
-    <object-name>tempHG</object-name>
-    <object-name>roue1D</object-name>
-    <object-name>roue2D</object-name>
     <object-name>porteroueD1</object-name>
     <object-name>porteroueD2</object-name>
-    <object-name>tempD</object-name>
-    <object-name>tempHD</object-name>
     <object-name>aileronG</object-name>
     <object-name>voletG1</object-name>
     <object-name>voletG2</object-name>
@@ -50,7 +35,23 @@
     <object-name>profondeur</object-name>
     <object-name>direction</object-name>
     <object-name>moteurs</object-name>
+
     <object-name>trous</object-name>
+    <object-name>tempAB</object-name>
+    <object-name>tempAH</object-name>
+    <object-name>rotationH</object-name>
+    <object-name>articule01</object-name>
+    <object-name>articule02</object-name>
+    <object-name>roueAG</object-name>
+    <object-name>roueAD</object-name>
+    <object-name>tempG</object-name>
+    <object-name>tempHG</object-name>
+    <object-name>roue1G</object-name>
+    <object-name>roue2G</object-name>
+    <object-name>tempD</object-name>
+    <object-name>tempHD</object-name>
+    <object-name>roue1D</object-name>
+    <object-name>roue2D</object-name>
     <object-name>echappes</object-name>
 
     <!-- Objets transparents -->
@@ -67,27 +68,12 @@
     <object-name>ailes</object-name>
     <object-name>fuselage</object-name>
     <object-name>derive</object-name>
-    <object-name>roueAG</object-name>
-    <object-name>roueAD</object-name>
-    <object-name>tempAB</object-name>
-    <object-name>tempAH</object-name>
-    <object-name>rotationH</object-name>
-    <object-name>articule01</object-name>
-    <object-name>articule02</object-name>
     <object-name>porteA1</object-name>
     <object-name>porteA2</object-name>
-    <object-name>roue1G</object-name>
-    <object-name>roue2G</object-name>
     <object-name>porteroueG1</object-name>
     <object-name>porteroueG2</object-name>
-    <object-name>tempG</object-name>
-    <object-name>tempHG</object-name>
-    <object-name>roue1D</object-name>
-    <object-name>roue2D</object-name>
     <object-name>porteroueD1</object-name>
     <object-name>porteroueD2</object-name>
-    <object-name>tempD</object-name>
-    <object-name>tempHD</object-name>
     <object-name>aileronG</object-name>
     <object-name>voletG1</object-name>
     <object-name>voletG2</object-name>
@@ -106,25 +92,28 @@
     <object-name>profondeur</object-name>
     <object-name>direction</object-name>
     <object-name>moteurs</object-name>
+
     <object-name>trous</object-name>
+    <object-name>tempAB</object-name>
+    <object-name>tempAH</object-name>
+    <object-name>rotationH</object-name>
+    <object-name>articule01</object-name>
+    <object-name>articule02</object-name>
+    <object-name>roueAG</object-name>
+    <object-name>roueAD</object-name>
+    <object-name>tempG</object-name>
+    <object-name>tempHG</object-name>
+    <object-name>roue1G</object-name>
+    <object-name>roue2G</object-name>
+    <object-name>tempD</object-name>
+    <object-name>tempHD</object-name>
+    <object-name>roue1D</object-name>
+    <object-name>roue2D</object-name>
     <object-name>echappes</object-name>
 
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
     <texture>texture.png</texture>
-<!--
-    <diffuse>
-      <red-prop>diffuse/red</red-prop>
-      <green-prop>diffuse/green</green-prop>
-      <blue-prop>diffuse/blue</blue-prop>
-    </diffuse>
-
-    <ambient>
-      <red-prop>ambient/red</red-prop>
-      <green-prop>ambient/green</green-prop>
-      <blue-prop>ambient/blue</blue-prop>
-    </ambient>
--->
     <specular>
       <red-prop>specular/red</red-prop>
       <green-prop>specular/green</green-prop>
@@ -136,11 +125,6 @@
       <green-prop>emission/green</green-prop>
       <blue-prop>emission/blue</blue-prop>
     </emission>
-<!--
-    <shininess>
-      <shininess-prop>shininess</shininess-prop>
-    </shininess>
--->
   </animation>
 
   <effect>
@@ -195,18 +179,17 @@
 
   <!-- Une ombre pour OSG -->
   <model>
-    <name>shadowOSG</name>
     <path>Aircraft/C130/Models/shadow.xml</path>
-  </model>
-
-  <!-- Intérieur -->
-  <model>
-    <path>Aircraft/C130/Models/Interior/interior.xml</path>
     <offsets>
       <x-m> 0 </x-m>
       <y-m> 0 </y-m>
       <z-m> 0 </z-m>
     </offsets>
+  </model>
+
+  <!-- Intérieur-->
+  <model>
+    <path>Aircraft/C130/Models/Interior/interior.xml</path>
   </model>
 
   <!-- Effets sur le sol -->
@@ -248,9 +231,6 @@
       <x-m>  0.170 </x-m>
       <y-m> -9.821 </y-m>
       <z-m>  2.916 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -261,9 +241,6 @@
       <x-m>  0.170 </x-m>
       <y-m> -4.926 </y-m>
       <z-m>  2.916 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -274,9 +251,6 @@
       <x-m> 0.170 </x-m>
       <y-m> 4.926 </y-m>
       <z-m> 2.916 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -287,9 +261,6 @@
       <x-m> 0.170 </x-m>
       <y-m> 9.821 </y-m>
       <z-m> 2.916 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -335,14 +306,14 @@
     <type>rotate</type>
     <object-name>aileronG</object-name>
     <property>surface-positions/left-aileron-pos-norm</property>
-    <factor>-25.0</factor>
+    <factor> 25 </factor>
     <axis>
-      <x1-m>   1.656 </x1-m>
-      <y1-m> -14.018 </y1-m>
-      <z1-m>   4.042 </z1-m>
-      <x2-m>   1.122 </x2-m>
-      <y2-m> -19.854 </y2-m>
-      <z2-m>   4.208 </z2-m>
+      <x1-m>   1.200 </x1-m>
+      <y1-m> -19.853 </y1-m>
+      <z1-m>   4.208 </z1-m>
+      <x2-m>   1.837 </x2-m>
+      <y2-m> -14.018 </y2-m>
+      <z2-m>   4.036 </z2-m>
     </axis>
   </animation>
 
@@ -350,14 +321,14 @@
     <type>rotate</type>
     <object-name>aileronD</object-name>
     <property>surface-positions/right-aileron-pos-norm</property>
-    <factor>-25.0</factor>
+    <factor> 25 </factor>
     <axis>
-     <x1-m>   1.122 </x1-m>
-     <y1-m>  19.854 </y1-m>
-     <z1-m>   4.208 </z1-m>
-     <x2-m>   1.656 </x2-m>
-     <y2-m>  14.018 </y2-m>
-     <z2-m>   4.042 </z2-m>
+      <x1-m>  1.837 </x1-m>
+      <y1-m> 14.018 </y1-m>
+      <z1-m>  4.036 </z1-m>
+      <x2-m>  1.200 </x2-m>
+      <y2-m> 19.853 </y2-m>
+      <z2-m>  4.208 </z2-m>
     </axis>
   </animation>
 
@@ -533,9 +504,9 @@
     <property>surface-positions/elevator-pos-norm</property>
     <factor> 25 </factor>
     <center>
-      <x-m> 13.312 </x-m>
+      <x-m> 13.506 </x-m>
       <y-m>  0.000 </y-m>
-      <z-m>  4.097 </z-m>
+      <z-m>  4.096 </z-m>
     </center>
     <axis>
       <x> 0 </x>
@@ -549,16 +520,14 @@
     <type>rotate</type>
     <object-name>direction</object-name>
     <property>surface-positions/rudder-pos-norm</property>
-    <factor> 25 </factor>
-    <center>
-      <x-m> 13.368 </x-m>
-      <y-m>  0.000 </y-m>
-      <z-m>  7.657 </z-m>
-    </center>
+    <factor> -25 </factor>
     <axis>
-      <x>  0 </x>
-      <y>  0 </y>
-      <z> -1 </z>
+      <x1-m> 13.407 </x1-m>
+      <y1-m>  0.000 </y1-m>
+      <z1-m>  4.306 </z1-m>
+      <x2-m> 13.395 </x2-m>
+      <y2-m>  0.000 </y2-m>
+      <z2-m> 10.630 </z2-m>
     </axis>
   </animation>
   

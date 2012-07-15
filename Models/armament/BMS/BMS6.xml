@@ -1,10 +1,13 @@
-<PropertyList>
-<path>BMS6.ac</path>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
-<animation>
- <type>range</type>
- <min-m>0</min-m>
- <max-m>30</max-m>
-</animation>
+<PropertyList>
+
+  <path>BMS6.ac</path>
+
+  <animation>
+    <type>range</type>
+    <min-m>  0 </min-m>
+    <max-m> 30 </max-m>
+  </animation>
 
 </PropertyList>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <!--  C130K YASim config. -  2008 Emmanuel BARANGER
                              2010 updated by Jettoo
@@ -20,13 +20,16 @@
   <!-- Configuration d'approche -->
   <approach speed="123" aoa="3.0" fuel="1.0">
     <control-setting axis="/controls/engines/engine[0]/throttle" value="0.3"/>
+    <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="1"/>
+
     <control-setting axis="/controls/engines/engine[1]/throttle" value="0.3"/>
+    <control-setting axis="/controls/engines/engine[1]/propeller-pitch" value="1"/>
+
     <control-setting axis="/controls/engines/engine[2]/throttle" value="0.3"/>
+    <control-setting axis="/controls/engines/engine[2]/propeller-pitch" value="1"/>
+
     <control-setting axis="/controls/engines/engine[3]/throttle" value="0.3"/>
-    <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="1.0"/>
-    <control-setting axis="/controls/engines/engine[1]/propeller-pitch" value="1.0"/>
-    <control-setting axis="/controls/engines/engine[2]/propeller-pitch" value="1.0"/>
-    <control-setting axis="/controls/engines/engine[3]/propeller-pitch" value="1.0"/>
+    <control-setting axis="/controls/engines/engine[3]/propeller-pitch" value="1"/>
     <control-setting axis="/controls/flight/flaps" value="0.7"/>
     <control-setting axis="/controls/gear/gear-down" value="1"/>
   </approach>
@@ -34,39 +37,42 @@
   <!-- Configuration de croisiere -->
   <cruise speed="348" alt="28000" fuel="0.7">
     <control-setting axis="/controls/engines/engine[0]/throttle" value="0.7"/>
-    <control-setting axis="/controls/engines/engine[1]/throttle" value="0.7"/>
-    <control-setting axis="/controls/engines/engine[2]/throttle" value="0.7"/>
-    <control-setting axis="/controls/engines/engine[3]/throttle" value="0.7"/>
     <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="0.8"/>
+
+    <control-setting axis="/controls/engines/engine[1]/throttle" value="0.7"/>
     <control-setting axis="/controls/engines/engine[1]/propeller-pitch" value="0.8"/>
+
+    <control-setting axis="/controls/engines/engine[2]/throttle" value="0.7"/>
     <control-setting axis="/controls/engines/engine[2]/propeller-pitch" value="0.8"/>
+
+    <control-setting axis="/controls/engines/engine[3]/throttle" value="0.7"/>
     <control-setting axis="/controls/engines/engine[3]/propeller-pitch" value="0.8"/>
-    <control-setting axis="/controls/flight/flaps" value="0.0"/>
+    <control-setting axis="/controls/flight/flaps" value="0"/>
     <control-setting axis="/controls/gear/gear-down" value="0"/>
   </cruise>
 
   <cockpit x="10.333" y="0.598" z="3.005"/>
 
   <!-- Fuselage -->
-  <fuselage ax="13.224" ay="0" az="1.23" bx="11.80" by="0" bz="1.23" width="2.00" taper="0.40" midpoint="1.00"/>
-  <fuselage ax="12.00" ay="0" az="1.12" bx="8.90" by="0" bz="2.02" width="4.36" taper="0.42" midpoint="1.00"/>
-  <fuselage ax="9.50" ay="0" az="2.05" bx="-4.10" by="0" bz="2.05" width="4.304" taper="1.00" midpoint="1.00"/>
-  <fuselage ax="-3.80" ay="0" az="2.05" bx="-11.50" by="0" bz="3.50" width="4.304" taper="0.3" midpoint="0.00"/>
-  <fuselage ax="-11.50" ay="0" az="3.50" bx="-16.414" by="0" bz="4.175" width="1.30" taper="0.1" midpoint="0.00"/>
+  <fuselage ax=" 13.224" ay=" 0.000" az="1.230" bx=" 11.800" by=" 0.000" bz="1.230" width="2.000" taper="0.40" midpoint="1.00"/>
+  <fuselage ax=" 12.000" ay=" 0.000" az="1.120" bx="  8.900" by=" 0.000" bz="2.020" width="4.360" taper="0.42" midpoint="1.00"/>
+  <fuselage ax="  9.500" ay=" 0.000" az="2.050" bx=" -4.100" by=" 0.000" bz="2.050" width="4.304" taper="1.00" midpoint="1.00"/>
+  <fuselage ax=" -3.800" ay=" 0.000" az="2.050" bx="-11.500" by=" 0.000" bz="3.500" width="4.304" taper="0.30" midpoint="0.00"/>
+  <fuselage ax="-11.500" ay=" 0.000" az="3.500" bx="-16.414" by=" 0.000" bz="4.175" width="1.300" taper="0.10" midpoint="0.00"/>
 
   <!-- engines -->
-  <fuselage ax="3.533" ay="9.821" az="3.725" bx="-1.427" by="9.821" bz="3.725" width="1.05" taper="0.60" midpoint="0.15"/>
+  <fuselage ax="  3.533" ay=" 9.821" az="3.725" bx=" -1.427" by=" 9.821" bz="3.725" width="1.050" taper="0.60" midpoint="0.15"/>
 
-  <fuselage ax="3.533" ay="4.929" az="3.725" bx="-1.427" by="4.929" bz="3.725" width="1.05" taper="0.60" midpoint="0.15"/>
+  <fuselage ax="  3.533" ay=" 4.929" az="3.725" bx=" -1.427" by=" 4.929" bz="3.725" width="1.050" taper="0.60" midpoint="0.15"/>
 
-  <fuselage ax="3.533" ay="-4.929" az="3.725" bx="-1.427" by="-4.929" bz="3.725" width="1.05" taper="0.60" midpoint="0.15"/>
+  <fuselage ax="  3.533" ay="-4.929" az="3.725" bx=" -1.427" by="-4.929" bz="3.725" width="1.050" taper="0.60" midpoint="0.15"/>
 
-  <fuselage ax="3.533" ay="-9.821" az="3.725" bx="-1.427" by="-9.821" bz="3.725" width="1.05" taper="0.60" midpoint="0.15"/>
+  <fuselage ax="  3.533" ay="-9.821" az="3.725" bx=" -1.427" by="-9.821" bz="3.725" width="1.050" taper="0.60" midpoint="0.15"/>
 
   <!-- fuel tank -->
-  <fuselage ax="2.910" ay="7.695" az="2.172" bx="-4.795" by="7.695" bz="2.172" width="1.1" taper="0.60" midpoint="0.15"/>
+  <fuselage ax="  2.910" ay=" 7.695" az="2.172" bx=" -4.795" by=" 7.695" bz="2.172" width="1.100" taper="0.60" midpoint="0.15"/>
 
-  <fuselage ax="2.910" ay="-7.695" az="2.172" bx="-4.795" by="-7.695" bz="2.172" width="1.1" taper="0.60" midpoint="0.15"/>
+  <fuselage ax="  2.910" ay="-7.695" az="2.172" bx=" -4.795" by="-7.695" bz="2.172" width="1.100" taper="0.60" midpoint="0.15"/>
 
   <!-- Ailes taper 0.85, twist 3-->
   <wing x="-1.486" y="1.240" z="3.660"
@@ -337,22 +343,23 @@
   <!-- Reservoirs de carburant -->
   <!-- 1 et 4 - Reservoirs principaux d'extremites -->
   <!-- adjusted tanks to get a balanced aircraft/approx position)-->
-  <tank x="-0.2" y="14.732" z="3.927" capacity="8710"/>
-  <tank x="-0.2" y="-14.732" z="3.927" capacity="8710"/>
+  <tank x="-0.200" y=" 14.732" z="3.927" capacity="8710"/>
+  <tank x="-0.200" y="-14.732" z="3.927" capacity="8710"/>
+
   <!-- 2 et 3 - Reservoirs principaux interieurs -->
-  <tank x="-0.4" y="7.041" z="3.796" capacity="7995"/>
-  <tank x="-0.4" y="-7.041" z="3.796" capacity="7995"/>
+  <tank x="-0.400" y="  7.041" z="3.796" capacity="7995"/>
+  <tank x="-0.400" y=" -7.041" z="3.796" capacity="7995"/>
+
   <!-- 5 et 6 - Reservoirs auxiliaires -->
-  <tank x="-0.4" y="2.451" z="3.770" capacity="5915"/>
-  <tank x="-0.4" y="-2.451" z="3.770" capacity="5915"/>
+  <tank x="-0.400" y="  2.451" z="3.770" capacity="5915"/>
+  <tank x="-0.400" y=" -2.451" z="3.770" capacity="5915"/>
 
   <!-- 7 et 8 - Reservoirs supplementaires sur pylones -->
-  <tank x="-0.133" y="7.701" z="2.179" capacity="5299"/>
-  <tank x="-0.133" y="-7.701" z="2.179" capacity="5299"/>
+  <tank x="-0.133" y="  7.701" z="2.179" capacity="5299"/>
+  <tank x="-0.133" y=" -7.701" z="2.179" capacity="5299"/>
 
-  <!-- Ballast CG au centre de la corde des ailes x=1.486 -->
-  <ballast x="11" y="0" z="1" mass="8000"/>
-     
+  <!-- Mass placment -->
+  <ballast x=" 11.0" y="0" z="1.0" mass="  8000"/>    
   <ballast x="-13.5" y="0" z="3.7" mass="-15000"/>
      
 </airplane>

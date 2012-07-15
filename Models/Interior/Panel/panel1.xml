@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
@@ -21,9 +21,7 @@
       <x-m> -0.333 </x-m>
       <y-m> -0.258 </y-m>
       <z-m>  0.056 </z-m>
-      <roll-deg>     0.0 </roll-deg>
-      <pitch-deg>   90.0 </pitch-deg>
-      <heading-deg>  0.0 </heading-deg>
+      <pitch-deg> 90 </pitch-deg>
     </offsets>
   </model>
 
@@ -503,8 +501,8 @@
     <object-name>moteur1</object-name>
     <property>/controls/engines/engine[0]/throttle</property>
     <interpolation>
-      <entry><ind>  0.0 </ind><dep>   0.0 </dep></entry>
-      <entry><ind>  1.0 </ind><dep> -99.0 </dep></entry>
+      <entry><ind>  0 </ind><dep>   0 </dep></entry>
+      <entry><ind>  1 </ind><dep> -99 </dep></entry>
     </interpolation>
     <center>
       <x-m>  0.017 </x-m>
@@ -512,9 +510,9 @@
       <z-m> -0.180 </z-m>
     </center>
     <axis>
-      <x> 0.0 </x>
-      <y> 1.0 </y>
-      <z> 0.0 </z>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
     </axis>
   </animation>
 
@@ -524,8 +522,8 @@
     <object-name>moteur2</object-name>
     <property>/controls/engines/engine[1]/throttle</property>
     <interpolation>
-      <entry><ind> 0.0 </ind><dep>   0.0 </dep></entry>
-      <entry><ind> 1.0 </ind><dep> -99.0 </dep></entry>
+      <entry><ind> 0 </ind><dep>   0 </dep></entry>
+      <entry><ind> 1 </ind><dep> -99 </dep></entry>
     </interpolation>
     <center>
       <x-m>  0.017 </x-m>
@@ -533,9 +531,9 @@
       <z-m> -0.180 </z-m>
     </center>
     <axis>
-      <x> 0.0 </x>
-      <y> 1.0 </y>
-      <z> 0.0 </z>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
     </axis>
   </animation>
 
@@ -545,8 +543,8 @@
     <object-name>moteur3</object-name>
     <property>/controls/engines/engine[2]/throttle</property>
     <interpolation>
-      <entry><ind> 0.0 </ind><dep>   0.0 </dep></entry>
-      <entry><ind> 1.0 </ind><dep> -99.0 </dep></entry>
+      <entry><ind> 0 </ind><dep>   0 </dep></entry>
+      <entry><ind> 1 </ind><dep> -99 </dep></entry>
     </interpolation>
     <center>
       <x-m>  0.017 </x-m>
@@ -554,9 +552,9 @@
       <z-m> -0.180 </z-m>
     </center>
     <axis>
-      <x> 0.0 </x>
-      <y> 1.0 </y>
-      <z> 0.0 </z>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
     </axis>
   </animation>
 
@@ -566,8 +564,8 @@
     <object-name>moteur4</object-name>
     <property>/controls/engines/engine[3]/throttle</property>
     <interpolation>
-      <entry><ind> 0.0 </ind><dep>   0.0 </dep></entry>
-      <entry><ind> 1.0 </ind><dep> -99.0 </dep></entry>
+      <entry><ind> 0 </ind><dep>   0 </dep></entry>
+      <entry><ind> 1 </ind><dep> -99 </dep></entry>
     </interpolation>
     <center>
       <x-m>  0.017 </x-m>
@@ -575,9 +573,9 @@
       <z-m> -0.180 </z-m>
     </center>
     <axis>
-      <x> 0.0 </x>
-      <y> 1.0 </y>
-      <z> 0.0 </z>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
     </axis>
   </animation>
 
@@ -587,8 +585,8 @@
     <object-name>helice1</object-name>
     <property>/controls/engines/engine[0]/propeller-pitch</property>
     <interpolation>
-      <entry><ind> 1.0 </ind><dep> -91.0 </dep></entry>
-      <entry><ind> 0.0 </ind><dep>   0.0 </dep></entry>
+      <entry><ind> 1 </ind><dep> -91 </dep></entry>
+      <entry><ind> 0 </ind><dep>   0 </dep></entry>
     </interpolation>
     <center>
       <x-m>  0.017 </x-m>
@@ -596,9 +594,9 @@
       <z-m> -0.180 </z-m>
     </center>
     <axis>
-      <x> 0.0 </x>
-      <y> 1.0 </y>
-      <z> 0.0 </z>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
     </axis>
   </animation>
 
@@ -608,8 +606,8 @@
     <object-name>helice2</object-name>
     <property>/controls/engines/engine[1]/propeller-pitch</property>
     <interpolation>
-      <entry><ind> 1.0 </ind><dep> -91.0 </dep></entry>
-      <entry><ind> 0.0 </ind><dep>   0.0 </dep></entry>
+      <entry><ind> 1 </ind><dep> -91 </dep></entry>
+      <entry><ind> 0 </ind><dep>   0 </dep></entry>
     </interpolation>
     <center>
       <x-m>  0.017 </x-m>
@@ -617,9 +615,9 @@
       <z-m> -0.180 </z-m>
     </center>
     <axis>
-      <x> 0.0 </x>
-      <y> 1.0 </y>
-      <z> 0.0 </z>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
     </axis>
   </animation>
  
@@ -629,8 +627,8 @@
     <object-name>helice3</object-name>
     <property>/controls/engines/engine[2]/propeller-pitch</property>
     <interpolation>
-      <entry><ind> 1.0 </ind><dep> -91.0 </dep></entry>
-      <entry><ind> 0.0 </ind><dep>   0.0 </dep></entry>
+      <entry><ind> 1 </ind><dep> -91 </dep></entry>
+      <entry><ind> 0 </ind><dep>   0 </dep></entry>
     </interpolation>
     <center>
       <x-m>  0.017 </x-m>
@@ -638,9 +636,9 @@
       <z-m> -0.180 </z-m>
     </center>
     <axis>
-      <x> 0.0 </x>
-      <y> 1.0 </y>
-      <z> 0.0 </z>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
     </axis>
   </animation>
  
@@ -650,8 +648,8 @@
     <object-name>helice4</object-name>
     <property>/controls/engines/engine[3]/propeller-pitch</property>
     <interpolation>
-      <entry><ind> 1.0 </ind><dep> -91.0 </dep></entry>
-      <entry><ind> 0.0 </ind><dep>   0.0 </dep></entry>
+      <entry><ind> 1 </ind><dep> -91 </dep></entry>
+      <entry><ind> 0 </ind><dep>   0 </dep></entry>
     </interpolation>
     <center>
       <x-m>  0.017 </x-m>
@@ -659,10 +657,11 @@
       <z-m> -0.180 </z-m>
     </center>
     <axis>
-      <x> 0.0 </x>
-      <y> 1.0 </y>
-      <z> 0.0 </z>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
     </axis>
   </animation>
 
 </PropertyList>
+

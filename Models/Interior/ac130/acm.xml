@@ -1,17 +1,19 @@
-<?xml version="1.0"?>
-<PropertyList> 
-	<path>acm.ac</path>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
-	<animation>
-		<type>select</type>
-		<object-name>acm-panel</object-name>
-		<condition>
-			<equals>
-				<property>sim/current-view/name</property>
-				<value>Cockpit View</value>
-			</equals>
-		</condition>
-	</animation>
+<PropertyList> 
+
+  <path>acm.ac</path>
+
+  <animation>
+    <type>select</type>
+    <object-name>acm-panel</object-name>
+    <condition>
+      <equals>
+        <property>sim/current-view/name</property>
+        <value>Cockpit View</value>
+      </equals>
+    </condition>
+  </animation>
 
 	<animation>
 		<type>select</type>

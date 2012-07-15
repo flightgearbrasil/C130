@@ -1,11 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
 <PropertyList>
 
-<path>BMS.ac</path>
+  <path>BMS.ac</path>
 
-<animation>
- <type>range</type>
- <min-m>0</min-m>
- <max-m>30</max-m>
-</animation>
+  <animation>
+    <type>range</type>
+    <min-m>  0 </min-m>
+    <max-m> 30 </max-m>
+  </animation>
 
 </PropertyList>
+

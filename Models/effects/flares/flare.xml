@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
@@ -16,9 +16,9 @@
     <lighting>false</lighting>
        
     <offsets>
-      <x-m>0</x-m>
-      <y-m>0</y-m>
-      <z-m>0.5</z-m>
+      <x-m> 0.0 </x-m>
+      <y-m> 0.0 </y-m>
+      <z-m> 0.5 </z-m>
     </offsets>
            
     <attach>local</attach>
@@ -29,15 +29,15 @@
            
     <shooter>
       <speed-mps>
-        <value>0.7</value>
-        <spread>0.1</spread>
+        <value>  0.7 </value>
+        <spread> 0.1 </spread>
       </speed-mps>
     </shooter>
        
     <counter>
       <particles-per-sec>
-        <value>8</value>
-        <spread>.3</spread>
+        <value>  8.0 </value>
+        <spread> 0.3 </spread>
       </particles-per-sec>
     </counter>
            

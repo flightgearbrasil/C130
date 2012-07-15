@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
@@ -14,15 +14,23 @@
 
     <multiplay>
       <chat_display>1</chat_display>
-      <generic>
-        <int type="int" n="0">0</int>
-        <int type="int" n="1">0</int>
-        <int type="int" n="2">0</int>
-        <int type="int" n="3">0</int>
-        <int type="int" n="4">0</int>
-        <int type="int" n="5">0</int>
+      <generic> 
+        <int type="int" n="0">  0 </int>                                           <!--  0 immat -->
+        <int type="int" n="1">  0 </int>                                           <!--  1 immat -->
+        <int type="int" n="2">  0 </int>                                           <!--  2 immat -->
+        <int type="int" n="3">  0 </int>                                           <!--  3 immat -->
+        <int type="int" n="4">  0 </int>                                           <!--  4 immat -->
+        <int type="int" n="5">  0 </int>                                           <!--  5 immat -->
+        <int type="bool" n="6" alias="/smoke/active"> 0 </int>                     <!--  6 start smoke -->
+        <int type="int" n="7" alias="smoke/particlepersec"> 50 </int>              <!--  7 particlepersec -->
+        <int type="int" n="10" alias="controls/armament/trigger">0</int>           <!-- 10 reserved for bombable mode -->
         <float n="0" alias="/instrumentation/doors/crew/position-norm"/>
         <float n="1" alias="/instrumentation/doors/passenger/position-norm"/>
+        <float n="2" alias="/position/gear-agl-m"> 0 </float>                      <!-- altitude for MP shadow -->
+        <float n="3" alias="/smoke/colors/knob-red">1</float>                      <!-- 3 smoke mixer red setting -->
+        <float n="4" alias="/smoke/colors/knob-green">1</float>                    <!-- 4 smoke mixer green setting -->
+        <float n="5" alias="/smoke/colors/knob-blue">1</float>                     <!-- 5 smoke mixer blue setting -->
+        <string n="9" type="string" />                                             <!-- string[9] reserved for bombable mode -->
       </generic>
     </multiplay>
 
@@ -47,20 +55,20 @@
   <controls>
     <engines>
       <engine n="0">
-        <magnetos archive="y">3</magnetos>
-        <propeller-pitch>1.0</propeller-pitch>
+        <magnetos archive="y"> 3 </magnetos>
+        <propeller-pitch> 1 </propeller-pitch>
       </engine>
       <engine n="1">
-        <magnetos archive="y">3</magnetos>
-        <propeller-pitch>1.0</propeller-pitch>
+        <magnetos archive="y"> 3 </magnetos>
+        <propeller-pitch> 1 </propeller-pitch>
       </engine>
       <engine n="2">
-        <magnetos archive="y">3</magnetos>
-        <propeller-pitch>1.0</propeller-pitch>
+        <magnetos archive="y"> 3 </magnetos>
+        <propeller-pitch> 1 </propeller-pitch>
       </engine>
       <engine n="3">
-        <magnetos archive="y">3</magnetos>
-        <propeller-pitch>1.0</propeller-pitch>
+        <magnetos archive="y"> 3 </magnetos>
+        <propeller-pitch> 1 </propeller-pitch>
       </engine>
     </engines>
 
@@ -76,7 +84,7 @@
     </electric>
 
     <gear>
-      <brake-parking>1.0</brake-parking>
+      <brake-parking>1</brake-parking>
       <gear-down>true</gear-down>
     </gear>
 
@@ -145,7 +153,7 @@
       <target-speed-kt>330</target-speed-kt>
     </settings>
   </autopilot>
-
+<!--
   <consumables>
     <fuel>
       <tank n="9">
@@ -153,7 +161,7 @@
       </tank>
     </fuel>
   </consumables>
-
+-->
   <instrumentation>
     <radar>
       <serviceable type="bool" archive="y">true</serviceable>
@@ -164,8 +172,10 @@
       <heading-marker type="bool" archive="y">false</heading-marker>
       <lightning type="bool" archive="y">false</lightning>
       <display-mode type="string">arc</display-mode>
+
       <radar-texture-path type="string" archive="y">Aircraft/Instruments-3d/RDR-160/od_wxradar.rgb</radar-texture-path>
       <echo-texture-path type="string" archive="y">Aircraft/Instruments/Textures/wxecho.rgb</echo-texture-path>
+
       <display-controls>
         <WX type="bool" archive="y">false</WX>
         <data type="bool" archive="y">false</data>
@@ -193,8 +203,9 @@
       <file>Aircraft/C130/Nasal/liveries.nas</file>
     </liverie>
     <c130>
-<!--  <file>Aircraft/C130/Nasal/Electrical.nas</file> -->
+      <file>Aircraft/C130/Nasal/Electrical.nas</file>
       <file>Aircraft/Instruments-3d/RDR-160/RDR160.nas</file>
+
       <file>Aircraft/C130/Nasal/light.nas</file>
     </c130>
     <aar>

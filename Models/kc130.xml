@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
- <nasal>
+  <nasal>
     <load>
       var livery_update = aircraft.livery_update.new("Aircraft/C130/Models/Liveries", 10);
 
@@ -32,21 +32,11 @@
   <!-- Le fuselage -->
   <model>
     <path>Aircraft/C130/Models/main.xml</path>
-    <offsets>
-      <x-m> 0 </x-m>
-      <y-m> 0 </y-m>
-      <z-m> 0 </z-m>
-    </offsets>
   </model>
 
   <!-- Les tuyeaux -->
   <model>
     <path>Aircraft/C130/Models/refueling/refueling.xml</path>
-    <offsets>
-      <x-m> 0 </x-m>
-      <y-m> 0 </y-m>
-      <z-m> 0 </z-m>
-    </offsets>
   </model>
 
   <multiplay>
