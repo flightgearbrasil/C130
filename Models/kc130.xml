@@ -10,7 +10,7 @@
 
       var float_0 = self.getNode("sim/multiplay/generic/float[0]", 1);
       var float_1 = self.getNode("sim/multiplay/generic/float[1]", 1);
-      var float_2 = self.getNode("sim/multiplay/generic/float[2]", 1);
+      var float_6 = self.getNode("sim/multiplay/generic/float[6]", 1);
       
       var crew_door = self.getNode("instrumentation/doors/crew/position-norm", 1);
       var passenger_door = self.getNode("instrumentation/doors/passenger/position-norm", 1);
@@ -18,7 +18,7 @@
 
       crew_door.alias(float_0);
       passenger_door.alias(float_1);
-      drogue_pos.alias(float_2);
+      drogue_pos.alias(float_6);
     </load>
 
     <unload>

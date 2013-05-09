@@ -49,7 +49,7 @@
 
     <multiplay>
       <generic>
-        <float n="2" alias="/controls/refuelling/refuelling-drogues-pos-norm"/>
+        <float n="6" alias="/controls/refuelling/refuelling-drogues-pos-norm"/>
       </generic>
     </multiplay>
 
