@@ -129,6 +129,45 @@
 
   <effect>
     <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
+    <condition>
+      <not><property>sim/rendering/rembrandt/enabled</property></not>
+    </condition>
+    <object-name>fuselage</object-name>
+    <object-name>caches</object-name>
+    <object-name>ailes</object-name>
+    <object-name>fuselage</object-name>
+    <object-name>derive</object-name>
+    <object-name>porteA1</object-name>
+    <object-name>porteA2</object-name>
+    <object-name>porteroueG1</object-name>
+    <object-name>porteroueG2</object-name>
+    <object-name>porteroueD1</object-name>
+    <object-name>porteroueD2</object-name>
+    <object-name>aileronG</object-name>
+    <object-name>voletG1</object-name>
+    <object-name>voletG2</object-name>
+    <object-name>aileronD</object-name>
+    <object-name>voletD1</object-name>
+    <object-name>voletD2</object-name>
+    <object-name>aileronG</object-name>
+    <object-name>voletG1</object-name>
+    <object-name>reservoirs</object-name>
+    <object-name>porteA</object-name>
+    <object-name>antennes</object-name>
+    <object-name>porteBG</object-name>
+    <object-name>porteBD</object-name>
+    <object-name>baieB</object-name>
+    <object-name>baieH</object-name>
+    <object-name>profondeur</object-name>
+    <object-name>direction</object-name>
+    <object-name>moteurs</object-name>
+  </effect>
+
+  <effect>
+    <inherits-from>Effects/model-combined-deferred</inherits-from>
+    <condition>
+      <property>sim/rendering/rembrandt/enabled</property>
+    </condition>
     <object-name>fuselage</object-name>
     <object-name>caches</object-name>
     <object-name>ailes</object-name>
@@ -177,20 +216,39 @@
     <object-name>cables</object-name>
   </animation>
 
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <condition>
+      <property>sim/rendering/rembrandt/enabled</property>
+    </condition>
+    <object-name>vitres</object-name>
+    <object-name>hublotBG</object-name>
+    <object-name>hublotBD</object-name>
+    <object-name>cables</object-name>
+  </effect>
+
   <!-- Une ombre pour OSG -->
   <model>
     <path>Aircraft/C130/Models/shadow.xml</path>
     <offsets>
-      <x-m> 0 </x-m>
-      <y-m> 0 </y-m>
-      <z-m> 0 </z-m>
+      <x-m>  0.0 </x-m>
+      <y-m>  0.0 </y-m>
+      <z-m> -0.6 </z-m>
     </offsets>
   </model>
 
   <!-- Intérieur-->
   <model>
+    <name>Interieur</name>
     <path>Aircraft/C130/Models/Interior/interior.xml</path>
   </model>
+
+  <!-- For Rembrandt -->
+  <animation>
+    <type>noshadow</type>
+    <object-name>Interieur</object-name>
+  </animation>
 
   <!-- Effets sur le sol -->
   <!-- Roue avant -->
@@ -1128,7 +1186,7 @@
   </model>
 
   <model>
-    <path>Aircraft/C130/Models/light/StrobeWhite.xml</path>
+    <path>Aircraft/C130/Models/light/StrobeLight.xml</path>
     <offsets>
       <x-m>  -0.135 </x-m>
       <y-m> -20.146 </y-m>
@@ -1137,7 +1195,7 @@
   </model>
 
   <model>
-    <path>Aircraft/C130/Models/light/StrobeWhite.xml</path>
+    <path>Aircraft/C130/Models/light/StrobeLight.xml</path>
     <offsets>
       <x-m> -0.135 </x-m>
       <y-m> 20.146 </y-m>
@@ -1146,4 +1204,3 @@
   </model>
 
 </PropertyList>
-

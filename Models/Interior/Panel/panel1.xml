@@ -4,6 +4,20 @@
 
   <path>panel1.ac</path>
 
+  <animation>
+    <object-name>panel</object-name>
+    <object-name>fond</object-name>
+    <object-name>moteur1</object-name>    
+    <object-name>moteur2</object-name>    
+    <object-name>moteur3</object-name>    
+    <object-name>moteur4</object-name>    
+    <object-name>helice1</object-name>    
+    <object-name>helice2</object-name>    
+    <object-name>helice3</object-name>    
+    <object-name>helice4</object-name>    
+    
+  </animation>
+
   <!-- adf -->
   <model>
     <path>Aircraft/Instruments-3d/adf/adf.xml</path>
@@ -664,4 +678,3 @@
   </animation>
 
 </PropertyList>
-

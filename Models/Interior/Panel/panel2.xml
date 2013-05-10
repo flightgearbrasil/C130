@@ -3,5 +3,10 @@
 <PropertyList>
 
   <path>panel2.ac</path>
+  
+  <animation>
+    <object-name>plafonnier</object-name>
+    
+  </animation>
 
 </PropertyList>
