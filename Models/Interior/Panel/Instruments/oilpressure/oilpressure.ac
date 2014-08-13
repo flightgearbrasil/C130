@@ -1,6 +1,6 @@
 AC3Db
 MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
-MATERIAL "transparent" rgb 1 1 1 amb 1 1 1 emis 0 0 0 spec 1 1 1 shi 64 trans 0.85
+MATERIAL "transparent" rgb 1 1 1 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 64 trans 0.85
 OBJECT world
 kids 4
 OBJECT poly
@@ -9,8 +9,8 @@ loc -0.000261 0 -0
 data 4
 face
 texture "oilpressure.png"
-texrep 1 1
-crease 30.000001
+texrep 1.000000 1.000000
+crease 180.000005
 numvert 17
 0.00212 -0.000133 -0.025249
 0.00212 0.009521 -0.023329
@@ -133,8 +133,8 @@ loc 0 -0.000205 -0
 data 4
 fond
 texture "oilpressure.png"
-texrep 1 1
-crease 30.000001
+texrep 1.000000 1.000000
+crease 180.000005
 numvert 128
 0.003403 0.000089 -0.026964
 0.003403 0.005428 -0.026445
@@ -944,8 +944,8 @@ loc 0 0 -0
 data 6
 needle
 texture "oilpressure.png"
-texrep 1 1
-crease 30.000001
+texrep 1.000000 1.000000
+crease 180.000005
 numvert 14
 0.002499 0.019809 0.000263
 0.002357 0.022117 -0.000004
@@ -1037,7 +1037,7 @@ name "vitre"
 loc 0 0 -0
 data 5
 vitre
-crease 30.000001
+crease 180.000005
 numvert 34
 0.00243 -0.000029 -0.000017
 0.002997 0.021938 -0.014695

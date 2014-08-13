@@ -16,6 +16,12 @@
     <object-name>propblur</object-name>
   </animation>   
 
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>propblur</object-name>
+    <object-name>propdisc</object-name>
+  </effect>
+  
   <!-- Mise en place des pales par défaut -->
   <animation>
     <type>select</type>

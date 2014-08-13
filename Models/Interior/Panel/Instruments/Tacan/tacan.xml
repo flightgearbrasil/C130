@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
-
+  
   <path>tacan.ac</path>
-
+  
   <animation>
     <object-name>fond</object-name>
     <object-name>test-lamp</object-name>
@@ -29,22 +29,16 @@
     <object-name>clic-select-R</object-name>
     <object-name>clic-vol-L</object-name>
     <object-name>clic-vol-R</object-name>
-
+    
     <object-name>vitre</object-name>
   </animation>
-
-  <animation>
-    <type>noshadow</type>
+  
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/C130/Models/Effects/Glass/glass</inherits-from>
     <object-name>vitre</object-name>
-  </animation>
-
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
-    <object-name>vitre</object-name>
-  </animation>
-
+  </effect>
+  
   <animation>
     <type>material</type>
     <object-name>drum-1</object-name>
@@ -59,14 +53,13 @@
     <object-name>unit-knob</object-name>
     <object-name>select-knob</object-name>
     <emission>
-      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+      <!-- <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop> -->
       <red>   0.50 </red>
       <green> 0.25 </green>
       <blue>  0.25 </blue>
     </emission>
   </animation>
-
-
+  
   <animation>
     <type>textranslate</type>
     <object-name>drum-1</object-name>
@@ -79,7 +72,7 @@
       <z>  0 </z>
     </axis>
   </animation>
-
+  
   <animation>
     <type>textranslate</type>
     <object-name>drum-2</object-name>
@@ -92,7 +85,7 @@
       <z>  0 </z>
     </axis>
   </animation>
-
+  
   <animation>
     <type>textranslate</type>
     <object-name>drum-3</object-name>
@@ -105,7 +98,7 @@
       <z>  0 </z>
     </axis>
   </animation>
-
+  
   <animation>
     <type>select</type>
     <object-name>y-sign</object-name>
@@ -116,7 +109,7 @@
       </equals>
     </condition>
   </animation>
-
+  
   <animation>
     <type>select</type>
     <object-name>x-sign</object-name>
@@ -127,15 +120,15 @@
       </equals>
     </condition>
   </animation>
-
-<!-- Comming soon
+  
+  <!-- Comming soon
   <animation>
     <name>All-Tenth</name>
     <object-name>tenth-knob</object-name>
     <object-name>clic-tenth-L</object-name>
     <object-name>clic-tenth-R</object-name>
   </animation>
-
+  
   <animation>
     <rotate>
     <object-name>All-Tenth</object-name>
@@ -146,14 +139,14 @@
       <z> 1 </z>
     </axis>
   </animation>
-
+  
   <animation>
     <name>All-Xy</name>
     <object-name>xy-knob</object-name>
     <object-name>clic-xy-L</object-name>
     <object-name>clic-xy-R</object-name>
   </animation>
-
+  
   <animation>
     <rotate>
     <object-name>All-Xy</object-name>
@@ -164,14 +157,14 @@
       <z> 1 </z>
     </axis>
   </animation>
-
+  
   <animation>
     <name>All-Unit</name>
     <object-name>unit-knob</object-name>
     <object-name>clic-unit-L</object-name>
     <object-name>clic-unit-R</object-name>
   </animation>
-
+  
   <animation>
     <rotate>
     <object-name>All-Unit</object-name>
@@ -182,14 +175,14 @@
       <z> 1 </z>
     </axis>
   </animation>
-
+  
   <animation>
     <name>All-Select</name>
     <object-name>unit-select</object-name>
     <object-name>clic-select-L</object-name>
     <object-name>clic-select-R</object-name>
   </animation>
-
+  
   <animation>
     <rotate>
     <object-name>All-Select</object-name>
@@ -200,14 +193,14 @@
       <z> 1 </z>
     </axis>
   </animation>
-
+  
   <animation>
     <name>All-Vol</name>
     <object-name>vol-knob</object-name>
     <object-name>clic-vol-L</object-name>
     <object-name>clic-vol-R</object-name>
   </animation>
-
+  
   <animation>
     <rotate>
     <object-name>All-Vol</object-name>
@@ -218,8 +211,8 @@
       <z> 1 </z>
     </axis>
   </animation>
--->
-
+  -->
+  
   <!-- Hot spot -->
   <animation>
     <type>pick</type>
@@ -229,11 +222,11 @@
       <button>0</button>
       <repeatable>true</repeatable>
       <!--
-        comming soon
+      comming soon
       -->
     </action>
   </animation>
-
+  
   <animation>
     <type>pick</type>
     <object-name>clic-tenth-R</object-name>
@@ -242,11 +235,11 @@
       <button>0</button>
       <repeatable>true</repeatable>
       <!--
-        comming soon
+      comming soon
       -->
     </action>
   </animation>
-
+  
   <animation>
     <type>pick</type>
     <object-name>clic-xy-L</object-name>
@@ -255,11 +248,11 @@
       <button>0</button>
       <repeatable>true</repeatable>
       <!--
-        comming soon
+      comming soon
       -->
     </action>
   </animation>
-
+  
   <animation>
     <type>pick</type>
     <object-name>clic-xy-R</object-name>
@@ -268,11 +261,11 @@
       <button>0</button>
       <repeatable>true</repeatable>
       <!--
-        comming soon
+      comming soon
       -->
     </action>
   </animation>
-
+  
   <animation>
     <type>pick</type>
     <object-name>clic-unit-L</object-name>
@@ -281,11 +274,11 @@
       <button>0</button>
       <repeatable>true</repeatable>
       <!--
-        comming soon
+      comming soon
       -->
     </action>
   </animation>
-
+  
   <animation>
     <type>pick</type>
     <object-name>clic-unit-R</object-name>
@@ -294,11 +287,11 @@
       <button>0</button>
       <repeatable>true</repeatable>
       <!--
-        comming soon
+      comming soon
       -->
     </action>
   </animation>
-
+  
   <animation>
     <type>pick</type>
     <object-name>clic-select-L</object-name>
@@ -307,11 +300,11 @@
       <button>0</button>
       <repeatable>true</repeatable>
       <!--
-        comming soon
+      comming soon
       -->
     </action>
   </animation>
-
+  
   <animation>
     <type>pick</type>
     <object-name>clic-select-R</object-name>
@@ -320,11 +313,11 @@
       <button>0</button>
       <repeatable>true</repeatable>
       <!--
-        comming soon
+      comming soon
       -->
     </action>
   </animation>
-
+  
   <animation>
     <type>pick</type>
     <object-name>clic-vol-L</object-name>
@@ -333,11 +326,11 @@
       <button>0</button>
       <repeatable>true</repeatable>
       <!--
-        comming soon
+      comming soon
       -->
     </action>
   </animation>
-
+  
   <animation>
     <type>pick</type>
     <object-name>clic-vol-R</object-name>
@@ -346,9 +339,9 @@
       <button>0</button>
       <repeatable>true</repeatable>
       <!--
-        comming soon
+      comming soon
       -->
     </action>
   </animation>
-
+  
 </PropertyList>

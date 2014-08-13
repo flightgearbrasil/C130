@@ -642,7 +642,7 @@
       <mode>once</mode>
       <path>Aircraft/C130/Sounds/click2.wav</path>
       <condition>
-        <property>sim/model/A-10/weapons/dual-AIM-9/aim9-knob</property>
+        <property>sim/model/weapons/dual-AIM-9/aim9-knob</property>
       </condition>
       <volume>
         <value>5</value>
@@ -666,7 +666,7 @@
       <mode>once</mode>
       <path>Aircraft/C130/Sounds/click3.wav</path>
       <condition>
-        <property>sim/model/A-10/weapons/gun-rate-switch</property>
+        <property>sim/model/weapons/gun-rate-switch</property>
       </condition>
       <volume>
         <value>5</value>
