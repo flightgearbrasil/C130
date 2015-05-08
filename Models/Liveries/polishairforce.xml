@@ -4,8 +4,8 @@
   <sim>
     <model>
       <livery>
-        <name type="string">United States Marine Corps</name>
-        <texture>Liveries/BH7112.png</texture>
+        <name type="string">Polish Air Force</name>
+        <texture>Liveries/polishairforce.png</texture>
 <!--
         <diffuse>
           <red>   0.5 </red>

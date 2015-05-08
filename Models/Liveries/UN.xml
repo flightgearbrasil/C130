@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 
 <PropertyList>
   <sim>
     <model>
       <livery>
-        <name type="string">United States Marine Corps</name>
-        <texture>Liveries/BH7112.png</texture>
+        <name type="string">United Nations</name>
+        <texture>Liveries/UN.png</texture>
 <!--
         <diffuse>
           <red>   0.5 </red>
