@@ -3,13 +3,14 @@
 <!-- Lockheed KC130 Hercules. -->
 
 <PropertyList include="c130-base.xml">
-  
+
   <sim include="Systems/kc130-views.xml">
 
     <description>KC130 Hercules (YASim)</description>
     <author>BARANGER Emmanuel (3D/FDM), FABERT Didier (texture), Jettoo (FDM)</author>
     <flight-model>yasim</flight-model>
     <aero>kc130-yasim</aero>
+    <variant-of>c130</variant-of>
     
     <rating>
       <FDM type="int">     2 </FDM>
@@ -24,27 +25,27 @@
       <livery>
         <file type="string">default</file>
       </livery>
-    </model> 
-    
+    </model>
+
     <startup>
       <splash-texture>Aircraft/C130/splash/kc130-splash.png</splash-texture>
     </startup>
-    
+
     <sound>
       <audible>true</audible>
       <path>Aircraft/C130/Sounds/c130-sound.xml</path>
     </sound>
-    
+
     <help include="Systems/kc130-help.xml"/>
-    
+
     <menubar include="Dialogs/kc130-menu.xml"/>
-    
+
     <multiplay>
       <generic>
         <float n="14" alias="/controls/refuelling/refuelling-drogues-pos-norm"/>
       </generic>
     </multiplay>
-    
+
   </sim>
 
   <controls>
@@ -52,23 +53,23 @@
       <refuelling-drogues-pos-norm type="float">0</refuelling-drogues-pos-norm>
     </refuelling>
   </controls>
-  
+
   <systems>
     <refuel>
       <type type="string">boom</type>
     </refuel>
   </systems>
-  
+
   <tanker type="bool">false</tanker>
-  
+
   <input>
     <keyboard include="Systems/kc130-keyboard.xml"/>
   </input>
-  
+
   <nasal>
     <drogue>
       <file>Aircraft/C130/Nasal/drogues.nas</file>
     </drogue>
   </nasal>
-  
+
 </PropertyList>
