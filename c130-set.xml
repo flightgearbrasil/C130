@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <!-- Lockheed C130 Hercules. -->
-
-<PropertyList include="c130-base.xml">
+<PropertyList include="Systems/c130-base.xml">
   
-  <sim include="Systems/c130-views.xml">
+  <sim include="Systems/Views/c130-views.xml">
 
     <description>C130 Hercules (YASim)</description>
     <author>BARANGER Emmanuel (3D/FDM), FABERT Didier (texture), Jettoo (FDM)</author>
+    
     <flight-model>yasim</flight-model>
-    <aero>c130-yasim</aero>
+    <aero>Systems/FDM/c130-yasim</aero>
     
     <rating>
       <FDM type="int">     2 </FDM>
@@ -35,15 +35,13 @@
       <path>Aircraft/C130/Sounds/c130-sound.xml</path>
     </sound>
     
-    <help include="Systems/c130-help.xml"/>
+    <help include="Systems/Helps/c130-help.xml"/>
     
     <menubar include="Dialogs/c130-menu.xml"/>
     
   </sim>
 
-  <input>
-    <keyboard include="Systems/c130-keyboard.xml"/>
-  </input>
+  <input include="Systems/Keyboard/c130-keyboard.xml"/>
   
   <systems>
     <refuel>
@@ -58,4 +56,3 @@
   </nasal>
   
 </PropertyList>
-

@@ -1,44 +1,42 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
-<!-- (C) 2008  Anders Gidenstam.
-     Distribution: GPL v2 or later.
--->
+<!-- (C) 2008  Anders Gidenstam. Distribution: GPL v2 or later. -->
 <PropertyList>
-
-  <!--========================================================================= 
-   Smoke
-  -->
+  
+  <!-- ================================================== Smoke -->
   <particlesystem>
+    
     <name>Smoke</name>
+    
     <type>normal</type>
     <texture>smoke.png</texture>
     <emissive>false</emissive>
     <lighting>true</lighting>
-
+    
     <attach>world</attach>
-
+    
     <placer>
-     <type>sector</type>
-     <radius-min-m>  0 </radius-min-m>
-     <radius-max-m> 30 </radius-max-m>
+      <type>sector</type>
+      <radius-min-m>  0 </radius-min-m>
+      <radius-max-m> 30 </radius-max-m>
     </placer>
-
+    
     <shooter>
       <speed-mps>
         <value>  0.5 </value>
         <spread> 0.0 </spread>
       </speed-mps>
     </shooter>
-
+    
     <counter>
       <particles-per-sec>
         <value>  2.0 </value>
         <spread> 0.5 </spread>
       </particles-per-sec>
     </counter>
-
+    
     <align>billboard</align>
-
+    
     <particle>
       <start>
         <color>
@@ -65,18 +63,18 @@
         </size>
       </end>
       <life-sec>
-       <value> 4 </value>
+        <value> 4 </value>
       </life-sec>
       <mass-kg>  60 </mass-kg>
       <radius-m> 10 </radius-m>
     </particle>
-
+    
     <program>
       <fluid>   air  </fluid>
       <gravity> true </gravity>
       <wind>    true </wind>
     </program>
-
+    
   </particlesystem>
-
+  
 </PropertyList>

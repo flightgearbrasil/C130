@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+  
+  <!-- engines on, low pitch (parking) -->
+  <engines>
+    <engine n="0">
+      <magnetos archive="y"> 3 </magnetos>
+      <propeller-pitch> 1 </propeller-pitch>
+    </engine>
+    <engine n="1">
+      <magnetos archive="y"> 3 </magnetos>
+      <propeller-pitch> 1 </propeller-pitch>
+    </engine>
+    <engine n="2">
+      <magnetos archive="y"> 3 </magnetos>
+      <propeller-pitch> 1 </propeller-pitch>
+    </engine>
+    <engine n="3">
+      <magnetos archive="y"> 3 </magnetos>
+      <propeller-pitch> 1 </propeller-pitch>
+    </engine>
+  </engines>
+  
+  <electric>
+    <external-power>0</external-power>
+    <battery-switch>1</battery-switch>
+    <engine n="0">
+      <generator>0</generator>
+    </engine>
+    <engine n="1">
+      <generator>0</generator>
+    </engine>
+  </electric>
+  
+  <gear>
+    <brake-parking>1</brake-parking>
+    <gear-down>true</gear-down>
+  </gear>
+  
+  <lighting>
+    <instruments-norm>0.8</instruments-norm>
+    <landing-lights type="bool">0</landing-lights>
+    <beacon type="bool">0</beacon>
+    <strobe type="bool">0</strobe>
+    <nav-lights type="bool">0</nav-lights>
+    <cabin-lights type="bool">0</cabin-lights>
+    <wing-lights type="bool">0</wing-lights>
+    <taxi-light type="bool">0</taxi-light>
+    <instrument-lights type="bool">0</instrument-lights>
+  </lighting>
+  
+  <anti-ice>
+    <prop-heat>0</prop-heat>
+    <pitot-heat>0</pitot-heat>
+  </anti-ice>
+  
+  <cabin>
+    <fan type="bool">0</fan>
+    <heat type="bool">0</heat>
+  </cabin>
+  
+  <smoke type="bool">true</smoke>
+  <signal type="bool">true</signal>
+  <paratroopers type="bool">true</paratroopers>
+  <jump-signal type="bool">false</jump-signal>
+  <negGtime type="int">0</negGtime>
+  
+  <gmeter>
+    <reset type="int">1</reset>
+  </gmeter>
+  
+  <flight>
+    <elevator-trim type="double">-0.1</elevator-trim>
+  </flight>
+  
+</PropertyList>
