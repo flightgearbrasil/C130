@@ -8,7 +8,7 @@ name "fond"
 loc 0 0 -0
 data 4
 fond
-texture "compass.png"
+texture "comp.png"
 texrep 1.000000 1.000000
 crease 180.000005
 numvert 25
@@ -200,7 +200,7 @@ name "ring"
 loc 0 0 -0
 data 4
 ring
-texture "compass.png"
+texture "comp.png"
 texrep 1.000000 1.000000
 crease 180.000005
 numvert 48

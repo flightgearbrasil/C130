@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+  
+  <!-- above 700 RPM avoids the stop --> 
+
+  <engine n="0">
+    <rpm archive="y">100</rpm>
+  </engine>
+  <engine n="1">
+    <rpm archive="y">100</rpm>
+  </engine>
+  <engine n="2">
+    <rpm archive="y">100</rpm>
+  </engine>
+  <engine n="3">
+    <rpm archive="y">100</rpm>
+  </engine>
+  
+</PropertyList>

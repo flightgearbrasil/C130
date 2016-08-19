@@ -9,7 +9,7 @@ data 8
 pod-left
 texture "refueling.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 388
 2.516324 2.700968 12.834462
 2.516324 2.631866 12.828057
@@ -3018,7 +3018,7 @@ data 9
 pod-right
 texture "refueling.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 388
 2.238799 2.700965 -12.83518
 2.238799 2.631866 -12.828775
@@ -6027,7 +6027,7 @@ data 16
 refueling-drogue
 texture "refueling.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 2952
 3.560161 2.012791 -12.577595
 3.553724 1.997897 -12.590912

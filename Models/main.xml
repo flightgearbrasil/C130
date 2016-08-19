@@ -53,12 +53,12 @@
     <object-name>roue1D</object-name>
     <object-name>roue2D</object-name>
     <object-name>echappes</object-name>
-
+    <object-name>cables</object-name>
+    
     <!-- Objets transparents -->
     <object-name>vitres</object-name>
     <object-name>hublotBG</object-name>
     <object-name>hublotBD</object-name>
-    <object-name>cables</object-name>
   </animation>
 
   <animation>
@@ -110,7 +110,8 @@
     <object-name>roue1D</object-name>
     <object-name>roue2D</object-name>
     <object-name>echappes</object-name>
-
+    <object-name>cables</object-name>
+    
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
     <texture>texture.png</texture>
@@ -119,12 +120,6 @@
       <green-prop>specular/green</green-prop>
       <blue-prop>specular/blue</blue-prop>
     </specular>
-
-    <emission>
-      <red-prop>emission/red</red-prop>
-      <green-prop>emission/green</green-prop>
-      <blue-prop>emission/blue</blue-prop>
-    </emission>
   </animation>
 
   <effect>
@@ -174,7 +169,7 @@
     <offsets>
       <x-m>  0.0 </x-m>
       <y-m>  0.0 </y-m>
-      <z-m> -0.6 </z-m>
+      <z-m> -5.8 </z-m>
     </offsets>
   </model>
 
@@ -188,9 +183,9 @@
   <model>
     <path>Aircraft/C130/Models/Effects/ground/ground0.xml</path>
     <offsets>
-      <x-m> -0.831 </x-m>
-      <y-m>  0.000 </y-m>
-      <z-m> -0.896 </z-m>
+      <x-m> -11.104 </x-m>
+      <y-m>   0.000 </y-m>
+      <z-m>  -5.961 </z-m>
     </offsets>
   </model>
 
@@ -198,9 +193,9 @@
   <model>
     <path>Aircraft/C130/Models/Effects/ground/ground1.xml</path>
     <offsets>
-      <x-m>  0.702 </x-m>
+      <x-m> -2.424 </x-m>
       <y-m> -2.125 </y-m>
-      <z-m> -0.896 </z-m>
+      <z-m> -5.979 </z-m>
     </offsets>
   </model>
 
@@ -208,9 +203,9 @@
   <model>
     <path>Aircraft/C130/Models/Effects/ground/ground2.xml</path>
     <offsets>
-      <x-m>  0.702 </x-m>
+      <x-m> -2.424 </x-m>
       <y-m>  2.125 </y-m>
-      <z-m> -0.896 </z-m>
+      <z-m> -5.979 </z-m>
     </offsets>
   </model>
 
@@ -219,9 +214,9 @@
   <model>
     <path>Aircraft/C130/Models/Effects/trail/trail1.xml</path>
     <offsets>
-      <x-m>  0.170 </x-m>
+      <x-m> -1.423 </x-m>
       <y-m> -9.821 </y-m>
-      <z-m>  2.916 </z-m>
+      <z-m> -2.147 </z-m>
     </offsets>
   </model>
 
@@ -229,9 +224,9 @@
   <model>
     <path>Aircraft/C130/Models/Effects/trail/trail2.xml</path>
     <offsets>
-      <x-m>  0.170 </x-m>
+      <x-m> -1.423 </x-m>
       <y-m> -4.926 </y-m>
-      <z-m>  2.916 </z-m>
+      <z-m> -2.147 </z-m>
     </offsets>
   </model>
 
@@ -239,9 +234,9 @@
   <model>
     <path>Aircraft/C130/Models/Effects/trail/trail3.xml</path>
     <offsets>
-      <x-m> 0.170 </x-m>
-      <y-m> 4.926 </y-m>
-      <z-m> 2.916 </z-m>
+      <x-m> -1.423 </x-m>
+      <y-m>  4.926 </y-m>
+      <z-m> -2.147 </z-m>
     </offsets>
   </model>
 
@@ -249,9 +244,9 @@
   <model>
     <path>Aircraft/C130/Models/Effects/trail/trail4.xml</path>
     <offsets>
-      <x-m> 0.170 </x-m>
-      <y-m> 9.821 </y-m>
-      <z-m> 2.916 </z-m>
+      <x-m> -1.423 </x-m>
+      <y-m>  9.821 </y-m>
+      <z-m> -2.147 </z-m>
     </offsets>
   </model>
 
@@ -259,36 +254,36 @@
   <model>
     <path>Aircraft/C130/Models/Propellers/propeller1.xml</path>
     <offsets>
-      <x-m> -3.764 </x-m>
-      <y-m> -9.821 </y-m>
-      <z-m>  3.622 </z-m>
+      <x-m> -5.34817 </x-m>
+      <y-m> -9.82100 </y-m>
+      <z-m> -1.42943 </z-m>
     </offsets>
   </model>
 
   <model>
     <path>Aircraft/C130/Models/Propellers/propeller2.xml</path>
     <offsets> 
-      <x-m> -3.764 </x-m>
-      <y-m> -4.926 </y-m>
-      <z-m>  3.622 </z-m>
+      <x-m> -5.34817 </x-m>
+      <y-m> -4.92600 </y-m>
+      <z-m> -1.42943 </z-m>
     </offsets>
   </model>
 
   <model>
     <path>Aircraft/C130/Models/Propellers/propeller3.xml</path>
     <offsets>
-      <x-m> -3.764 </x-m>
-      <y-m>  4.926 </y-m>
-      <z-m>  3.622 </z-m>
+      <x-m> -5.34817 </x-m>
+      <y-m>  4.92600 </y-m>
+      <z-m> -1.42943 </z-m>
     </offsets>
   </model>
 
   <model>
     <path>Aircraft/C130/Models/Propellers/propeller4.xml</path>
     <offsets>
-      <x-m> -3.764 </x-m>
-      <y-m>  9.821 </y-m>
-      <z-m>  3.622 </z-m>
+      <x-m> -5.34817 </x-m>
+      <y-m>  9.82100 </y-m>
+      <z-m> -1.42943 </z-m>
     </offsets>
   </model>
 
@@ -299,12 +294,12 @@
     <property>surface-positions/left-aileron-pos-norm</property>
     <factor> 25 </factor>
     <axis>
-      <x1-m>   1.200 </x1-m>
-      <y1-m> -19.853 </y1-m>
-      <z1-m>   4.208 </z1-m>
-      <x2-m>   1.837 </x2-m>
-      <y2-m> -14.018 </y2-m>
-      <z2-m>   4.036 </z2-m>
+      <x1-m>  -0.39336 </x1-m>
+      <y1-m> -19.85387 </y1-m>
+      <z1-m>  -0.85508 </z1-m>
+      <x2-m>   0.24370 </x2-m>
+      <y2-m> -14.01833 </y2-m>
+      <z2-m>  -1.02653 </z2-m>
     </axis>
   </animation>
 
@@ -314,12 +309,12 @@
     <property>surface-positions/right-aileron-pos-norm</property>
     <factor> 25 </factor>
     <axis>
-      <x1-m>  1.837 </x1-m>
-      <y1-m> 14.018 </y1-m>
-      <z1-m>  4.036 </z1-m>
-      <x2-m>  1.200 </x2-m>
-      <y2-m> 19.853 </y2-m>
-      <z2-m>  4.208 </z2-m>
+      <x1-m>  0.24370 </x1-m>
+      <y1-m> 14.01833 </y1-m>
+      <z1-m> -1.02653 </z1-m>
+      <x2-m> -0.39336 </x2-m>
+      <y2-m> 19.85387 </y2-m>
+      <z2-m> -0.85508 </z2-m>
     </axis>
   </animation>
 
@@ -354,9 +349,9 @@
     <property>surface-positions/flap-pos-norm</property>
     <factor> -50 </factor>
     <center>
-      <x-m>  2.153 </x-m>
-      <y-m> -9.882 </y-m>
-      <z-m>  3,720 </z-m>
+      <x-m>  0.51759 </x-m>
+      <y-m> -9.88152 </y-m>
+      <z-m> -1.44495 </z-m>
     </center>
     <axis>
       <x> -0.105 </x>
@@ -393,11 +388,11 @@
     <type>rotate</type>
     <object-name>voletG2</object-name>
     <property>surface-positions/flap-pos-norm</property>
-    <factor>-50.0</factor>
+    <factor> -50 </factor>
     <center>
-      <x-m>  2.583 </x-m>
-      <y-m> -3.927 </y-m>
-      <z-m>  3,587 </z-m>
+      <x-m>  0.97412 </x-m>
+      <y-m> -3.92706 </y-m>
+      <z-m> -1.64816 </z-m>
     </center>
     <axis>
       <x>  0 </x>
@@ -436,9 +431,9 @@
     <property>surface-positions/flap-pos-norm</property>
     <factor>  50.0</factor>
     <center>
-      <x-m> 2.153 </x-m>
-      <y-m> 9.882 </y-m>
-      <z-m> 3,720 </z-m>
+      <x-m>  0.51759 </x-m>
+      <y-m>  9.88152 </y-m>
+      <z-m> -1.44495 </z-m>
     </center>
     <axis>
       <x> -0.105 </x>
@@ -477,9 +472,9 @@
     <property>surface-positions/flap-pos-norm</property>
     <factor>  50 </factor>
     <center>
-      <x-m>  2.566 </x-m>
-      <y-m>  4.151 </y-m>
-      <z-m>  3,777 </z-m>
+      <x-m>  0.97412 </x-m>
+      <y-m>  3.92706 </y-m>
+      <z-m> -1.64816 </z-m>
     </center>
     <axis>
       <x> 0 </x>
@@ -495,9 +490,9 @@
     <property>surface-positions/elevator-pos-norm</property>
     <factor> 25 </factor>
     <center>
-      <x-m> 13.506 </x-m>
-      <y-m>  0.000 </y-m>
-      <z-m>  4.096 </z-m>
+      <x-m> 11.91272 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m> -0.96632 </z-m>
     </center>
     <axis>
       <x> 0 </x>
@@ -513,12 +508,12 @@
     <property>surface-positions/rudder-pos-norm</property>
     <factor> -25 </factor>
     <axis>
-      <x1-m> 13.407 </x1-m>
-      <y1-m>  0.000 </y1-m>
-      <z1-m>  4.306 </z1-m>
-      <x2-m> 13.395 </x2-m>
-      <y2-m>  0.000 </y2-m>
-      <z2-m> 10.630 </z2-m>
+      <x1-m> 11.81391 </x1-m>
+      <y1-m>  0.00000 </y1-m>
+      <z1-m> -0.75704 </z1-m>
+      <x2-m> 11.80147 </x2-m>
+      <y2-m>  0.00000 </y2-m>
+      <z2-m>  5.56740 </z2-m>
     </axis>
   </animation>
   
@@ -543,9 +538,9 @@
       <entry><ind> 1 </ind><dep>  0 </dep></entry>
     </interpolation>
     <center>
-      <x-m> -9.509 </x-m>
-      <y-m>  0.000 </y-m>
-      <z-m>  1.000 </z-m>
+      <x-m> -11.10287 </x-m>
+      <y-m>   0.00000 </y-m>
+      <z-m>  -4.06300 </z-m>
     </center>
     <axis>
       <x> 0 </x>
@@ -610,9 +605,9 @@
       <entry><ind> 1.00 </ind><dep>  0 </dep></entry>
     </interpolation>
     <center>
-      <x-m> -11.290 </x-m>
-      <y-m>   0.000 </y-m>
-      <z-m>   0.153 </z-m>
+      <x-m> -12.88448 </x-m>
+      <y-m>   0.00000 </y-m>
+      <z-m>  -4.90986 </z-m>
     </center>
     <axis>
       <x> 0 </x>
@@ -661,9 +656,9 @@
       <entry><ind> 1.0 </ind><dep>  0.00 </dep></entry>
     </interpolation>
     <center>
-      <x-m>  0.000 </x-m>
-      <y-m> -2.461 </y-m>
-      <z-m>  0.495 </z-m>
+      <x-m> -1.59363 </x-m>
+      <y-m> -2.46063 </y-m>
+      <z-m> -4.56754 </z-m>
     </center>
     <axis>
       <x> 1 </x>
@@ -682,9 +677,9 @@
       <entry><ind> 1.0 </ind><dep>  0 </dep></entry>
     </interpolation>
     <center>
-      <x-m>  0.000 </x-m>
-      <y-m> -1.686 </y-m>
-      <z-m> -0.122 </z-m>
+      <x-m> -1.59364 </x-m>
+      <y-m> -1.68591 </y-m>
+      <z-m> -5.18556 </z-m>
     </center>
     <axis>
       <x> -1 </x>
@@ -703,9 +698,9 @@
       <entry><ind> 1.0 </ind><dep>  0.00 </dep></entry>
     </interpolation>
     <center>
-      <x-m>  0.000 </x-m>
-      <y-m>  2.461 </y-m>
-      <z-m>  0.495 </z-m>
+      <x-m> -1.59363 </x-m>
+      <y-m>  2.46063 </y-m>
+      <z-m> -4.56754 </z-m>
     </center>
     <axis>
       <x> -1 </x>
@@ -724,9 +719,9 @@
       <entry><ind> 1.0 </ind><dep>  0 </dep></entry>
     </interpolation>
     <center>
-      <x-m>  0.000 </x-m>
-      <y-m>  1.686 </y-m>
-      <z-m> -0.122 </z-m>
+      <x-m> -1.59364 </x-m>
+      <y-m>  1.68591 </y-m>
+      <z-m> -5.18556 </z-m>
     </center>
     <axis>
       <x> 1 </x>
@@ -768,9 +763,9 @@
       <entry><ind> 1 </ind><dep> -41.801 </dep></entry>
     </interpolation>
     <center>
-      <x-m> -9.641 </x-m>
-      <y-m>  0.000 </y-m>
-      <z-m> -0.481 </z-m>
+      <x-m> -11.23452 </x-m>
+      <y-m>   0.00000 </y-m>
+      <z-m>  -5.54408 </z-m>
     </center>
     <axis>
       <x> 0 </x>
@@ -788,9 +783,9 @@
       <entry><ind> 1 </ind><dep> 42.40 </dep></entry>
     </interpolation>
     <center>
-      <x-m> -9.659 </x-m>
-      <y-m>  0.000 </y-m>
-      <z-m>  0.638 </z-m>
+      <x-m> -11.25242 </x-m>
+      <y-m>   0.00000 </y-m>
+      <z-m>  -4.42506 </z-m>
     </center>
     <axis>
       <x> 0 </x>
@@ -854,9 +849,9 @@
     <property>surface-positions/rudder-pos-norm</property>
     <factor> 20 </factor>
     <center>
-      <x-m> -9.511 </x-m>
-      <y-m>  0.000 </y-m>
-      <z-m> -0.548 </z-m>
+      <x-m> -11.16317 </x-m>
+      <y-m>   0.00000 </y-m>
+      <z-m>  -4.72893 </z-m>
     </center>
     <axis>
       <x> 0 </x>
@@ -878,9 +873,9 @@
     <property>gear/gear[0]/rollspeed-ms</property>
     <factor> -30 </factor>
     <center>
-      <x-m> -9.511 </x-m>
-      <y-m>  0.000 </y-m>
-      <z-m> -0.548 </z-m>
+      <x-m> -11.10488 </x-m>
+      <y-m>   0.00000 </y-m>
+      <z-m>  -5.61119 </z-m>
     </center>
     <axis>
       <x> 0 </x>
@@ -895,9 +890,9 @@
     <property>gear/gear[1]/rollspeed-ms</property>
     <factor> -30 </factor>
     <center>
-      <x-m> -0.831 </x-m>
-      <y-m> -2.125 </y-m>
-      <z-m> -0.430 </z-m>
+      <x-m> -2.42488 </x-m>
+      <y-m> -2.12500 </y-m>
+      <z-m> -5.49319 </z-m>
     </center>
     <axis>
       <x> 0 </x>
@@ -912,9 +907,9 @@
     <property>gear/gear[3]/rollspeed-ms</property>
     <factor> -30 </factor>
     <center>
-      <x-m>  0.702 </x-m>
-      <y-m> -2.125 </y-m>
-      <z-m> -0.430 </z-m>
+      <x-m> -0.89188 </x-m>
+      <y-m> -2.12500 </y-m>
+      <z-m> -5.49319 </z-m>
     </center>
     <axis>
       <x> 0 </x>
@@ -929,9 +924,9 @@
     <property>gear/gear[2]/rollspeed-ms</property>
     <factor> -30 </factor>
     <center>
-      <x-m> -0.831 </x-m>
-      <y-m>  2.125 </y-m>
-      <z-m> -0.430 </z-m>
+      <x-m> -2.42488 </x-m>
+      <y-m>  2.12500 </y-m>
+      <z-m> -5.49319 </z-m>
     </center>
     <axis>
       <x> 0 </x>
@@ -946,9 +941,9 @@
     <property>gear/gear[4]/rollspeed-ms</property>
     <factor> -30 </factor>
     <center>
-      <x-m>  0.702 </x-m>
-      <y-m>  2.125 </y-m>
-      <z-m> -0.430 </z-m>
+      <x-m> -0.89188 </x-m>
+      <y-m>  2.12500 </y-m>
+      <z-m> -5.49319 </z-m>
     </center>
     <axis>
       <x> 0 </x>
@@ -967,6 +962,10 @@
   <animation>
     <type>pick</type>
     <object-name>PorteCargo</object-name>
+    <object-name>porteBG</object-name>
+    <object-name>hublotBG</object-name>
+    <object-name>porteBD</object-name>
+    <object-name>hublotBD</object-name>
     <visible>true</visible>
     <action>
       <button>0</button>
@@ -984,9 +983,9 @@
     <property>sim/model/door-positions/passenger/position-norm</property>
     <factor> 31.12 </factor>
     <center>
-      <x-m>  4.061 </x-m>
-      <y-m>  0.000 </y-m>
-      <z-m> -0.155 </z-m>
+      <x-m>  2.46907 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m> -5.23274 </z-m>
     </center>
     <axis>
       <x> 0 </x>
@@ -1001,9 +1000,9 @@
     <property>sim/model/door-positions/passenger/position-norm</property>
     <factor> 22.52 </factor>
     <center>
-      <x-m> 10.600 </x-m>
-      <y-m>  0.000 </y-m>
-      <z-m>  3.083 </z-m>
+      <x-m>  9.00680 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m> -2.13374 </z-m>
     </center>
     <axis>
       <x> 0 </x>
@@ -1012,11 +1011,16 @@
     </axis>
   </animation>
 
-  <!-- Petite porte arrière gauche -->
+  <!-- Petites portes arrières -->
   <animation>
-    <type>translate</type>
+    <name>PorteArriereGauche</name>
     <object-name>porteBG</object-name>
     <object-name>hublotBG</object-name>
+  </animation>
+  
+  <animation>
+    <type>translate</type>
+    <object-name>PorteArriereGauche</object-name>
     <property>sim/model/door-positions/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.0 </ind><dep> 0.00 </dep></entry>
@@ -1032,8 +1036,7 @@
 
   <animation>
     <type>rotate</type>
-    <object-name>porteBG</object-name>
-    <object-name>hublotBG</object-name>
+    <object-name>PorteArriereGauche</object-name>
     <property>sim/model/door-positions/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.0 </ind><dep>  0 </dep></entry>
@@ -1041,9 +1044,9 @@
       <entry><ind> 1.0 </ind><dep> 40 </dep></entry>
     </interpolation>
     <center>
-      <x-m> 3.615 </x-m>
-      <y-m> 0.000 </y-m>
-      <z-m> 1.854 </z-m>
+      <x-m>  2.02133 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m> -3.21666 </z-m>
     </center>
     <axis>
       <x> -1 </x>
@@ -1052,11 +1055,15 @@
     </axis>
   </animation>
 
-  <!-- Petite porte arrière droite -->
   <animation>
-    <type>translate</type>
+    <name>PorteArriereDroite</name>
     <object-name>porteBD</object-name>
     <object-name>hublotBD</object-name>
+  </animation>
+  
+  <animation>
+    <type>translate</type>
+    <object-name>PorteArriereDroite</object-name>
     <property>sim/model/door-positions/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.0 </ind><dep> 0.00 </dep></entry>
@@ -1072,8 +1079,7 @@
 
   <animation>
     <type>rotate</type>
-    <object-name>porteBD</object-name>
-    <object-name>hublotBD</object-name>
+    <object-name>PorteArriereDroite</object-name>
     <property>sim/model/door-positions/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.0 </ind><dep>  0 </dep></entry>
@@ -1081,9 +1087,9 @@
       <entry><ind> 1.0 </ind><dep> 40 </dep></entry>
     </interpolation>
     <center>
-      <x-m> 3.615 </x-m>
-      <y-m> 0.000 </y-m>
-      <z-m> 1.854 </z-m>
+      <x-m>  2.02133 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m> -3.21666 </z-m>
     </center>
     <axis>
       <x> 1 </x>
@@ -1113,9 +1119,9 @@
     <property>sim/model/door-positions/crew/position-norm</property>
     <factor> 88 </factor>
     <center>
-      <x-m> -7.599 </x-m>
-      <y-m> -1.168 </y-m>
-      <z-m>  0.156 </z-m>
+      <x-m> -9.21695 </x-m>
+      <y-m> -1.16833 </y-m>
+      <z-m> -4.90735 </z-m>
     </center>
     <axis>
       <x> 1 </x>
@@ -1128,45 +1134,45 @@
   <model>
     <path>Aircraft/C130/Models/light/beacon.xml</path>
     <offsets>
-      <x-m> 12.588 </x-m>
-      <y-m>  0.000 </y-m>
-      <z-m> 11.168 </z-m>
+      <x-m> 11.24185 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m>  6.10442 </z-m>
     </offsets>
   </model>
 
   <model>
     <path>Aircraft/C130/Models/light/RedLight.xml</path>
     <offsets>
-      <x-m>  -0.235 </x-m>
-      <y-m> -20.146 </y-m>
-      <z-m>   4.208 </z-m>
+      <x-m>  -1.76940 </x-m>
+      <y-m> -20.14592 </y-m>
+      <z-m>  -0.85508 </z-m>
     </offsets>
   </model>
 
+  <model>
+    <path>Aircraft/C130/Models/light/StrobeLight.xml</path>
+    <offsets>
+      <x-m>  -1.66940 </x-m>
+      <y-m> -20.14592 </y-m>
+      <z-m>  -0.85508 </z-m>
+    </offsets>
+  </model>
+  
   <model>
     <path>Aircraft/C130/Models/light/GreenLight.xml</path>
     <offsets>
-      <x-m> -0.235 </x-m>
-      <y-m> 20.146 </y-m>
-      <z-m>  4.208 </z-m>
+      <x-m> -1.76940 </x-m>
+      <y-m> 20.14592 </y-m>
+      <z-m> -0.85508 </z-m>
     </offsets>
   </model>
 
   <model>
     <path>Aircraft/C130/Models/light/StrobeLight.xml</path>
     <offsets>
-      <x-m>  -0.135 </x-m>
-      <y-m> -20.146 </y-m>
-      <z-m>   4.208 </z-m>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft/C130/Models/light/StrobeLight.xml</path>
-    <offsets>
-      <x-m> -0.135 </x-m>
-      <y-m> 20.146 </y-m>
-      <z-m>  4.208 </z-m>
+      <x-m> -1.66940 </x-m>
+      <y-m> 20.14592 </y-m>
+      <z-m> -0.85508 </z-m>
     </offsets>
   </model>
 

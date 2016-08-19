@@ -2,6 +2,11 @@
 
 <PropertyList>
 
+  <!-- MP sound call -->
+  <sound>
+    <path>Aircraft/C130/Sounds/mp-c-sound.xml</path>
+  </sound>
+  
   <nasal>
     <load>
       var livery_update = aircraft.livery_update.new("Aircraft/C130/Models/Liveries", 10);
@@ -31,4 +36,3 @@
   </model>
 
 </PropertyList>
-

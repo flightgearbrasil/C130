@@ -6,9 +6,9 @@
   <model>
     <path>Aircraft/C130/Models/Interior/ac130/armament/gau12/turret.xml</path>
     <offsets>
-      <x-m> -6.40 </x-m>
-      <y-m> -1.95 </y-m>
-      <z-m>  1.35 </z-m>
+      <x-m> -7.99387 </x-m>
+      <y-m> -1.95000 </y-m>
+      <z-m> -3.71319 </z-m>
     </offsets>
   </model>
   
@@ -16,18 +16,18 @@
   <model>
     <path>Aircraft/C130/Models/Interior/ac130/armament/gau12/gau12.xml</path>
     <offsets>
-      <x-m> -6.25 </x-m>
-      <y-m> -1.85 </y-m>
-      <z-m>  1.35 </z-m> 
+      <x-m> -7.84387 </x-m>
+      <y-m> -1.85000 </y-m>
+      <z-m> -3.71319 </z-m> 
     </offsets>
   </model>
   
   <model>
     <path>Aircraft/C130/Models/Interior/ac130/armament/gau12/gun_door.xml</path>
     <offsets>
-      <x-m> -6.40 </x-m>
-      <y-m> -1.85 </y-m>
-      <z-m>  1.30 </z-m> 
+      <x-m> -7.99387 </x-m>
+      <y-m> -1.85000 </y-m>
+      <z-m> -3.76319 </z-m> 
       <heading-deg> 180 </heading-deg>
     </offsets>
   </model>
@@ -36,9 +36,9 @@
   <model>
     <path>Aircraft/C130/Models/Interior/ac130/armament/gau12/turret.xml</path>
     <offsets>
-      <x-m> -5.40 </x-m>
-      <y-m> -1.95 </y-m>
-      <z-m>  1.35 </z-m>
+      <x-m> -6.99387 </x-m>
+      <y-m> -1.95000 </y-m>
+      <z-m> -3.71319 </z-m>
     </offsets>
   </model>
   
@@ -46,18 +46,18 @@
   <model>
     <path>Aircraft/C130/Models/Interior/ac130/armament/gau12/gau12.xml</path>
     <offsets>
-      <x-m> -5.25 </x-m>
-      <y-m> -1.85 </y-m> 
-      <z-m>  1.35  </z-m>
+      <x-m> -6.84387 </x-m>
+      <y-m> -1.85000 </y-m> 
+      <z-m> -3.71319 </z-m>
     </offsets>
   </model>
   
   <model>
     <path>Aircraft/C130/Models/Interior/ac130/armament/gau12/gun_door.xml</path>
     <offsets>
-      <x-m> -5.40 </x-m>
-      <y-m> -1.85 </y-m>
-      <z-m>  1.30   </z-m> 
+      <x-m> -6.99387 </x-m>
+      <y-m> -1.85000 </y-m>
+      <z-m> -3.76319 </z-m> 
       <heading-deg> 180 </heading-deg>
     </offsets>
   </model>
@@ -66,9 +66,9 @@
   <model>
     <path>Aircraft/C130/Models/Interior/ac130/armament/40/bofor.xml</path>
     <offsets>
-      <x-m>  3.623 </x-m> <!--  0.6 -->
-      <y-m> -0.850 </y-m> <!-- -2.4 -->
-      <z-m>  1.170 </z-m>
+      <x-m>  2.02913 </x-m> <!--  0.6 -->
+      <y-m> -0.85000 </y-m> <!-- -2.4 -->
+      <z-m> -3.89319 </z-m>
       <pitch-deg>     5 </pitch-deg>
       <heading-deg> -90 </heading-deg>
     </offsets>
@@ -78,9 +78,9 @@
   <model>
     <path>Aircraft/C130/Models/Interior/ac130/armament/gau12/mount.xml</path>
     <offsets>
-      <x-m> -5.30 </x-m>
-      <y-m> -1.60 </y-m>
-      <z-m>  1.35 </z-m>
+      <x-m> -6.89387 </x-m>
+      <y-m> -1.60000 </y-m>
+      <z-m> -3.71319 </z-m>
     </offsets>
   </model>
   
@@ -88,9 +88,9 @@
   <model>
     <path>Aircraft/C130/Models/Interior/ac130/armament/gau12/mount.xml</path>
     <offsets>
-      <x-m> -6.30 </x-m>
-      <y-m> -1.60 </y-m>
-      <z-m>  1.35 </z-m>
+      <x-m> -7.89387 </x-m>
+      <y-m> -1.60000 </y-m>
+      <z-m> -3.71319 </z-m>
     </offsets>
   </model>
   

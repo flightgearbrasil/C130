@@ -9,51 +9,61 @@
     <object-name>interieur</object-name>
     <object-name>tour</object-name>
     <object-name>cabine</object-name>
-
+    <object-name>planchet</object-name>
+    <object-name>intporteA</object-name>
+    <object-name>intporteBG</object-name>
+    <object-name>intporteBD</object-name>
+    <object-name>intbaieB</object-name>
+    <object-name>intbaieH</object-name>
+    
     <!-- Objets transparents -->
     <object-name>intvitres</object-name>
+    <object-name>inthublotBG</object-name>
+    <object-name>inthublotBD</object-name>
   </animation>
 
   <!-- working for Rembrandt -->
   <effect>
-    <inherits-from>Aircraft/C130/Models/Effects/Glass/glass</inherits-from>
+    <inherits-from>Effects/model-transparent</inherits-from>
     <object-name>intvitres</object-name>
+    <object-name>inthublotBG</object-name>
+    <object-name>inthublotBD</object-name>
   </effect>
   
   <!-- Pilote -->
   <model>
     <path>Aircraft/C130/Models/Pilot/pilot.xml</path>
     <offsets>
-      <x-m> -10.280 </x-m>
-      <y-m>  -0.610 </y-m>
-      <z-m>   2.488 </z-m>
+      <x-m> -11.87387 </x-m>
+      <y-m>  -0.61000 </y-m>
+      <z-m>  -2.57519 </z-m>
     </offsets>
   </model>
 
   <model>
     <path>Aircraft/C130/Models/Pilot/pilot.xml</path>
     <offsets>
-      <x-m> -10.280 </x-m>
-      <y-m>   0.610 </y-m>
-      <z-m>   2.488 </z-m>
+      <x-m> -11.87387 </x-m>
+      <y-m>   0.61000 </y-m>
+      <z-m>  -2.57519 </z-m>
     </offsets>
   </model>
 
   <model>
     <path>Aircraft/C130/Models/Pilot/pilot.xml</path>
     <offsets>
-      <x-m> -9.280 </x-m>
-      <y-m>  0.000 </y-m>
-      <z-m>  2.748 </z-m>
+      <x-m> -10.87387 </x-m>
+      <y-m>   0.00000 </y-m>
+      <z-m>  -2.31519 </z-m>
     </offsets>
   </model>
 
   <model>
     <path>Aircraft/C130/Models/Pilot/pilot.xml</path>
     <offsets>
-      <x-m> -8.807 </x-m>
-      <y-m>  0.594 </y-m>
-      <z-m>  2.383 </z-m>
+      <x-m> -10.40087 </x-m>
+      <y-m>   0.59400 </y-m>
+      <z-m>  -2.68019 </z-m>
       <heading-deg> -90 </heading-deg>
     </offsets>
   </model>
@@ -62,40 +72,199 @@
   <model>
     <path>Aircraft/C130/Models/Interior/Panel/panel.xml</path>
     <offsets>
-      <x-m> -10.746 </x-m>
-      <y-m>   0.000 </y-m>
-      <z-m>   2.480 </z-m>
+      <x-m> -12.33987 </x-m>
+      <y-m>   0.00000 </y-m>
+      <z-m>  -2.58319 </z-m>
     </offsets>
   </model>
-<!--
-  <panel>
-    <name>Panel3D</name>
-    <path>Aircraft/C130/Models/Interior/Panel/hotspots.xml</path>
-    <bottom-left>
-      <x-m>-11.074</x-m>
-      <y-m> -0.366</y-m>
-      <z-m>  2.262</z-m>
-    </bottom-left>
-    <bottom-right>
-      <x-m>-11.074</x-m>
-      <y-m> -0.205</y-m>
-      <z-m>  2.262</z-m>
-    </bottom-right>
-    <top-left>
-      <x-m>-11.074</x-m>
-      <y-m> -0.366</y-m>
-      <z-m>  2.382</z-m>
-    </top-left>
-  </panel>
--->
+  
   <!-- Plafonnier --> 
   <model>
     <path>Aircraft/C130/Models/Interior/Panel/Overhead/overhead.xml</path>
     <offsets>
-      <x-m> -10.433 </x-m>
-      <y-m>   0.000 </y-m>
-      <z-m>   3.603 </z-m>
+      <x-m> -12.02687 </x-m>
+      <y-m>   0.00000 </y-m>
+      <z-m>  -1.46019 </z-m>
     </offsets>
   </model>
 
+  <!-- Portes cargo arrière et petite porte arrière/coté -->
+  <animation>
+    <name>IntPorteCargo</name>
+    <object-name>intbaieB</object-name>
+    <object-name>intbaieH</object-name>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>IntPorteCargo</object-name>
+    <object-name>intporteBG</object-name>
+    <object-name>intporteBD</object-name>
+    <object-name>inthublotBG</object-name>
+    <object-name>inthublotBD</object-name>
+    <object-name>intPorteCargo</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.passenger.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>intbaieB</object-name>
+    <property>sim/model/door-positions/passenger/position-norm</property>
+    <factor> 31.12 </factor>
+    <center>
+      <x-m>  2.46907 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m> -5.23274 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>intbaieH</object-name>
+    <property>sim/model/door-positions/passenger/position-norm</property>
+    <factor> 22.52 </factor>
+    <center>
+      <x-m>  9.00680 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m> -2.13374 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+  <!-- Petites portes arrières -->
+  <animation>
+    <name>IntPorteArriereGauche</name>
+    <object-name>intporteBG</object-name>
+    <object-name>inthublotBG</object-name>
+  </animation>
+  
+  <animation>
+    <type>translate</type>
+    <object-name>IntPorteArriereGauche</object-name>
+    <property>sim/model/door-positions/passenger/position-norm</property>
+    <interpolation>
+      <entry><ind> 0.0 </ind><dep> 0.00 </dep></entry>
+      <entry><ind> 0.2 </ind><dep> 0.05 </dep></entry>
+      <entry><ind> 1.0 </ind><dep> 0.05 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>IntPorteArriereGauche</object-name>
+    <property>sim/model/door-positions/passenger/position-norm</property>
+    <interpolation>
+      <entry><ind> 0.0 </ind><dep>  0 </dep></entry>
+      <entry><ind> 0.2 </ind><dep>  0 </dep></entry>
+      <entry><ind> 1.0 </ind><dep> 40 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m>  2.02133 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m> -3.21666 </z-m>
+    </center>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <name>IntPorteArriereDroite</name>
+    <object-name>intporteBD</object-name>
+    <object-name>inthublotBD</object-name>
+  </animation>
+  
+  <animation>
+    <type>translate</type>
+    <object-name>IntPorteArriereDroite</object-name>
+    <property>sim/model/door-positions/passenger/position-norm</property>
+    <interpolation>
+      <entry><ind> 0.0 </ind><dep> 0.00 </dep></entry>
+      <entry><ind> 0.2 </ind><dep> 0.05 </dep></entry>
+      <entry><ind> 1.0 </ind><dep> 0.05 </dep></entry>
+    </interpolation>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>IntPorteArriereDroite</object-name>
+    <property>sim/model/door-positions/passenger/position-norm</property>
+    <interpolation>
+      <entry><ind> 0.0 </ind><dep>  0 </dep></entry>
+      <entry><ind> 0.2 </ind><dep>  0 </dep></entry>
+      <entry><ind> 1.0 </ind><dep> 40 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m>  2.02133 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m> -3.21666 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+  <!-- Porte équipage avant -->
+  <animation>
+    <type>pick</type>
+    <object-name>intporteA</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.crew.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>intporteA</object-name>
+    <property>sim/model/door-positions/crew/position-norm</property>
+    <factor> 88 </factor>
+    <center>
+      <x-m> -9.21695 </x-m>
+      <y-m> -1.16833 </y-m>
+      <z-m> -4.90735 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
 </PropertyList>
