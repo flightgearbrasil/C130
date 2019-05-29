@@ -1,0 +1,82 @@
+Specifications (C-130H)
+
+
+Data from USAF C-130 Hercules fact sheet,[51] International Directory of Military Aircraft,[52] Complete Encyclopedia of World Aircraft,[53] Encyclopedia of Modern Military Aircraft[54]
+General characteristics
+Crew: 5 (two pilots, navigator, flight engineer and loadmaster)
+
+Capacity:
+
+92 passengers or
+64 airborne troops or
+74 litter patients with 2 medical personnel or
+6 pallets or
+2–3 Humvees or
+2 M113 armored personnel carriers
+
+Payload: 45,000 lb (20,000 kg)
+Length: 97 ft 9 in (29.8 m)
+Wingspan: 132 ft 7 in (40.4 m)
+Height: 38 ft 3 in (11.6 m)
+Wing area: 1,745 ft² (162.1 m²)
+Empty weight: 75,800 lb (34,400 kg)
+Useful load: 72,000 lb (33,000 kg)
+Max. takeoff weight: 155,000 lb (70,300 kg)
+Powerplant: 4 × Allison T56-A-15 turboprops, 4,590 shp (3,430 kW) each
+
+Performance
+
+Maximum speed: 320 knots (366 mph, 592 km/h) at 20,000 ft (6,060 m)
+Cruise speed: 292 kn (336 mph, 540 km/h)
+Range: 2,050 nmi (2,360 mi, 3,800 km) ( payload of 12,700Kgs (28,000Ibs) )
+Absolute range : 8368 km = 4518.358 nmi (source : http://www.strategypage.com/htmw/htairmo/articles/20080626.aspx?comments=Y )
+Service ceiling: 33,000 ft (10,060 m) empty;[55] 23,000 ft (7,077 m) with 42,000 pounds (19,090 kilograms) payload ()
+Rate of climb: 1,830 ft/min (9.3 m/s)
+Takeoff distance: 
+	3,586 ft (1,093 m) at 155,000 lb (70,300 kg) max gross weight;[54] 
+	1,400 ft (427 m) at 80,000 lb (36,300 kg) gross weight[56]
+
+SOURCE : http://en.wikipedia.org/wiki/Lockheed_C-130_Hercules in 2012/03/07
+
+
+Specifications (C-130H)
+
+General Characteristics
+
+Primary Function: Tactical and intratheater airlift
+
+Contractor: Lockheed Martin Aeronautical Systems Company
+
+Power Plant: Four Allison T56-A-15 turboprops; 4,300 horsepower, each engine (flat rated)
+
+Length: 97 feet, 9 inches (29.3 meters)
+
+Height: 38 feet, 3 inches (11.4 meters)
+
+Wingspan: 132 feet, 7 inches (39.7 meters)
+
+Cargo Compartment: 
+	Length, 41 feet (12.5 meters); width, 108 inches (2.74 meters); height, 9 feet (2.74 meters). 
+	Rear ramp (one pallet position); length, 88 inches (2.23 meters); width, 108 inches (2.74 meters); height, 76 inches (1.93 meters)
+
+Speed: 374 mph (Mach 0.57) at 20,000 feet (6,060 meters)
+
+Ceiling: 33,000 feet (10,000 meters) with 45,000 pounds (17,716 kilograms) payload
+
+Maximum Takeoff Weight: 155,000 pounds (69,750 kilograms)
+
+Range: 2,356 miles (2,049 nautical miles) with maximum payload; 2,500 miles (2,174 nautical miles) with 25,000 pounds (11,250 kilograms) cargo; 5,200 miles (4,522 nautical miles) with no cargo
+
+Crew: Five (two pilots, a navigator, flight engineer and loadmaster); up to 92 troops or 64 paratroops or 74 litter patients or six standard freight pallets with a maximum of 45,000 pounds of cargo.
+
+Unit Cost: $14.1 million (1996 dollars)
+
+Date Deployed: April 1955
+
+Inventory: Active force, 93; Air Reserve component (Reserve and ANG), 296
+
+SOURCE : 
+
+Specifications (C-130E)
+
+SEE C-130_data.png

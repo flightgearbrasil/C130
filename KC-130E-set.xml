@@ -1,0 +1,969 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+
+       Creation :   March 07, 2012 12:55:31 AM 
+       Last update: 
+
+-->
+<PropertyList>
+	<sim>
+
+		<description>Lockheed KC-130E</description>
+		<author>BARANGER Emmanuel, FABERT Didier</author>
+		<flight-model>jsb</flight-model>
+		<aero>KC-130E</aero>
+		<aircraft-version>20120308</aircraft-version>
+
+		<!-- Estado de desenvolvimento da aeronave -->
+		<status>beta</status>
+		<rating>
+			<FDM type="int">2</FDM>
+			<systems type="int">1</systems>
+			<cockpit type="int">3</cockpit>
+			<model type="int">4</model>
+		</rating>
+
+		<virtual-cockpit archive="y">false</virtual-cockpit>
+
+		<!-- Sistemas da Aeronave -->
+		<systems>
+			<!-- Sistema eltrico -->
+			<electrical>
+				<path>Aircraft/C130/Systems/electrical.xml</path>
+			</electrical>
+			<!-- Piloto automtico -->
+			<autopilot>
+				<path>Aircraft/C130/Systems/autopilot.xml</path>
+			</autopilot>
+			<!-- Outros sistemas -->
+		</systems>
+
+		<instrumentation>
+			<path>Aircraft/C130/Systems/instrumentation.xml</path>
+		</instrumentation>
+
+		<sound>
+			<audible>true</audible>
+			<path>Aircraft/C130/Sounds/c130-sound.xml</path>
+		</sound>
+
+		<startup>
+			<splash-texture>Aircraft/C130/splash/splash.png</splash-texture>
+		</startup>
+
+		<model>
+			<path>Aircraft/C130/Models/kc130e.xml</path>
+			<start-idling type="bool">false</start-idling>
+			<livery>
+				<file type="string">default</file>
+			</livery>
+		</model>
+
+		<submodels>
+			<serviceable type="bool">true</serviceable>
+			<path>Aircraft/C130/Submodels/submodels.xml</path>
+		</submodels>
+
+
+		<chase-distance-m type="double" archive="y">-45.0</chase-distance-m>
+
+		<view n="100">
+			<name>Co Pilot Seat View</name>
+			<internal archive="y">true</internal>
+			<type>lookfrom</type>
+			<config>
+				<from-model type="bool">true</from-model>
+				<ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+				<x-offset-m archive="y">   0.607 </x-offset-m>
+				<!--Right -->
+				<y-offset-m archive="y">   3.002 </y-offset-m>
+				<!--Up    -->
+				<z-offset-m archive="y"> -10.362 </z-offset-m>
+				<!--Back  -->
+				<pitch-offset-deg>-15</pitch-offset-deg>
+				<default-field-of-view-deg>60</default-field-of-view-deg>
+				<dynamic-view type="bool">true</dynamic-view>
+			</config>
+		</view>
+
+		<view n="101">
+			<name>Weapons View</name>
+			<type>lookfrom</type>
+			<internal archive="y">true</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<from-model-idx type="int">0</from-model-idx>
+				<ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
+				<default-field-of-view-deg type="double">39</default-field-of-view-deg>
+				<pitch-offset-deg>-5</pitch-offset-deg>
+				<x-offset-m archive="y"> -2.71 </x-offset-m>
+				<!-- Right -->
+				<y-offset-m archive="y">  1.41 </y-offset-m>
+				<!-- Up -->
+				<z-offset-m archive="y">  0.00 </z-offset-m>
+				<!-- Back -->
+			</config>
+		</view>
+
+		<view n="102">
+			<name>Battle Management Station</name>
+			<type>lookfrom</type>
+			<internal archive="y">true</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<from-model-idx type="int">-90</from-model-idx>
+				<ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
+				<default-field-of-view-deg type="double">120</default-field-of-view-deg>
+				<pitch-offset-deg>-5</pitch-offset-deg>
+				<heading-offset-deg>90</heading-offset-deg>
+				<x-offset-m archive="y">  0.60 </x-offset-m>
+				<!-- Right -->
+				<y-offset-m archive="y">  1.60 </y-offset-m>
+				<!-- Up -->
+				<z-offset-m archive="y"> -3.40 </z-offset-m>
+				<!-- Back -->
+			</config>
+		</view>
+
+		<view n="103">
+			<name>Commander Seat View</name>
+			<internal archive="y">true</internal>
+			<type>lookfrom</type>
+			<config>
+				<from-model type="bool">true</from-model>
+				<ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+				<x-offset-m archive="y">  0.000 </x-offset-m>
+				<!--Right -->
+				<y-offset-m archive="y">  3.256 </y-offset-m>
+				<!--Up    -->
+				<z-offset-m archive="y"> -9.298 </z-offset-m>
+				<!--Back  -->
+				<pitch-offset-deg>-15</pitch-offset-deg>
+				<default-field-of-view-deg>60</default-field-of-view-deg>
+				<dynamic-view type="bool">true</dynamic-view>
+			</config>
+		</view>
+
+		<view n="104">
+			<name>Engineer Seat View</name>
+			<internal archive="y">true</internal>
+			<type>lookfrom</type>
+			<config>
+				<from-model type="bool">true</from-model>
+				<ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+				<x-offset-m archive="y">  0.685 </x-offset-m>
+				<!--Right -->
+				<y-offset-m archive="y">  2.892 </y-offset-m>
+				<!--Up    -->
+				<z-offset-m archive="y"> -8.823 </z-offset-m>
+				<!--Back  -->
+				<pitch-offset-deg>-15</pitch-offset-deg>
+				<default-field-of-view-deg>60</default-field-of-view-deg>
+				<heading-offset-deg type="double">270</heading-offset-deg>
+				<dynamic-view type="bool">true</dynamic-view>
+			</config>
+		</view>
+
+		<view n="105">
+			<name>Tail Camera View</name>
+			<type>lookfrom</type>
+			<internal archive="y">true</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<from-model-idx type="int">0</from-model-idx>
+				<ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
+				<default-field-of-view-deg type="double">30</default-field-of-view-deg>
+				<pitch-offset-deg>-5</pitch-offset-deg>
+				<x-offset-m archive="y">  0.000 </x-offset-m>
+				<!-- Right -->
+				<y-offset-m archive="y"> 11.214 </y-offset-m>
+				<!-- Up -->
+				<z-offset-m archive="y"> 12.663 </z-offset-m>
+				<!-- Back -->
+			</config>
+		</view>
+
+		<view n="0">
+			<internal archive="y">true</internal>
+			<config>
+				<x-offset-m archive="y">  -0.607 </x-offset-m>
+				<!-- Right -->
+				<y-offset-m archive="y">   2.970 </y-offset-m>
+				<!-- Up    -->
+				<z-offset-m archive="y"> -10.362 </z-offset-m>
+				<!-- Back  -->
+				<pitch-offset-deg> -12 </pitch-offset-deg>
+				<default-field-of-view-deg>60</default-field-of-view-deg>
+			</config>
+		</view>
+
+		<view n="1">
+			<config>
+				<target-z-offset-m archive="y" type="double">0</target-z-offset-m>
+			</config>
+		</view>
+
+		<view n="2">
+			<config>
+				<target-z-offset-m archive="y" type="double">0</target-z-offset-m>
+			</config>
+		</view>
+
+		<view n="3">
+			<config>
+				<target-z-offset-m archive="y" type="double">0</target-z-offset-m>
+			</config>
+		</view>
+
+		<view n="4">
+			<config>
+				<target-z-offset-m archive="y" type="double">0</target-z-offset-m>
+			</config>
+		</view>
+
+		<view n="5">
+			<config>
+				<target-z-offset-m archive="y" type="double">0</target-z-offset-m>
+			</config>
+		</view>
+
+		<view n="6">
+			<config>
+				<target-z-offset-m archive="y" type="double">0</target-z-offset-m>
+			</config>
+		</view>
+
+		<airport>
+			<runways>
+				<start-offset-m>50</start-offset-m>
+			</runways>
+		</airport>
+
+		<flaps>
+			<setting>0.000</setting>
+			<!-- flaps up -->
+			<setting>0.200</setting>
+			<!-- flaps 20  -->
+			<setting>0.400</setting>
+			<!-- flaps 40  -->
+			<setting>0.500</setting>
+			<!-- flaps 50 -->
+			<setting>0.600</setting>
+			<!-- flaps 60 -->
+			<setting>0.800</setting>
+			<!-- flaps 80 -->
+			<setting>1.000</setting>
+			<!-- flaps 100 -->
+		</flaps>
+
+		<instrumentation>
+			<path>Aircraft/L-188/Systems/instrumentation.xml</path>
+		</instrumentation>
+
+		<multiplay>
+			<generic>
+				<float n="2" alias="/controls/refuelling/refuelling-drogues-pos-norm"/>
+		        <int type="int" n="6" alias="/controls/refueling/refueling-active"/>
+			</generic>
+		</multiplay>
+
+
+		<!-- O menu de ajuda dessa aeronave -->
+		<help>
+			<title>Hercules KC-130E</title>
+			<line>Choose your favorit texture using the key above</line>
+			<line>To start the plane you have to select "Engine Starter" and then when</line>
+			<line>n2 shows 25 you have to select "Engine Start", If you want to cutoff</line>
+			<line>the engine just select "Engine Start"</line>
+			<key>
+				<name>Del</name>
+				<desc>Toggle Reversers</desc>
+			</key>
+			<key>
+				<name>Ctrl-j</name>
+				<desc>Parachutist</desc>
+			</key>
+			<key>
+				<name>D</name>
+				<desc>Open/Close backdoor</desc>
+			</key>
+			<key>
+				<name>d</name>
+				<desc>Open/Close crew door</desc>
+			</key>
+			<key>
+				<name>Ctrl-j</name>
+				<desc>Parachutist</desc>
+			</key>
+			<key>
+				<name>O</name>
+				<desc>operate drogue</desc>
+			</key>
+			<text>
+=== Takeoff Procedure ===
+Pre-departure:
+1. - Allocate your fuel, payload and weight under Equipment/fuel and payload
+   - Ensure a complete systems checklist is carried out
+   - Use Pushback truck to taxi away from the terminal
+
+Departure:
+2. Select "Engines" menu to get the engines running
+3. Set your flaps suitably for the conditions and runway length (50 percent)
+4. Release parking brakes
+5. Apply throttle gently, until at 105 percent throttle
+6. Rotate speed between 93 - 123 kts on average depending on weight, temperature and elevation.
+   Pitch up between 8 - 10 degrees.
+7. Raise landing gear at positive climb
+8. Maintain positive climb between 160 - 180 kts.
+
+=== Cruising ===
+- Cruising Speed: GS 320 kts at 20,000 ft
+- Service Ceiling: 25,000ft
+- Engines N1 = 90%
+
+=== Descending ===
+- Atis/Airport Information CHECK
+- Altimeter CHECK
+- Radios SET
+- Descent Speed 170 KIAS 66% N1
+- Flaps / Landing Gear CHECK UP
+- Fuel Balance CHECK
+- At Transition Altitude (FL180) reset Altimeter to local
+- Check Weather (ATIS, Flight Services)
+
+=== Approach ===
+- Localizer Level Flight
+- Landing Lights ON
+- Propeller HIGH RPM
+- Speed: Establish 150 KIAS 75 percent N1
+       Flaps SET 20 deg
+- Speed: Establish 130 KIAS 75 percent N1
+       Flaps SET 40 deg 77 percent N1
+- Landing Gear DOWN
+- Turning toward runway: set flaps 80 deg (100 percent)
+- Final Glideslope Descent :
+- Speed: Establish 115 KIAS 75 percent N1
+- Elevator Trim AS DESIRED
+- Parking Brake VERIFY OFF
+- De-Ice AS REQUIRED
+
+=== Landing ===
+- Switch off cabin lights. Switch on landing lights if necessary
+- Autopilot OFF
+- Autothrottle (IAS) OFF
+- Landing speeds about 100 to 160 kts depending on flap settings and weights, 
+  touch down carefully and smoothly
+- Touchdown MAIN WHEELS FIRST
+- Landing Roll LOWER NOSE WHEEL
+- Apply speedbrakes (when operating manually)
+- After touchdown apply Reverse Thrust
+- At 40 kts, cancel Reverse Thrust
+
+=== SPECIFICATIONS = PERFORMANCE === 
+
+Max. takeoff weight (MTOW): 155,000 lb (70,300 kg)
+Max. landing weight (MLW): 130,000 lb
+Max. Zero-Fuel Weight (MZFW): 117,892 lb
+
+Maximum speed: 320 knots (366 mph, 592 kmh) at 20,000 ft (6,060 m)
+Range: 2,050 nmi (2,360 mi, 3,800 km)
+Service ceiling: 
+    33,000 ft (10,060 m) empty;
+    23,000 ft (7,077 m) with 42,000 pounds (19,090 kilograms) payload
+Rate of climb: 1,830 ft per min (9.3 ms)
+Takeoff distance: 
+    3,586 ft (1,093 m) at 155,000 lb (70,300 kg) max gross weight;
+    1,400 ft (427 m) at 80,000 lb (36,300 kg) gross weight
+    
+</text>
+
+
+		</help>
+
+		<!--    <menubar include="Dialogs/c130-menu.xml"/> -->
+
+		<!-- Entradas para o menu de apoio para controle da aeronave -->
+		<menubar>
+			<default>
+				<menu n="100">
+					<label>C-130E Hercules</label>
+					<enabled type="bool">true</enabled>
+
+					<item>
+						<label>Lights</label>
+						<binding>
+							<command>nasal</command>
+							<script>
+							  var dlg = gui.Dialog.new("/sim/gui/dialogs/lights-config/dialog", "Aircraft/L-188/Dialogs/lights-dialog.xml");
+				       </script>
+						</binding>
+						<binding>
+							<command>dialog-show</command>
+							<dialog-name>lightcontrol</dialog-name>
+						</binding>
+					</item>
+
+
+					<item>
+						<label>Engines</label>
+						<binding>
+							<command>nasal</command>
+							<script>
+							  var dlg = gui.Dialog.new("/sim/gui/dialogs/engines-config/dialog", "Aircraft/L-188/Dialogs/engines-dialog.xml");
+				       </script>
+						</binding>
+						<binding>
+							<command>dialog-show</command>
+							<dialog-name>enginecontrol</dialog-name>
+						</binding>
+					</item>
+					<item>
+						<label>Pushback</label>
+						<name>pushback</name>
+						<binding>
+							<command>dialog-show</command>
+							<dialog-name>pushback</dialog-name>
+						</binding>
+					</item>
+					<item>
+						<label>Select Livery</label>
+						<binding>
+							<command>nasal</command>
+							<script>aircraft.livery.dialog.open()</script>
+						</binding>
+					</item>
+
+				</menu>
+			</default>
+		</menubar>
+
+	</sim>
+
+	<engines>
+		<engine n="0">
+			<running>true</running>
+			<reverser-position type="double">0.000000</reverser-position>
+			<rpm archive="y" alias="/engines/engine[0]/thruster/rpm"/>
+		</engine>
+		<engine n="1">
+			<running>true</running>
+			<reverser-position type="double">0.000000</reverser-position>
+			<rpm archive="y" alias="/engines/engine[1]/thruster/rpm"/>
+		</engine>
+		<engine n="2">
+			<running>true</running>
+			<reverser-position type="double">0.000000</reverser-position>
+			<rpm archive="y" alias="/engines/engine[2]/thruster/rpm"/>
+		</engine>
+		<engine n="3">
+			<running>true</running>
+			<reverser-position type="double">0.000000</reverser-position>
+			<rpm archive="y" alias="/engines/engine[3]/thruster/rpm"/>
+		</engine>
+	</engines>
+
+	<ai>
+		<submodels>
+			<trigger type="bool">false</trigger>
+		</submodels>
+	</ai>
+
+	<!-- autopilot -->
+	<autopilot>
+		<settings>
+			<target-speed-kt>180</target-speed-kt>
+		</settings>
+	</autopilot>
+
+	<controls>
+		<engines>
+			<engine n="0">
+				<magnetos archive="y">3</magnetos>
+				<propeller-pitch>1.0</propeller-pitch>
+			</engine>
+			<engine n="1">
+				<magnetos archive="y">3</magnetos>
+				<propeller-pitch>1.0</propeller-pitch>
+			</engine>
+			<engine n="2">
+				<magnetos archive="y">3</magnetos>
+				<propeller-pitch>1.0</propeller-pitch>
+			</engine>
+			<engine n="3">
+				<magnetos archive="y">3</magnetos>
+				<propeller-pitch>1.0</propeller-pitch>
+			</engine>
+		</engines>
+
+		<electric>
+			<external-power>0</external-power>
+			<battery-switch>1</battery-switch>
+			<engine n="0">
+				<generator>0</generator>
+			</engine>
+			<engine n="1">
+				<generator>0</generator>
+			</engine>
+			<engine n="2">
+				<generator>0</generator>
+			</engine>
+			<engine n="3">
+				<generator>0</generator>
+			</engine>
+		</electric>
+		<engines>
+			<engine n="0">
+				<condition>0</condition>
+				<propeller-pitch>0</propeller-pitch>
+			</engine>
+			<engine n="1">
+				<condition>0</condition>
+				<propeller-pitch>0</propeller-pitch>
+			</engine>
+			<engine n="2">
+				<condition>0</condition>
+				<propeller-pitch>0</propeller-pitch>
+			</engine>
+			<engine n="3">
+				<condition>0</condition>
+				<propeller-pitch>0</propeller-pitch>
+			</engine>
+		</engines>
+		<gear>
+			<brake-parking>1.0</brake-parking>
+			<gear-down>true</gear-down>
+		</gear>
+		<lighting>
+			<instruments-norm>0.8</instruments-norm>
+			<landing-lights type="bool">0</landing-lights>
+			<beacon type="bool">0</beacon>
+			<strobe type="bool">0</strobe>
+			<nav-lights type="bool">0</nav-lights>
+			<cabin-lights type="bool">0</cabin-lights>
+			<wing-lights type="bool">0</wing-lights>
+			<taxi-light type="bool">0</taxi-light>
+			<instrument-lights type="bool">0</instrument-lights>
+		</lighting>
+		<anti-ice>
+			<prop-heat>0</prop-heat>
+			<pitot-heat>0</pitot-heat>
+		</anti-ice>
+		<cabin>
+			<fan type="bool">0</fan>
+			<heat type="bool">0</heat>
+		</cabin>
+
+		<smoke type="bool">false</smoke>
+		<signal type="bool">true</signal>
+		<paratroopers type="bool">true</paratroopers>
+		<jump-signal type="bool">false</jump-signal>
+		<negGtime type="int">0</negGtime>
+		<gmeter>
+			<reset type="int">1</reset>
+		</gmeter>
+		<flight>
+			<elevator-trim type="double">0.1</elevator-trim>
+		</flight>
+		<refuelling>
+			<refuelling-drogues-pos-norm type="float">0</refuelling-drogues-pos-norm>
+		</refuelling>
+	</controls>
+
+	<input>
+		<keyboard>
+			<key n="101">
+				<name>e</name>
+				<desc>(Un)Deploy probles</desc>
+				<binding>
+					<command>property-toggle</command>
+					<property>controls/refueling/refueling-active</property>
+				</binding>
+				<binding>
+					 <command>property-cycle</command>
+					 <property>controls/refuelling/refuelling-drogues-pos-norm</property>
+					 <value>0</value>
+					 <value>1</value>
+				</binding>
+			</key>
+
+			<key n="68">
+				<name>D</name>
+				<desc>Passenger door</desc>
+				<binding>
+					<command>nasal</command>
+					<script>doors.doorsystem.passengerexport();</script>
+				</binding>
+			</key>
+
+			<key n="83">
+				<name>S</name>
+				<desc>Start smoke</desc>
+				<binding>
+					<command>property-assign</command>
+					<property>controls/smoke</property>
+					<value>true</value>
+				</binding>
+			</key>
+
+			<key n="100">
+				<name>d</name>
+				<desc>Crew door</desc>
+				<binding>
+					<command>nasal</command>
+					<script>doors.doorsystem.crewexport();</script>
+				</binding>
+			</key>
+
+			<key n="79">
+				<name>O</name>
+				<desc>Extend Refuelling Drogues</desc>
+				<binding n="0">
+					<command>nasal</command>
+					<script>drogue.toggle_refuelling_drogues()</script>
+				</binding>
+			</key>
+
+			<key n="10">
+				<name>Ctrl-j</name>
+				<desc>Jump signal</desc>
+				<binding>
+					<command>property-assign</command>
+					<property>controls/signal</property>
+					<value>true</value>
+				</binding>
+			</key>
+
+			<key n="117">
+				<name>u</name>
+				<desc>Propeller-feather</desc>
+				<binding>
+					<command>property-toggle</command>
+					<property>controls/engines/engine[0]/propeller-feather</property>
+				</binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>controls/engines/engine[1]/propeller-feather</property>
+				</binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>controls/engines/engine[2]/propeller-feather</property>
+				</binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>controls/engines/engine[3]/propeller-feather</property>
+				</binding>
+			</key>
+
+			<key n="127">
+				<name>Delete</name>
+				<desc>Toggle Reversers</desc>
+				<binding>
+					<command>property-toggle</command>
+					<property>controls/engines/engine[0]/reverser</property>
+				</binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>controls/engines/engine[1]/reverser</property>
+				</binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>controls/engines/engine[2]/reverser</property>
+				</binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>controls/engines/engine[3]/reverser</property>
+				</binding>
+				<binding>
+					<command>nasal</command>
+					<script>reversethrust.togglereverser()</script>
+				</binding>
+				<!--
+				<binding>
+					<command>nasal</command>
+					<script>
+			         setprop("controls/engines/engine[0]/propeller-pitch",0);
+			         setprop("controls/engines/engine[1]/propeller-pitch",0);
+			         setprop("controls/engines/engine[2]/propeller-pitch",0);
+			         setprop("controls/engines/engine[3]/propeller-pitch",0);
+			      </script>
+				</binding>
+				-->
+			</key>
+
+			<key n="119">
+				<name>w</name>
+				<desc>Walk forward toward view</desc>
+				<repeatable>true</repeatable>
+				<binding>
+					<command>nasal</command>
+					<script>walk.walk_about(0.1)</script>
+				</binding>
+			</key>
+			<key n="87">
+				<name>W</name>
+				<desc>Walk backward from view</desc>
+				<repeatable>true</repeatable>
+				<binding>
+					<command>nasal</command>
+					<script>walk.walk_about(-0.1)</script>
+				</binding>
+			</key>
+
+		</keyboard>
+
+	</input>
+
+	<!-- Cdigos NASAL -->
+	<nasal>
+		<doors>
+			<file>Aircraft/C130/Nasal/doors.nas</file>
+		</doors>
+		<liverie>
+			<file>Aircraft/C130/Nasal/liveries.nas</file>
+		</liverie>
+		<c130>
+			<!--  <file>Aircraft/C130/Nasal/Electrical.nas</file> -->
+			<file>Aircraft/C130/Nasal/controls.nas</file>
+			<file>Aircraft/Instruments-3d/RDR-160/RDR160.nas</file>
+			<file>Aircraft/C130/Nasal/light.nas</file>
+		</c130>
+		<aar>
+			<file>Aircraft/Generic/aar.nas</file>
+		</aar>
+		<tyresmoke>
+			<file>Aircraft/C130/Nasal/tyresmoke.nas</file>
+		</tyresmoke>
+		<walk>
+			<file>Aircraft/C130/Nasal/walk.nas</file>
+		</walk>
+		<reversethrust>
+			<file>Aircraft/C130/Nasal/reverse-thrust.nas</file>
+		</reversethrust>
+		<lights>
+			<file>Aircraft/C130/Nasal/lights.nas</file>
+		</lights>
+		<drogue>
+			<file>Aircraft/C130/Nasal/drogues.nas</file>
+		</drogue>
+	</nasal>
+
+	<instrumentation>
+		<dme>
+			<switch-position>1</switch-position>
+		</dme>
+		<!--
+        <radar>
+            <switch type="string" archive="y">on</switch>
+            <mode-control type="int" archive="y">1</mode-control>
+            <display-controls>
+                <WX type="bool" archive="y">false</WX>
+                <pos type="bool" archive="y">true</pos>
+                <data type="bool" archive="y">true</data>
+                <symbol type="bool" archive="y">true</symbol>
+            </display-controls>
+            <serviceable type="bool">true</serviceable>
+            <range type="int" archive="y">10</range>
+            <reference-range-nm type="double" archive="y">640</reference-range-nm>
+            <mode type="string" archive="y">WX</mode>
+            <font>
+                <color>
+                    <red type="float">0.7</red>
+                    <green type="float">0.7</green>
+                    <blue type="float">0.7</blue>
+                    <alpha type="float">1</alpha>
+                </color>
+                <name type="string" archive="y">helvetica_bold.txf</name>
+                <size type="float">8</size>
+                <line-spacing type="float">0.2</line-spacing>
+            </font>
+            <lightning type="bool" archive="y">true</lightning>
+            <display-mode type="string" archive="y">arc</display-mode>
+            <radar-texture-path type="string" archive="y">Aircraft/777-200/Models/Instruments/MFD/od_wxradar.png</radar-texture-path>
+            <echo-texture-path type="string" archive="y">Aircraft/777-200/Models/Instruments/MFD/wxecho.png</echo-texture-path>
+            <minimized type="bool" archive="y">false</minimized>
+            <heading-marker type="bool" archive="y">true</heading-marker>
+            <limit-deg type="int">360</limit-deg>
+        </radar>
+        -->
+		<groundradar>
+			<id type="string">KSFO</id>
+			<range type="double">1.2</range>
+		</groundradar>
+		<!--
+    <radar>
+      <serviceable type="bool" archive="y">true</serviceable>
+      <switch type="string" archive="y">off</switch>
+      <mode-control type="int" archive="y">3</mode-control>
+      <range type="int" archive="y">20</range>
+      <mode type="string" archive="y">WX</mode>
+      <heading-marker type="bool" archive="y">false</heading-marker>
+      <lightning type="bool" archive="y">false</lightning>
+      <display-mode type="string">arc</display-mode>
+      <radar-texture-path type="string" archive="y">Aircraft/Instruments-3d/RDR-160/od_wxradar.rgb</radar-texture-path>
+      <echo-texture-path type="string" archive="y">Aircraft/Instruments/Textures/wxecho.rgb</echo-texture-path>
+      <display-controls>
+        <WX type="bool" archive="y">false</WX>
+        <data type="bool" archive="y">false</data>
+        <pos type="bool" archive="y">true</pos>
+      </display-controls>
+    </radar>
+    -->
+		<inst-vertical-speed-indicator>
+			<serviceable>true</serviceable>
+		</inst-vertical-speed-indicator>
+		<doors>
+			<crew>
+				<position-norm type="float">0</position-norm>
+			</crew>
+			<passenger>
+				<position-norm type="float">0</position-norm>
+			</passenger>
+		</doors>
+
+	</instrumentation>
+
+
+	<systems>
+		<refuel>
+			<type type="string">boom</type>
+		</refuel>
+	</systems>
+
+	<tanker type="bool">false</tanker>
+
+	<consumables>
+		<fuel>
+			<tank n="0">
+				<name>Principaux d'extremites 1</name>
+				<level-gal_us archive="y">200</level-gal_us>
+			</tank>
+			<tank n="1">
+				<name>Principaux d'extremites 4</name>
+				<level-gal_us archive="y">200</level-gal_us>
+			</tank>
+			<tank n="2">
+				<name>Principaux interieurs 2</name>
+				<level-gal_us archive="y">200</level-gal_us>
+			</tank>
+			<tank n="3">
+				<name>Principaux interieurs 3</name>
+				<level-gal_us archive="y">200</level-gal_us>
+			</tank>
+			<tank n="4">
+				<name>Reservoirs auxiliaires 5</name>
+				<level-gal_us archive="y">200</level-gal_us>
+			</tank>
+			<tank n="5">
+				<name>Reservoirs auxiliaires 6</name>
+				<level-gal_us archive="y">200</level-gal_us>
+			</tank>
+			<tank n="6">
+				<name>Supplementaires sur pylones 7</name>
+				<level-gal_us archive="y">0</level-gal_us>
+			</tank>
+			<tank n="7">
+				<name>Supplementaires sur pylones 8</name>
+				<level-gal_us archive="y">0</level-gal_us>
+			</tank>
+		</fuel>
+	</consumables>
+
+
+	<payload>
+		<weight>
+			<name type="string">Pilot</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[0]"/>
+			<min-lb type="double">0.0</min-lb>
+			<max-lb type="double">300.0</max-lb>
+		</weight>
+		<weight>
+			<name type="string">Co Pilot</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[1]"/>
+			<min-lb type="double">0.0</min-lb>
+			<max-lb type="double">300.0</max-lb>
+		</weight>
+		<weight>
+			<name type="string">Navigator</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[2]"/>
+			<min-lb type="double">0.0</min-lb>
+			<max-lb type="double">300.0</max-lb>
+		</weight>
+		<weight>
+			<name type="string">Flight engineer</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[3]"/>
+			<min-lb type="double">0.0</min-lb>
+			<max-lb type="double">300.0</max-lb>
+		</weight>
+		<weight>
+			<name type="string">Loadmaster</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[4]"/>
+			<min-lb type="double">0.0</min-lb>
+			<max-lb type="double">300.0</max-lb>
+		</weight>
+		<weight>
+			<name type="string">Payload</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[5]"/>
+			<min-lb type="double">0.0</min-lb>
+			<max-lb type="double">45000</max-lb>
+		</weight>
+		<!--
+      <weight>
+            <name type="string">Cabin Zone 0e</name>
+            <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[6]"/>
+            <min-lb type="double">0.0</min-lb>
+            <max-lb type="double">1600</max-lb>
+      </weight>
+      <weight>
+            <name type="string">Cargo 1</name>
+            <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[7]"/>
+            <min-lb type="double">0.0</min-lb>
+            <max-lb type="double">776</max-lb>
+      </weight>
+      <weight>
+            <name type="string">Cargo 2</name>
+            <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[8]"/>
+            <min-lb type="double">0.0</min-lb>
+            <max-lb type="double">776</max-lb>
+      </weight>
+      <weight>
+            <name type="string">Cargo 3</name>
+            <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[9]"/>
+            <min-lb type="double">0.0</min-lb>
+            <max-lb type="double">1133</max-lb>
+      </weight>
+      <weight>
+            <name type="string">Cargo 4</name>
+            <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[10]"/>
+            <min-lb type="double">0.0</min-lb>
+            <max-lb type="double">4374</max-lb>
+      </weight>
+      <weight>
+            <name type="string">Cargo 5</name>
+            <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[11]"/>
+            <min-lb type="double">0.0</min-lb>
+            <max-lb type="double">207</max-lb>
+      </weight>
+      <weight>
+            <name type="string">Cargo 6</name>
+            <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[12]"/>
+            <min-lb type="double">0.0</min-lb>
+            <max-lb type="double">359</max-lb>
+      </weight>
+      -->
+	</payload>
+
+</PropertyList>
+

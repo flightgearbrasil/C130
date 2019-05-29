@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Lockheed AC 130 Hercules. -->
+
+<PropertyList include="c130-base.xml">
+
+  <sim>
+
+    <description>AC-130 (YASim)</description>
+    <flight-model>yasim</flight-model>
+    <aero>ac130-yasim</aero>
+
+    <model>
+      <path>Aircraft/C130/Models/ac130.xml</path>
+      <start-idling type="bool">false</start-idling>
+      <livery>
+        <file type="string">default</file>
+      </livery>
+    </model> 
+
+    <startup>
+      <splash-texture>Aircraft/C130/splash/ac130-splash.png</splash-texture>
+    </startup>
+
+    <sound>
+      <audible>true</audible>
+      <path>Aircraft/C130/Sounds/ac130-sound.xml</path>
+    </sound>
+
+    <help>
+      <title>AC-130</title>
+      <key>
+        <name>D</name>
+        <desc>Open/Close backdoor</desc>
+      </key>
+      <key>
+        <name>d</name>
+        <desc>Open/Close crew door</desc>
+      </key>
+      <key>
+        <name>e</name>
+        <desc>Fire Both GAU-12 25mm Rotory Cannons</desc>
+      </key>
+      <key>
+        <name>E</name>
+        <desc>Fire Bofors 40mm Cannon</desc>
+      </key>
+    </help>
+
+  </sim>
+
+  <input>
+    <keyboard include="Nasal/ac130-keyboard.xml"/>
+  </input>
+
+  <systems>
+    <refuel>
+      <type type="string">boom</type>
+    </refuel>
+  </systems>
+
+  <nasal>
+    <weapons>
+      <file>Aircraft/C130/Nasal/weapons.nas</file>
+    </weapons>
+  </nasal>
+  
+  
+    <consumables>
+        <fuel>
+            <tank n="0">
+                <name>Principaux d'extremites 1</name>
+                <level-gal_us archive="y">200</level-gal_us>
+            </tank>
+            <tank n="1">
+                <name>Principaux d'extremites 4</name>
+                <level-gal_us archive="y">200</level-gal_us>
+            </tank>
+            <tank n="2">
+                <name>Principaux interieurs 2</name>
+                <level-gal_us archive="y">200</level-gal_us>
+            </tank>
+            <tank n="3">
+                <name>Principaux interieurs 3</name>
+                <level-gal_us archive="y">200</level-gal_us>
+            </tank>
+            <tank n="4">
+                <name>Reservoirs auxiliaires 5</name>
+                <level-gal_us archive="y">200</level-gal_us>
+            </tank>
+            <tank n="5">
+                <name>Reservoirs auxiliaires 6</name>
+                <level-gal_us archive="y">200</level-gal_us>
+            </tank>
+            <tank n="6">
+                <name>Supplementaires sur pylones 7</name>
+                <level-gal_us archive="y">0</level-gal_us>
+            </tank>
+            <tank n="7">
+                <name>Supplementaires sur pylones 8</name>
+                <level-gal_us archive="y">0</level-gal_us>
+            </tank>
+        </fuel>
+    </consumables>
+
+</PropertyList>
+
